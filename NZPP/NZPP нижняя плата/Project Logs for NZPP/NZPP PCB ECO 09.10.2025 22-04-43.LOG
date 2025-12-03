@@ -1,0 +1,216 @@
+Added Component: Designator=RY1(TRR-1A-05-D-00-R)
+Added Component: Designator=RY2(TRR-1A-05-D-00-R)
+Added Component: Designator=RY3(TRR-1A-05-D-00-R)
+Added Component: Designator=RY4(TRR-1A-05-D-00-R)
+Added Component: Designator=RY5(TRR-1A-05-D-00-R)
+Added Component: Designator=RY6(TRR-1A-05-D-00-R)
+Added Component: Designator=RY7(TRR-1A-05-D-00-R)
+Added Component: Designator=RY8(TRR-1A-05-D-00-R)
+Added Component: Designator=RY9(TRR-1A-05-D-00-R)
+Added Component: Designator=RY10(TRR-1A-05-D-00-R)
+Added Component: Designator=RY11(TRR-1A-05-D-00-R)
+Added Component: Designator=RY12(TRR-1A-05-D-00-R)
+Added Component: Designator=RY13(TRR-1A-05-D-00-R)
+Added Component: Designator=RY14(TRR-1A-05-D-00-R)
+Added Component: Designator=RY15(TRR-1A-05-D-00-R)
+Added Component: Designator=RY16(TRR-1A-05-D-00-R)
+Added Component: Designator=RY17(TRR-1A-05-D-00-R)
+Added Component: Designator=RY18(TRR-1A-05-D-00-R)
+Added Component: Designator=RY19(TRR-1A-05-D-00-R)
+Added Component: Designator=RY20(TRR-1A-05-D-00-R)
+Added Component: Designator=RY21(TRR-1A-05-D-00-R)
+Added Component: Designator=RY22(TRR-1A-05-D-00-R)
+Added Component: Designator=RY23(TRR-1A-05-D-00-R)
+Added Component: Designator=RY24(TRR-1A-05-D-00-R)
+Added Component: Designator=RY25(TRR-1A-05-D-00-R)
+Added Component: Designator=RY26(TRR-1A-05-D-00-R)
+Added Component: Designator=RY27(TRR-1A-05-D-00-R)
+Added Component: Designator=RY28(TRR-1A-05-D-00-R)
+Added Component: Designator=RY29(TRR-1A-05-D-00-R)
+Added Component: Designator=RY30(TRR-1A-05-D-00-R)
+Added Component: Designator=RY31(TRR-1A-05-D-00-R)
+Added Component: Designator=RY32(TRR-1A-05-D-00-R)
+Added Component: Designator=RY33(TRR-1A-05-D-00-R)
+Added Component: Designator=RY34(TRR-1A-05-D-00-R)
+Added Component: Designator=RY35(TRR-1A-05-D-00-R)
+Added Component: Designator=RY36(TRR-1A-05-D-00-R)
+Added Pin To Net: NetName=+5V Pin=RY1-2
+Added Pin To Net: NetName=NetRY1_6 Pin=RY1-6
+Added Pin To Net: NetName=NET1 Pin=RY1-8
+Added Pin To Net: NetName=NET23 Pin=RY1-14
+Added Pin To Net: NetName=+5V Pin=RY2-2
+Added Pin To Net: NetName=NetRY2_6 Pin=RY2-6
+Added Pin To Net: NetName=NET2 Pin=RY2-8
+Added Pin To Net: NetName=NET23 Pin=RY2-14
+Added Pin To Net: NetName=+5V Pin=RY3-2
+Added Pin To Net: NetName=NetRY3_6 Pin=RY3-6
+Added Pin To Net: NetName=NET3 Pin=RY3-8
+Added Pin To Net: NetName=NET23 Pin=RY3-14
+Added Pin To Net: NetName=+5V Pin=RY4-2
+Added Pin To Net: NetName=NetRY4_6 Pin=RY4-6
+Added Pin To Net: NetName=NET4 Pin=RY4-8
+Added Pin To Net: NetName=NET23 Pin=RY4-14
+Added Pin To Net: NetName=+5V Pin=RY5-2
+Added Pin To Net: NetName=NetRY5_6 Pin=RY5-6
+Added Pin To Net: NetName=NET5 Pin=RY5-8
+Added Pin To Net: NetName=NET23 Pin=RY5-14
+Added Pin To Net: NetName=+5V Pin=RY6-2
+Added Pin To Net: NetName=NetRY6_6 Pin=RY6-6
+Added Pin To Net: NetName=NET6 Pin=RY6-8
+Added Pin To Net: NetName=NET23 Pin=RY6-14
+Added Pin To Net: NetName=+5V Pin=RY7-2
+Added Pin To Net: NetName=NetRY7_6 Pin=RY7-6
+Added Pin To Net: NetName=NET7 Pin=RY7-8
+Added Pin To Net: NetName=NET23 Pin=RY7-14
+Added Pin To Net: NetName=+5V Pin=RY8-2
+Added Pin To Net: NetName=NetRY8_6 Pin=RY8-6
+Added Pin To Net: NetName=NET8 Pin=RY8-8
+Added Pin To Net: NetName=NET23 Pin=RY8-14
+Added Pin To Net: NetName=+5V Pin=RY9-2
+Added Pin To Net: NetName=NetRY9_6 Pin=RY9-6
+Added Pin To Net: NetName=NET9 Pin=RY9-8
+Added Pin To Net: NetName=NET23 Pin=RY9-14
+Added Pin To Net: NetName=+5V Pin=RY10-2
+Added Pin To Net: NetName=NetRY10_6 Pin=RY10-6
+Added Pin To Net: NetName=NET10 Pin=RY10-8
+Added Pin To Net: NetName=NET23 Pin=RY10-14
+Added Pin To Net: NetName=+5V Pin=RY11-2
+Added Pin To Net: NetName=NetRY11_6 Pin=RY11-6
+Added Pin To Net: NetName=NET11 Pin=RY11-8
+Added Pin To Net: NetName=NET23 Pin=RY11-14
+Added Pin To Net: NetName=+5V Pin=RY12-2
+Added Pin To Net: NetName=NetRY12_6 Pin=RY12-6
+Added Pin To Net: NetName=NET12 Pin=RY12-8
+Added Pin To Net: NetName=NET23 Pin=RY12-14
+Added Pin To Net: NetName=+5V Pin=RY13-2
+Added Pin To Net: NetName=NetRY13_6 Pin=RY13-6
+Added Pin To Net: NetName=NET13 Pin=RY13-8
+Added Pin To Net: NetName=NET23 Pin=RY13-14
+Added Pin To Net: NetName=+5V Pin=RY14-2
+Added Pin To Net: NetName=NetRY14_6 Pin=RY14-6
+Added Pin To Net: NetName=NET14 Pin=RY14-8
+Added Pin To Net: NetName=NET23 Pin=RY14-14
+Added Pin To Net: NetName=+5V Pin=RY15-2
+Added Pin To Net: NetName=NetRY15_6 Pin=RY15-6
+Added Pin To Net: NetName=NET15 Pin=RY15-8
+Added Pin To Net: NetName=NET23 Pin=RY15-14
+Added Pin To Net: NetName=+5V Pin=RY16-2
+Added Pin To Net: NetName=NetRY16_6 Pin=RY16-6
+Added Pin To Net: NetName=NET16 Pin=RY16-8
+Added Pin To Net: NetName=NET23 Pin=RY16-14
+Added Pin To Net: NetName=+5V Pin=RY17-2
+Added Pin To Net: NetName=NetRY17_6 Pin=RY17-6
+Added Pin To Net: NetName=NET17 Pin=RY17-8
+Added Pin To Net: NetName=NET23 Pin=RY17-14
+Added Pin To Net: NetName=+5V Pin=RY18-2
+Added Pin To Net: NetName=NetRY18_6 Pin=RY18-6
+Added Pin To Net: NetName=NET18 Pin=RY18-8
+Added Pin To Net: NetName=NET23 Pin=RY18-14
+Added Pin To Net: NetName=+5V Pin=RY19-2
+Added Pin To Net: NetName=NetRY19_6 Pin=RY19-6
+Added Pin To Net: NetName=NET23 Pin=RY19-8
+Added Pin To Net: NetName=NET23 Pin=RY19-14
+Added Pin To Net: NetName=+5V Pin=RY20-2
+Added Pin To Net: NetName=NetRY20_6 Pin=RY20-6
+Added Pin To Net: NetName=NET24 Pin=RY20-8
+Added Pin To Net: NetName=NET23 Pin=RY20-14
+Added Pin To Net: NetName=+5V Pin=RY21-2
+Added Pin To Net: NetName=NetRY21_6 Pin=RY21-6
+Added Pin To Net: NetName=NET19 Pin=RY21-8
+Added Pin To Net: NetName=NET23 Pin=RY21-14
+Added Pin To Net: NetName=+5V Pin=RY22-2
+Added Pin To Net: NetName=NetRY22_6 Pin=RY22-6
+Added Pin To Net: NetName=NET20 Pin=RY22-8
+Added Pin To Net: NetName=NET23 Pin=RY22-14
+Added Pin To Net: NetName=+5V Pin=RY23-2
+Added Pin To Net: NetName=NetRY23_6 Pin=RY23-6
+Added Pin To Net: NetName=NET21 Pin=RY23-8
+Added Pin To Net: NetName=NET23 Pin=RY23-14
+Added Pin To Net: NetName=+5V Pin=RY24-2
+Added Pin To Net: NetName=NetRY24_6 Pin=RY24-6
+Added Pin To Net: NetName=NET22 Pin=RY24-8
+Added Pin To Net: NetName=NET23 Pin=RY24-14
+Added Pin To Net: NetName=+5V Pin=RY25-2
+Added Pin To Net: NetName=NetRY25_6 Pin=RY25-6
+Added Pin To Net: NetName=NET25 Pin=RY25-8
+Added Pin To Net: NetName=NET23 Pin=RY25-14
+Added Pin To Net: NetName=+5V Pin=RY26-2
+Added Pin To Net: NetName=NetRY26_6 Pin=RY26-6
+Added Pin To Net: NetName=NET26 Pin=RY26-8
+Added Pin To Net: NetName=NET23 Pin=RY26-14
+Added Pin To Net: NetName=+5V Pin=RY27-2
+Added Pin To Net: NetName=NetRY27_6 Pin=RY27-6
+Added Pin To Net: NetName=NET27 Pin=RY27-8
+Added Pin To Net: NetName=NET23 Pin=RY27-14
+Added Pin To Net: NetName=+5V Pin=RY28-2
+Added Pin To Net: NetName=NetRY28_6 Pin=RY28-6
+Added Pin To Net: NetName=NET28 Pin=RY28-8
+Added Pin To Net: NetName=NET23 Pin=RY28-14
+Added Pin To Net: NetName=+5V Pin=RY29-2
+Added Pin To Net: NetName=NetRY29_6 Pin=RY29-6
+Added Pin To Net: NetName=NET29 Pin=RY29-8
+Added Pin To Net: NetName=NET23 Pin=RY29-14
+Added Pin To Net: NetName=+5V Pin=RY30-2
+Added Pin To Net: NetName=NetRY30_6 Pin=RY30-6
+Added Pin To Net: NetName=NET30 Pin=RY30-8
+Added Pin To Net: NetName=NET23 Pin=RY30-14
+Added Pin To Net: NetName=+5V Pin=RY31-2
+Added Pin To Net: NetName=NetRY31_6 Pin=RY31-6
+Added Pin To Net: NetName=NET31 Pin=RY31-8
+Added Pin To Net: NetName=NET23 Pin=RY31-14
+Added Pin To Net: NetName=+5V Pin=RY32-2
+Added Pin To Net: NetName=NetRY32_6 Pin=RY32-6
+Added Pin To Net: NetName=NET32 Pin=RY32-8
+Added Pin To Net: NetName=NET23 Pin=RY32-14
+Added Pin To Net: NetName=+5V Pin=RY33-2
+Added Pin To Net: NetName=NetRY33_6 Pin=RY33-6
+Added Pin To Net: NetName=NET33 Pin=RY33-8
+Added Pin To Net: NetName=NET23 Pin=RY33-14
+Added Pin To Net: NetName=+5V Pin=RY34-2
+Added Pin To Net: NetName=NetRY34_6 Pin=RY34-6
+Added Pin To Net: NetName=NET34 Pin=RY34-8
+Added Pin To Net: NetName=NET23 Pin=RY34-14
+Added Pin To Net: NetName=+5V Pin=RY35-2
+Added Pin To Net: NetName=NetRY35_6 Pin=RY35-6
+Added Pin To Net: NetName=NET35 Pin=RY35-8
+Added Pin To Net: NetName=NET23 Pin=RY35-14
+Added Pin To Net: NetName=+5V Pin=RY36-2
+Added Pin To Net: NetName=NetRY36_6 Pin=RY36-6
+Added Pin To Net: NetName=NET36 Pin=RY36-8
+Added Pin To Net: NetName=NET23 Pin=RY36-14
+Added Member To Class: ClassName=2.NZPP Member=Component RY1 TRR-1A-05-D-00-R
+Added Member To Class: ClassName=2.NZPP Member=Component RY2 TRR-1A-05-D-00-R
+Added Member To Class: ClassName=2.NZPP Member=Component RY3 TRR-1A-05-D-00-R
+Added Member To Class: ClassName=2.NZPP Member=Component RY4 TRR-1A-05-D-00-R
+Added Member To Class: ClassName=2.NZPP Member=Component RY5 TRR-1A-05-D-00-R
+Added Member To Class: ClassName=2.NZPP Member=Component RY6 TRR-1A-05-D-00-R
+Added Member To Class: ClassName=2.NZPP Member=Component RY7 TRR-1A-05-D-00-R
+Added Member To Class: ClassName=2.NZPP Member=Component RY8 TRR-1A-05-D-00-R
+Added Member To Class: ClassName=2.NZPP Member=Component RY9 TRR-1A-05-D-00-R
+Added Member To Class: ClassName=2.NZPP Member=Component RY10 TRR-1A-05-D-00-R
+Added Member To Class: ClassName=2.NZPP Member=Component RY11 TRR-1A-05-D-00-R
+Added Member To Class: ClassName=2.NZPP Member=Component RY12 TRR-1A-05-D-00-R
+Added Member To Class: ClassName=2.NZPP Member=Component RY13 TRR-1A-05-D-00-R
+Added Member To Class: ClassName=2.NZPP Member=Component RY14 TRR-1A-05-D-00-R
+Added Member To Class: ClassName=2.NZPP Member=Component RY15 TRR-1A-05-D-00-R
+Added Member To Class: ClassName=2.NZPP Member=Component RY16 TRR-1A-05-D-00-R
+Added Member To Class: ClassName=2.NZPP Member=Component RY17 TRR-1A-05-D-00-R
+Added Member To Class: ClassName=2.NZPP Member=Component RY18 TRR-1A-05-D-00-R
+Added Member To Class: ClassName=2.NZPP Member=Component RY19 TRR-1A-05-D-00-R
+Added Member To Class: ClassName=2.NZPP Member=Component RY20 TRR-1A-05-D-00-R
+Added Member To Class: ClassName=2.NZPP Member=Component RY21 TRR-1A-05-D-00-R
+Added Member To Class: ClassName=2.NZPP Member=Component RY22 TRR-1A-05-D-00-R
+Added Member To Class: ClassName=2.NZPP Member=Component RY23 TRR-1A-05-D-00-R
+Added Member To Class: ClassName=2.NZPP Member=Component RY24 TRR-1A-05-D-00-R
+Added Member To Class: ClassName=2.NZPP Member=Component RY25 TRR-1A-05-D-00-R
+Added Member To Class: ClassName=2.NZPP Member=Component RY26 TRR-1A-05-D-00-R
+Added Member To Class: ClassName=2.NZPP Member=Component RY27 TRR-1A-05-D-00-R
+Added Member To Class: ClassName=2.NZPP Member=Component RY28 TRR-1A-05-D-00-R
+Added Member To Class: ClassName=2.NZPP Member=Component RY29 TRR-1A-05-D-00-R
+Added Member To Class: ClassName=2.NZPP Member=Component RY30 TRR-1A-05-D-00-R
+Added Member To Class: ClassName=2.NZPP Member=Component RY31 TRR-1A-05-D-00-R
+Added Member To Class: ClassName=2.NZPP Member=Component RY32 TRR-1A-05-D-00-R
+Added Member To Class: ClassName=2.NZPP Member=Component RY33 TRR-1A-05-D-00-R
+Added Member To Class: ClassName=2.NZPP Member=Component RY34 TRR-1A-05-D-00-R
+Added Member To Class: ClassName=2.NZPP Member=Component RY35 TRR-1A-05-D-00-R
+Added Member To Class: ClassName=2.NZPP Member=Component RY36 TRR-1A-05-D-00-R

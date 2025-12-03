@@ -1,0 +1,30 @@
+Added Component: Designator=RY21(TRR-1A-05-D-00-R)
+Added Component: Designator=RY23(TRR-1A-05-D-00-R)
+Added Component: Designator=RY24(TRR-1A-05-D-00-R)
+Added Component: Designator=RY25(TRR-1A-05-D-00-R)
+Added Component: Designator=RY26(TRR-1A-05-D-00-R)
+Added Pin To Net: NetName=+5V Pin=RY21-2
+Added Pin To Net: NetName=NetRY21_6 Pin=RY21-6
+Added Pin To Net: NetName=NET19 Pin=RY21-8
+Added Pin To Net: NetName=NET37 Pin=RY21-14
+Added Pin To Net: NetName=+5V Pin=RY23-2
+Added Pin To Net: NetName=NetRY23_6 Pin=RY23-6
+Added Pin To Net: NetName=NET21 Pin=RY23-8
+Added Pin To Net: NetName=NET37 Pin=RY23-14
+Added Pin To Net: NetName=+5V Pin=RY24-2
+Added Pin To Net: NetName=NetRY24_6 Pin=RY24-6
+Added Pin To Net: NetName=NET22 Pin=RY24-8
+Added Pin To Net: NetName=NET37 Pin=RY24-14
+Added Pin To Net: NetName=+5V Pin=RY25-2
+Added Pin To Net: NetName=NetRY25_6 Pin=RY25-6
+Added Pin To Net: NetName=NET25 Pin=RY25-8
+Added Pin To Net: NetName=NET37 Pin=RY25-14
+Added Pin To Net: NetName=+5V Pin=RY26-2
+Added Pin To Net: NetName=NetRY26_6 Pin=RY26-6
+Added Pin To Net: NetName=NET26 Pin=RY26-8
+Added Pin To Net: NetName=NET37 Pin=RY26-14
+Added Member To Class: ClassName=2.NZPP Member=Component RY21 TRR-1A-05-D-00-R
+Added Member To Class: ClassName=2.NZPP Member=Component RY23 TRR-1A-05-D-00-R
+Added Member To Class: ClassName=2.NZPP Member=Component RY24 TRR-1A-05-D-00-R
+Added Member To Class: ClassName=2.NZPP Member=Component RY25 TRR-1A-05-D-00-R
+Added Member To Class: ClassName=2.NZPP Member=Component RY26 TRR-1A-05-D-00-R

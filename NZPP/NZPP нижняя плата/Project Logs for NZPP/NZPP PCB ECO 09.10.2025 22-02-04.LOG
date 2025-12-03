@@ -1,0 +1,951 @@
+Added Component: Designator=*1(Point)
+Added Component: Designator=*2(Point)
+Added Component: Designator=*3(Point)
+Added Component: Designator=*4(Point)
+Added Component: Designator=*5(Point)
+Added Component: Designator=*6(Point)
+Added Component: Designator=*7(Point)
+Added Component: Designator=*8(Point)
+Added Component: Designator=*9(Point)
+Added Component: Designator=*10(Point)
+Added Component: Designator=*11(Point)
+Added Component: Designator=*12(Point)
+Added Component: Designator=*13(Point)
+Added Component: Designator=*14(Point)
+Added Component: Designator=*15(Point)
+Added Component: Designator=*16(Point)
+Added Component: Designator=*17(Point)
+Added Component: Designator=*18(Point)
+Added Component: Designator=*19(Point)
+Added Component: Designator=*20(Point)
+Added Component: Designator=*21(Point)
+Added Component: Designator=*22(Point)
+Added Component: Designator=*23(Point)
+Added Component: Designator=*24(Point)
+Added Component: Designator=*25(Point)
+Added Component: Designator=*26(Point)
+Added Component: Designator=*27(Point)
+Added Component: Designator=*28(Point)
+Added Component: Designator=*29(Point)
+Added Component: Designator=*30(Point)
+Added Component: Designator=*31(Point)
+Added Component: Designator=*32(Point)
+Added Component: Designator=*33(Point)
+Added Component: Designator=*34(Point)
+Added Component: Designator=*35(Point)
+Added Component: Designator=*(Point)
+Added Component: Designator=C1(CAP: 0805)
+Add component (AddParameter): Name = "Õ‡ËÏÂÌÓ‚‡ÌËÂ"; Value = "0805 10ÏÍ‘ X7R 10%"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "œËÏÂ˜‡ÌËÂ"; Value = "SMD"; VariantName = "[No Variations]"
+Added Component: Designator=C2(CAP: 0805)
+Add component (AddParameter): Name = "Õ‡ËÏÂÌÓ‚‡ÌËÂ"; Value = "0805 10ÏÍ‘ X7R 10%"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "œËÏÂ˜‡ÌËÂ"; Value = "SMD"; VariantName = "[No Variations]"
+Added Component: Designator=C3(CAP: 0805)
+Add component (AddParameter): Name = "Õ‡ËÏÂÌÓ‚‡ÌËÂ"; Value = "0805 10ÏÍ‘ X7R 10%"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "œËÏÂ˜‡ÌËÂ"; Value = "SMD"; VariantName = "[No Variations]"
+Added Component: Designator=C4(CAP: 0805)
+Add component (AddParameter): Name = "Õ‡ËÏÂÌÓ‚‡ÌËÂ"; Value = "0805 10ÏÍ‘ X7R 10%"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "œËÏÂ˜‡ÌËÂ"; Value = "SMD"; VariantName = "[No Variations]"
+Added Component: Designator=C5(CAP: 0805)
+Add component (AddParameter): Name = "Õ‡ËÏÂÌÓ‚‡ÌËÂ"; Value = "0805 10ÏÍ‘ X7R 10%"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "œËÏÂ˜‡ÌËÂ"; Value = "SMD"; VariantName = "[No Variations]"
+Added Component: Designator=C6(CAP: 0805)
+Add component (AddParameter): Name = "Õ‡ËÏÂÌÓ‚‡ÌËÂ"; Value = "0805 10ÏÍ‘ X7R 10%"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "œËÏÂ˜‡ÌËÂ"; Value = "SMD"; VariantName = "[No Variations]"
+Added Component: Designator=DD1(74HC595D)
+Added Component: Designator=DD2(STM32F103C8T6)
+Added Component: Designator=DD3(74HC595D)
+Added Component: Designator=DD4(74HC595D)
+Added Component: Designator=DD5(74HC595D)
+Added Component: Designator=DD6(B1205S-2WR3)
+Added Component: Designator=HL1(led)
+Added Component: Designator=HL2(led)
+Added Component: Designator=R1(RES: 0805)
+Add component (AddParameter): Name = "Õ‡ËÏÂÌÓ‚‡ÌËÂ"; Value = "0805 100ÍŒÏ"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "œËÏÂ˜‡ÌËÂ"; Value = "SMD"; VariantName = "[No Variations]"
+Added Component: Designator=R2(RES: 0805)
+Add component (AddParameter): Name = "Õ‡ËÏÂÌÓ‚‡ÌËÂ"; Value = "0805 100ÍŒÏ"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "œËÏÂ˜‡ÌËÂ"; Value = "SMD"; VariantName = "[No Variations]"
+Added Component: Designator=VT1(SC-70)
+Add component (AddParameter): Name = "CurrentCE"; Value = "100mA"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "CurrentGain"; Value = "420"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Frequency"; Value = "100MHz"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "HelpURL"; Value = "https://www.digikey.com/product-detail/en/on-semiconductor/BC847CLT1G/BC847CLT1GOSCT-ND/917836"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manufacturer"; Value = "ON Semiconductor"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "MaxPower"; Value = "300mW"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Package"; Value = "SOT-23"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "PartNumber"; Value = "PDTD113ZUX"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Temperature"; Value = "-55...+125∞C"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "TypeTransistor"; Value = "NPN transistor"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "ValueManufacturerPartNumber"; Value = "NPN transistor, 45V, 100mA, 100MHz, 300mW, 0.6V, 420, SOT-23, -55...+125∞C"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "VoltageCE"; Value = "45V"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "VoltageSaturation"; Value = "0.6V"; VariantName = "[No Variations]"
+Added Component: Designator=VT2(SC-70)
+Add component (AddParameter): Name = "CurrentCE"; Value = "100mA"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "CurrentGain"; Value = "420"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Frequency"; Value = "100MHz"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "HelpURL"; Value = "https://www.digikey.com/product-detail/en/on-semiconductor/BC847CLT1G/BC847CLT1GOSCT-ND/917836"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manufacturer"; Value = "ON Semiconductor"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "MaxPower"; Value = "300mW"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Package"; Value = "SOT-23"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "PartNumber"; Value = "PDTD113ZUX"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Temperature"; Value = "-55...+125∞C"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "TypeTransistor"; Value = "NPN transistor"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "ValueManufacturerPartNumber"; Value = "NPN transistor, 45V, 100mA, 100MHz, 300mW, 0.6V, 420, SOT-23, -55...+125∞C"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "VoltageCE"; Value = "45V"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "VoltageSaturation"; Value = "0.6V"; VariantName = "[No Variations]"
+Added Component: Designator=VT3(SC-70)
+Add component (AddParameter): Name = "CurrentCE"; Value = "100mA"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "CurrentGain"; Value = "420"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Frequency"; Value = "100MHz"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "HelpURL"; Value = "https://www.digikey.com/product-detail/en/on-semiconductor/BC847CLT1G/BC847CLT1GOSCT-ND/917836"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manufacturer"; Value = "ON Semiconductor"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "MaxPower"; Value = "300mW"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Package"; Value = "SOT-23"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "PartNumber"; Value = "PDTD113ZUX"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Temperature"; Value = "-55...+125∞C"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "TypeTransistor"; Value = "NPN transistor"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "ValueManufacturerPartNumber"; Value = "NPN transistor, 45V, 100mA, 100MHz, 300mW, 0.6V, 420, SOT-23, -55...+125∞C"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "VoltageCE"; Value = "45V"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "VoltageSaturation"; Value = "0.6V"; VariantName = "[No Variations]"
+Added Component: Designator=VT4(SC-70)
+Add component (AddParameter): Name = "CurrentCE"; Value = "100mA"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "CurrentGain"; Value = "420"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Frequency"; Value = "100MHz"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "HelpURL"; Value = "https://www.digikey.com/product-detail/en/on-semiconductor/BC847CLT1G/BC847CLT1GOSCT-ND/917836"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manufacturer"; Value = "ON Semiconductor"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "MaxPower"; Value = "300mW"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Package"; Value = "SOT-23"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "PartNumber"; Value = "PDTD113ZUX"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Temperature"; Value = "-55...+125∞C"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "TypeTransistor"; Value = "NPN transistor"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "ValueManufacturerPartNumber"; Value = "NPN transistor, 45V, 100mA, 100MHz, 300mW, 0.6V, 420, SOT-23, -55...+125∞C"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "VoltageCE"; Value = "45V"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "VoltageSaturation"; Value = "0.6V"; VariantName = "[No Variations]"
+Added Component: Designator=VT5(SC-70)
+Add component (AddParameter): Name = "CurrentCE"; Value = "100mA"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "CurrentGain"; Value = "420"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Frequency"; Value = "100MHz"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "HelpURL"; Value = "https://www.digikey.com/product-detail/en/on-semiconductor/BC847CLT1G/BC847CLT1GOSCT-ND/917836"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manufacturer"; Value = "ON Semiconductor"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "MaxPower"; Value = "300mW"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Package"; Value = "SOT-23"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "PartNumber"; Value = "PDTD113ZUX"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Temperature"; Value = "-55...+125∞C"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "TypeTransistor"; Value = "NPN transistor"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "ValueManufacturerPartNumber"; Value = "NPN transistor, 45V, 100mA, 100MHz, 300mW, 0.6V, 420, SOT-23, -55...+125∞C"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "VoltageCE"; Value = "45V"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "VoltageSaturation"; Value = "0.6V"; VariantName = "[No Variations]"
+Added Component: Designator=VT6(SC-70)
+Add component (AddParameter): Name = "CurrentCE"; Value = "100mA"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "CurrentGain"; Value = "420"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Frequency"; Value = "100MHz"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "HelpURL"; Value = "https://www.digikey.com/product-detail/en/on-semiconductor/BC847CLT1G/BC847CLT1GOSCT-ND/917836"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manufacturer"; Value = "ON Semiconductor"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "MaxPower"; Value = "300mW"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Package"; Value = "SOT-23"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "PartNumber"; Value = "PDTD113ZUX"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Temperature"; Value = "-55...+125∞C"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "TypeTransistor"; Value = "NPN transistor"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "ValueManufacturerPartNumber"; Value = "NPN transistor, 45V, 100mA, 100MHz, 300mW, 0.6V, 420, SOT-23, -55...+125∞C"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "VoltageCE"; Value = "45V"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "VoltageSaturation"; Value = "0.6V"; VariantName = "[No Variations]"
+Added Component: Designator=VT7(SC-70)
+Add component (AddParameter): Name = "CurrentCE"; Value = "100mA"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "CurrentGain"; Value = "420"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Frequency"; Value = "100MHz"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "HelpURL"; Value = "https://www.digikey.com/product-detail/en/on-semiconductor/BC847CLT1G/BC847CLT1GOSCT-ND/917836"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manufacturer"; Value = "ON Semiconductor"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "MaxPower"; Value = "300mW"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Package"; Value = "SOT-23"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "PartNumber"; Value = "PDTD113ZUX"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Temperature"; Value = "-55...+125∞C"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "TypeTransistor"; Value = "NPN transistor"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "ValueManufacturerPartNumber"; Value = "NPN transistor, 45V, 100mA, 100MHz, 300mW, 0.6V, 420, SOT-23, -55...+125∞C"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "VoltageCE"; Value = "45V"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "VoltageSaturation"; Value = "0.6V"; VariantName = "[No Variations]"
+Added Component: Designator=VT8(SC-70)
+Add component (AddParameter): Name = "CurrentCE"; Value = "100mA"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "CurrentGain"; Value = "420"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Frequency"; Value = "100MHz"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "HelpURL"; Value = "https://www.digikey.com/product-detail/en/on-semiconductor/BC847CLT1G/BC847CLT1GOSCT-ND/917836"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manufacturer"; Value = "ON Semiconductor"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "MaxPower"; Value = "300mW"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Package"; Value = "SOT-23"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "PartNumber"; Value = "PDTD113ZUX"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Temperature"; Value = "-55...+125∞C"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "TypeTransistor"; Value = "NPN transistor"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "ValueManufacturerPartNumber"; Value = "NPN transistor, 45V, 100mA, 100MHz, 300mW, 0.6V, 420, SOT-23, -55...+125∞C"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "VoltageCE"; Value = "45V"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "VoltageSaturation"; Value = "0.6V"; VariantName = "[No Variations]"
+Added Component: Designator=VT9(SC-70)
+Add component (AddParameter): Name = "CurrentCE"; Value = "100mA"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "CurrentGain"; Value = "420"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Frequency"; Value = "100MHz"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "HelpURL"; Value = "https://www.digikey.com/product-detail/en/on-semiconductor/BC847CLT1G/BC847CLT1GOSCT-ND/917836"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manufacturer"; Value = "ON Semiconductor"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "MaxPower"; Value = "300mW"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Package"; Value = "SOT-23"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "PartNumber"; Value = "PDTD113ZUX"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Temperature"; Value = "-55...+125∞C"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "TypeTransistor"; Value = "NPN transistor"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "ValueManufacturerPartNumber"; Value = "NPN transistor, 45V, 100mA, 100MHz, 300mW, 0.6V, 420, SOT-23, -55...+125∞C"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "VoltageCE"; Value = "45V"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "VoltageSaturation"; Value = "0.6V"; VariantName = "[No Variations]"
+Added Component: Designator=VT10(SC-70)
+Add component (AddParameter): Name = "CurrentCE"; Value = "100mA"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "CurrentGain"; Value = "420"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Frequency"; Value = "100MHz"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "HelpURL"; Value = "https://www.digikey.com/product-detail/en/on-semiconductor/BC847CLT1G/BC847CLT1GOSCT-ND/917836"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manufacturer"; Value = "ON Semiconductor"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "MaxPower"; Value = "300mW"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Package"; Value = "SOT-23"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "PartNumber"; Value = "PDTD113ZUX"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Temperature"; Value = "-55...+125∞C"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "TypeTransistor"; Value = "NPN transistor"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "ValueManufacturerPartNumber"; Value = "NPN transistor, 45V, 100mA, 100MHz, 300mW, 0.6V, 420, SOT-23, -55...+125∞C"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "VoltageCE"; Value = "45V"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "VoltageSaturation"; Value = "0.6V"; VariantName = "[No Variations]"
+Added Component: Designator=VT11(SC-70)
+Add component (AddParameter): Name = "CurrentCE"; Value = "100mA"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "CurrentGain"; Value = "420"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Frequency"; Value = "100MHz"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "HelpURL"; Value = "https://www.digikey.com/product-detail/en/on-semiconductor/BC847CLT1G/BC847CLT1GOSCT-ND/917836"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manufacturer"; Value = "ON Semiconductor"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "MaxPower"; Value = "300mW"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Package"; Value = "SOT-23"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "PartNumber"; Value = "PDTD113ZUX"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Temperature"; Value = "-55...+125∞C"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "TypeTransistor"; Value = "NPN transistor"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "ValueManufacturerPartNumber"; Value = "NPN transistor, 45V, 100mA, 100MHz, 300mW, 0.6V, 420, SOT-23, -55...+125∞C"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "VoltageCE"; Value = "45V"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "VoltageSaturation"; Value = "0.6V"; VariantName = "[No Variations]"
+Added Component: Designator=VT12(SC-70)
+Add component (AddParameter): Name = "CurrentCE"; Value = "100mA"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "CurrentGain"; Value = "420"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Frequency"; Value = "100MHz"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "HelpURL"; Value = "https://www.digikey.com/product-detail/en/on-semiconductor/BC847CLT1G/BC847CLT1GOSCT-ND/917836"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manufacturer"; Value = "ON Semiconductor"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "MaxPower"; Value = "300mW"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Package"; Value = "SOT-23"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "PartNumber"; Value = "PDTD113ZUX"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Temperature"; Value = "-55...+125∞C"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "TypeTransistor"; Value = "NPN transistor"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "ValueManufacturerPartNumber"; Value = "NPN transistor, 45V, 100mA, 100MHz, 300mW, 0.6V, 420, SOT-23, -55...+125∞C"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "VoltageCE"; Value = "45V"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "VoltageSaturation"; Value = "0.6V"; VariantName = "[No Variations]"
+Added Component: Designator=VT13(SC-70)
+Add component (AddParameter): Name = "CurrentCE"; Value = "100mA"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "CurrentGain"; Value = "420"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Frequency"; Value = "100MHz"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "HelpURL"; Value = "https://www.digikey.com/product-detail/en/on-semiconductor/BC847CLT1G/BC847CLT1GOSCT-ND/917836"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manufacturer"; Value = "ON Semiconductor"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "MaxPower"; Value = "300mW"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Package"; Value = "SOT-23"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "PartNumber"; Value = "PDTD113ZUX"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Temperature"; Value = "-55...+125∞C"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "TypeTransistor"; Value = "NPN transistor"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "ValueManufacturerPartNumber"; Value = "NPN transistor, 45V, 100mA, 100MHz, 300mW, 0.6V, 420, SOT-23, -55...+125∞C"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "VoltageCE"; Value = "45V"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "VoltageSaturation"; Value = "0.6V"; VariantName = "[No Variations]"
+Added Component: Designator=VT14(SC-70)
+Add component (AddParameter): Name = "CurrentCE"; Value = "100mA"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "CurrentGain"; Value = "420"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Frequency"; Value = "100MHz"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "HelpURL"; Value = "https://www.digikey.com/product-detail/en/on-semiconductor/BC847CLT1G/BC847CLT1GOSCT-ND/917836"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manufacturer"; Value = "ON Semiconductor"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "MaxPower"; Value = "300mW"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Package"; Value = "SOT-23"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "PartNumber"; Value = "PDTD113ZUX"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Temperature"; Value = "-55...+125∞C"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "TypeTransistor"; Value = "NPN transistor"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "ValueManufacturerPartNumber"; Value = "NPN transistor, 45V, 100mA, 100MHz, 300mW, 0.6V, 420, SOT-23, -55...+125∞C"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "VoltageCE"; Value = "45V"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "VoltageSaturation"; Value = "0.6V"; VariantName = "[No Variations]"
+Added Component: Designator=VT15(SC-70)
+Add component (AddParameter): Name = "CurrentCE"; Value = "100mA"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "CurrentGain"; Value = "420"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Frequency"; Value = "100MHz"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "HelpURL"; Value = "https://www.digikey.com/product-detail/en/on-semiconductor/BC847CLT1G/BC847CLT1GOSCT-ND/917836"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manufacturer"; Value = "ON Semiconductor"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "MaxPower"; Value = "300mW"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Package"; Value = "SOT-23"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "PartNumber"; Value = "PDTD113ZUX"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Temperature"; Value = "-55...+125∞C"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "TypeTransistor"; Value = "NPN transistor"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "ValueManufacturerPartNumber"; Value = "NPN transistor, 45V, 100mA, 100MHz, 300mW, 0.6V, 420, SOT-23, -55...+125∞C"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "VoltageCE"; Value = "45V"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "VoltageSaturation"; Value = "0.6V"; VariantName = "[No Variations]"
+Added Component: Designator=VT16(SC-70)
+Add component (AddParameter): Name = "CurrentCE"; Value = "100mA"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "CurrentGain"; Value = "420"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Frequency"; Value = "100MHz"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "HelpURL"; Value = "https://www.digikey.com/product-detail/en/on-semiconductor/BC847CLT1G/BC847CLT1GOSCT-ND/917836"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manufacturer"; Value = "ON Semiconductor"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "MaxPower"; Value = "300mW"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Package"; Value = "SOT-23"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "PartNumber"; Value = "PDTD113ZUX"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Temperature"; Value = "-55...+125∞C"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "TypeTransistor"; Value = "NPN transistor"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "ValueManufacturerPartNumber"; Value = "NPN transistor, 45V, 100mA, 100MHz, 300mW, 0.6V, 420, SOT-23, -55...+125∞C"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "VoltageCE"; Value = "45V"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "VoltageSaturation"; Value = "0.6V"; VariantName = "[No Variations]"
+Added Component: Designator=VT17(SC-70)
+Add component (AddParameter): Name = "CurrentCE"; Value = "100mA"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "CurrentGain"; Value = "420"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Frequency"; Value = "100MHz"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "HelpURL"; Value = "https://www.digikey.com/product-detail/en/on-semiconductor/BC847CLT1G/BC847CLT1GOSCT-ND/917836"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manufacturer"; Value = "ON Semiconductor"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "MaxPower"; Value = "300mW"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Package"; Value = "SOT-23"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "PartNumber"; Value = "PDTD113ZUX"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Temperature"; Value = "-55...+125∞C"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "TypeTransistor"; Value = "NPN transistor"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "ValueManufacturerPartNumber"; Value = "NPN transistor, 45V, 100mA, 100MHz, 300mW, 0.6V, 420, SOT-23, -55...+125∞C"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "VoltageCE"; Value = "45V"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "VoltageSaturation"; Value = "0.6V"; VariantName = "[No Variations]"
+Added Component: Designator=VT18(SC-70)
+Add component (AddParameter): Name = "CurrentCE"; Value = "100mA"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "CurrentGain"; Value = "420"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Frequency"; Value = "100MHz"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "HelpURL"; Value = "https://www.digikey.com/product-detail/en/on-semiconductor/BC847CLT1G/BC847CLT1GOSCT-ND/917836"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manufacturer"; Value = "ON Semiconductor"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "MaxPower"; Value = "300mW"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Package"; Value = "SOT-23"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "PartNumber"; Value = "PDTD113ZUX"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Temperature"; Value = "-55...+125∞C"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "TypeTransistor"; Value = "NPN transistor"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "ValueManufacturerPartNumber"; Value = "NPN transistor, 45V, 100mA, 100MHz, 300mW, 0.6V, 420, SOT-23, -55...+125∞C"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "VoltageCE"; Value = "45V"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "VoltageSaturation"; Value = "0.6V"; VariantName = "[No Variations]"
+Added Component: Designator=VT19(SC-70)
+Add component (AddParameter): Name = "CurrentCE"; Value = "100mA"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "CurrentGain"; Value = "420"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Frequency"; Value = "100MHz"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "HelpURL"; Value = "https://www.digikey.com/product-detail/en/on-semiconductor/BC847CLT1G/BC847CLT1GOSCT-ND/917836"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manufacturer"; Value = "ON Semiconductor"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "MaxPower"; Value = "300mW"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Package"; Value = "SOT-23"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "PartNumber"; Value = "PDTD113ZUX"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Temperature"; Value = "-55...+125∞C"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "TypeTransistor"; Value = "NPN transistor"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "ValueManufacturerPartNumber"; Value = "NPN transistor, 45V, 100mA, 100MHz, 300mW, 0.6V, 420, SOT-23, -55...+125∞C"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "VoltageCE"; Value = "45V"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "VoltageSaturation"; Value = "0.6V"; VariantName = "[No Variations]"
+Added Component: Designator=VT20(SC-70)
+Add component (AddParameter): Name = "CurrentCE"; Value = "100mA"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "CurrentGain"; Value = "420"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Frequency"; Value = "100MHz"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "HelpURL"; Value = "https://www.digikey.com/product-detail/en/on-semiconductor/BC847CLT1G/BC847CLT1GOSCT-ND/917836"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manufacturer"; Value = "ON Semiconductor"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "MaxPower"; Value = "300mW"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Package"; Value = "SOT-23"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "PartNumber"; Value = "PDTD113ZUX"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Temperature"; Value = "-55...+125∞C"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "TypeTransistor"; Value = "NPN transistor"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "ValueManufacturerPartNumber"; Value = "NPN transistor, 45V, 100mA, 100MHz, 300mW, 0.6V, 420, SOT-23, -55...+125∞C"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "VoltageCE"; Value = "45V"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "VoltageSaturation"; Value = "0.6V"; VariantName = "[No Variations]"
+Added Component: Designator=VT21(SC-70)
+Add component (AddParameter): Name = "CurrentCE"; Value = "100mA"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "CurrentGain"; Value = "420"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Frequency"; Value = "100MHz"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "HelpURL"; Value = "https://www.digikey.com/product-detail/en/on-semiconductor/BC847CLT1G/BC847CLT1GOSCT-ND/917836"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manufacturer"; Value = "ON Semiconductor"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "MaxPower"; Value = "300mW"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Package"; Value = "SOT-23"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "PartNumber"; Value = "PDTD113ZUX"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Temperature"; Value = "-55...+125∞C"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "TypeTransistor"; Value = "NPN transistor"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "ValueManufacturerPartNumber"; Value = "NPN transistor, 45V, 100mA, 100MHz, 300mW, 0.6V, 420, SOT-23, -55...+125∞C"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "VoltageCE"; Value = "45V"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "VoltageSaturation"; Value = "0.6V"; VariantName = "[No Variations]"
+Added Component: Designator=VT22(SC-70)
+Add component (AddParameter): Name = "CurrentCE"; Value = "100mA"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "CurrentGain"; Value = "420"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Frequency"; Value = "100MHz"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "HelpURL"; Value = "https://www.digikey.com/product-detail/en/on-semiconductor/BC847CLT1G/BC847CLT1GOSCT-ND/917836"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manufacturer"; Value = "ON Semiconductor"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "MaxPower"; Value = "300mW"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Package"; Value = "SOT-23"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "PartNumber"; Value = "PDTD113ZUX"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Temperature"; Value = "-55...+125∞C"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "TypeTransistor"; Value = "NPN transistor"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "ValueManufacturerPartNumber"; Value = "NPN transistor, 45V, 100mA, 100MHz, 300mW, 0.6V, 420, SOT-23, -55...+125∞C"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "VoltageCE"; Value = "45V"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "VoltageSaturation"; Value = "0.6V"; VariantName = "[No Variations]"
+Added Component: Designator=VT23(SC-70)
+Add component (AddParameter): Name = "CurrentCE"; Value = "100mA"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "CurrentGain"; Value = "420"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Frequency"; Value = "100MHz"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "HelpURL"; Value = "https://www.digikey.com/product-detail/en/on-semiconductor/BC847CLT1G/BC847CLT1GOSCT-ND/917836"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manufacturer"; Value = "ON Semiconductor"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "MaxPower"; Value = "300mW"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Package"; Value = "SOT-23"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "PartNumber"; Value = "PDTD113ZUX"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Temperature"; Value = "-55...+125∞C"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "TypeTransistor"; Value = "NPN transistor"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "ValueManufacturerPartNumber"; Value = "NPN transistor, 45V, 100mA, 100MHz, 300mW, 0.6V, 420, SOT-23, -55...+125∞C"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "VoltageCE"; Value = "45V"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "VoltageSaturation"; Value = "0.6V"; VariantName = "[No Variations]"
+Added Component: Designator=VT24(SC-70)
+Add component (AddParameter): Name = "CurrentCE"; Value = "100mA"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "CurrentGain"; Value = "420"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Frequency"; Value = "100MHz"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "HelpURL"; Value = "https://www.digikey.com/product-detail/en/on-semiconductor/BC847CLT1G/BC847CLT1GOSCT-ND/917836"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manufacturer"; Value = "ON Semiconductor"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "MaxPower"; Value = "300mW"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Package"; Value = "SOT-23"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "PartNumber"; Value = "PDTD113ZUX"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Temperature"; Value = "-55...+125∞C"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "TypeTransistor"; Value = "NPN transistor"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "ValueManufacturerPartNumber"; Value = "NPN transistor, 45V, 100mA, 100MHz, 300mW, 0.6V, 420, SOT-23, -55...+125∞C"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "VoltageCE"; Value = "45V"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "VoltageSaturation"; Value = "0.6V"; VariantName = "[No Variations]"
+Added Component: Designator=VT25(SC-70)
+Add component (AddParameter): Name = "CurrentCE"; Value = "100mA"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "CurrentGain"; Value = "420"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Frequency"; Value = "100MHz"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "HelpURL"; Value = "https://www.digikey.com/product-detail/en/on-semiconductor/BC847CLT1G/BC847CLT1GOSCT-ND/917836"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manufacturer"; Value = "ON Semiconductor"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "MaxPower"; Value = "300mW"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Package"; Value = "SOT-23"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "PartNumber"; Value = "PDTD113ZUX"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Temperature"; Value = "-55...+125∞C"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "TypeTransistor"; Value = "NPN transistor"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "ValueManufacturerPartNumber"; Value = "NPN transistor, 45V, 100mA, 100MHz, 300mW, 0.6V, 420, SOT-23, -55...+125∞C"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "VoltageCE"; Value = "45V"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "VoltageSaturation"; Value = "0.6V"; VariantName = "[No Variations]"
+Added Component: Designator=VT26(SC-70)
+Add component (AddParameter): Name = "CurrentCE"; Value = "100mA"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "CurrentGain"; Value = "420"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Frequency"; Value = "100MHz"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "HelpURL"; Value = "https://www.digikey.com/product-detail/en/on-semiconductor/BC847CLT1G/BC847CLT1GOSCT-ND/917836"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manufacturer"; Value = "ON Semiconductor"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "MaxPower"; Value = "300mW"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Package"; Value = "SOT-23"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "PartNumber"; Value = "PDTD113ZUX"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Temperature"; Value = "-55...+125∞C"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "TypeTransistor"; Value = "NPN transistor"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "ValueManufacturerPartNumber"; Value = "NPN transistor, 45V, 100mA, 100MHz, 300mW, 0.6V, 420, SOT-23, -55...+125∞C"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "VoltageCE"; Value = "45V"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "VoltageSaturation"; Value = "0.6V"; VariantName = "[No Variations]"
+Added Component: Designator=VT27(SC-70)
+Add component (AddParameter): Name = "CurrentCE"; Value = "100mA"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "CurrentGain"; Value = "420"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Frequency"; Value = "100MHz"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "HelpURL"; Value = "https://www.digikey.com/product-detail/en/on-semiconductor/BC847CLT1G/BC847CLT1GOSCT-ND/917836"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manufacturer"; Value = "ON Semiconductor"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "MaxPower"; Value = "300mW"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Package"; Value = "SOT-23"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "PartNumber"; Value = "PDTD113ZUX"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Temperature"; Value = "-55...+125∞C"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "TypeTransistor"; Value = "NPN transistor"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "ValueManufacturerPartNumber"; Value = "NPN transistor, 45V, 100mA, 100MHz, 300mW, 0.6V, 420, SOT-23, -55...+125∞C"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "VoltageCE"; Value = "45V"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "VoltageSaturation"; Value = "0.6V"; VariantName = "[No Variations]"
+Added Component: Designator=VT28(SC-70)
+Add component (AddParameter): Name = "CurrentCE"; Value = "100mA"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "CurrentGain"; Value = "420"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Frequency"; Value = "100MHz"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "HelpURL"; Value = "https://www.digikey.com/product-detail/en/on-semiconductor/BC847CLT1G/BC847CLT1GOSCT-ND/917836"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manufacturer"; Value = "ON Semiconductor"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "MaxPower"; Value = "300mW"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Package"; Value = "SOT-23"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "PartNumber"; Value = "PDTD113ZUX"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Temperature"; Value = "-55...+125∞C"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "TypeTransistor"; Value = "NPN transistor"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "ValueManufacturerPartNumber"; Value = "NPN transistor, 45V, 100mA, 100MHz, 300mW, 0.6V, 420, SOT-23, -55...+125∞C"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "VoltageCE"; Value = "45V"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "VoltageSaturation"; Value = "0.6V"; VariantName = "[No Variations]"
+Added Component: Designator=VT29(SC-70)
+Add component (AddParameter): Name = "CurrentCE"; Value = "100mA"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "CurrentGain"; Value = "420"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Frequency"; Value = "100MHz"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "HelpURL"; Value = "https://www.digikey.com/product-detail/en/on-semiconductor/BC847CLT1G/BC847CLT1GOSCT-ND/917836"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manufacturer"; Value = "ON Semiconductor"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "MaxPower"; Value = "300mW"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Package"; Value = "SOT-23"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "PartNumber"; Value = "PDTD113ZUX"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Temperature"; Value = "-55...+125∞C"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "TypeTransistor"; Value = "NPN transistor"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "ValueManufacturerPartNumber"; Value = "NPN transistor, 45V, 100mA, 100MHz, 300mW, 0.6V, 420, SOT-23, -55...+125∞C"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "VoltageCE"; Value = "45V"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "VoltageSaturation"; Value = "0.6V"; VariantName = "[No Variations]"
+Added Component: Designator=VT30(SC-70)
+Add component (AddParameter): Name = "CurrentCE"; Value = "100mA"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "CurrentGain"; Value = "420"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Frequency"; Value = "100MHz"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "HelpURL"; Value = "https://www.digikey.com/product-detail/en/on-semiconductor/BC847CLT1G/BC847CLT1GOSCT-ND/917836"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manufacturer"; Value = "ON Semiconductor"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "MaxPower"; Value = "300mW"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Package"; Value = "SOT-23"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "PartNumber"; Value = "PDTD113ZUX"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Temperature"; Value = "-55...+125∞C"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "TypeTransistor"; Value = "NPN transistor"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "ValueManufacturerPartNumber"; Value = "NPN transistor, 45V, 100mA, 100MHz, 300mW, 0.6V, 420, SOT-23, -55...+125∞C"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "VoltageCE"; Value = "45V"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "VoltageSaturation"; Value = "0.6V"; VariantName = "[No Variations]"
+Added Component: Designator=VT31(SC-70)
+Add component (AddParameter): Name = "CurrentCE"; Value = "100mA"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "CurrentGain"; Value = "420"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Frequency"; Value = "100MHz"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "HelpURL"; Value = "https://www.digikey.com/product-detail/en/on-semiconductor/BC847CLT1G/BC847CLT1GOSCT-ND/917836"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manufacturer"; Value = "ON Semiconductor"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "MaxPower"; Value = "300mW"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Package"; Value = "SOT-23"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "PartNumber"; Value = "PDTD113ZUX"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Temperature"; Value = "-55...+125∞C"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "TypeTransistor"; Value = "NPN transistor"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "ValueManufacturerPartNumber"; Value = "NPN transistor, 45V, 100mA, 100MHz, 300mW, 0.6V, 420, SOT-23, -55...+125∞C"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "VoltageCE"; Value = "45V"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "VoltageSaturation"; Value = "0.6V"; VariantName = "[No Variations]"
+Added Component: Designator=VT32(SC-70)
+Add component (AddParameter): Name = "CurrentCE"; Value = "100mA"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "CurrentGain"; Value = "420"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Frequency"; Value = "100MHz"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "HelpURL"; Value = "https://www.digikey.com/product-detail/en/on-semiconductor/BC847CLT1G/BC847CLT1GOSCT-ND/917836"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manufacturer"; Value = "ON Semiconductor"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "MaxPower"; Value = "300mW"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Package"; Value = "SOT-23"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "PartNumber"; Value = "PDTD113ZUX"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Temperature"; Value = "-55...+125∞C"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "TypeTransistor"; Value = "NPN transistor"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "ValueManufacturerPartNumber"; Value = "NPN transistor, 45V, 100mA, 100MHz, 300mW, 0.6V, 420, SOT-23, -55...+125∞C"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "VoltageCE"; Value = "45V"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "VoltageSaturation"; Value = "0.6V"; VariantName = "[No Variations]"
+Added Component: Designator=VT33(SC-70)
+Add component (AddParameter): Name = "CurrentCE"; Value = "100mA"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "CurrentGain"; Value = "420"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Frequency"; Value = "100MHz"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "HelpURL"; Value = "https://www.digikey.com/product-detail/en/on-semiconductor/BC847CLT1G/BC847CLT1GOSCT-ND/917836"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manufacturer"; Value = "ON Semiconductor"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "MaxPower"; Value = "300mW"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Package"; Value = "SOT-23"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "PartNumber"; Value = "PDTD113ZUX"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Temperature"; Value = "-55...+125∞C"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "TypeTransistor"; Value = "NPN transistor"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "ValueManufacturerPartNumber"; Value = "NPN transistor, 45V, 100mA, 100MHz, 300mW, 0.6V, 420, SOT-23, -55...+125∞C"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "VoltageCE"; Value = "45V"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "VoltageSaturation"; Value = "0.6V"; VariantName = "[No Variations]"
+Added Component: Designator=VT34(SC-70)
+Add component (AddParameter): Name = "CurrentCE"; Value = "100mA"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "CurrentGain"; Value = "420"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Frequency"; Value = "100MHz"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "HelpURL"; Value = "https://www.digikey.com/product-detail/en/on-semiconductor/BC847CLT1G/BC847CLT1GOSCT-ND/917836"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manufacturer"; Value = "ON Semiconductor"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "MaxPower"; Value = "300mW"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Package"; Value = "SOT-23"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "PartNumber"; Value = "PDTD113ZUX"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Temperature"; Value = "-55...+125∞C"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "TypeTransistor"; Value = "NPN transistor"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "ValueManufacturerPartNumber"; Value = "NPN transistor, 45V, 100mA, 100MHz, 300mW, 0.6V, 420, SOT-23, -55...+125∞C"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "VoltageCE"; Value = "45V"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "VoltageSaturation"; Value = "0.6V"; VariantName = "[No Variations]"
+Added Component: Designator=VT35(SC-70)
+Add component (AddParameter): Name = "CurrentCE"; Value = "100mA"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "CurrentGain"; Value = "420"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Frequency"; Value = "100MHz"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "HelpURL"; Value = "https://www.digikey.com/product-detail/en/on-semiconductor/BC847CLT1G/BC847CLT1GOSCT-ND/917836"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manufacturer"; Value = "ON Semiconductor"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "MaxPower"; Value = "300mW"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Package"; Value = "SOT-23"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "PartNumber"; Value = "PDTD113ZUX"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Temperature"; Value = "-55...+125∞C"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "TypeTransistor"; Value = "NPN transistor"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "ValueManufacturerPartNumber"; Value = "NPN transistor, 45V, 100mA, 100MHz, 300mW, 0.6V, 420, SOT-23, -55...+125∞C"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "VoltageCE"; Value = "45V"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "VoltageSaturation"; Value = "0.6V"; VariantName = "[No Variations]"
+Added Component: Designator=VT36(SC-70)
+Add component (AddParameter): Name = "CurrentCE"; Value = "100mA"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "CurrentGain"; Value = "420"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Frequency"; Value = "100MHz"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "HelpURL"; Value = "https://www.digikey.com/product-detail/en/on-semiconductor/BC847CLT1G/BC847CLT1GOSCT-ND/917836"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manufacturer"; Value = "ON Semiconductor"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "MaxPower"; Value = "300mW"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Package"; Value = "SOT-23"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "PartNumber"; Value = "PDTD113ZUX"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Temperature"; Value = "-55...+125∞C"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "TypeTransistor"; Value = "NPN transistor"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "ValueManufacturerPartNumber"; Value = "NPN transistor, 45V, 100mA, 100MHz, 300mW, 0.6V, 420, SOT-23, -55...+125∞C"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "VoltageCE"; Value = "45V"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "VoltageSaturation"; Value = "0.6V"; VariantName = "[No Variations]"
+Added Component: Designator=XS1(MKDSN 1,5/ 2-5,08)
+Added Component: Designator=XS2(MKDSN 1,5/ 2-5,08)
+Added Component: Designator=XS3(MKDSN 1,5/ 2-5,08)
+Added Pin To Net: NetName=+3V3 Pin=C1-2
+Added Pin To Net: NetName=+3V3 Pin=C2-2
+Added Pin To Net: NetName=+3V3 Pin=C3-2
+Added Pin To Net: NetName=+3V3 Pin=C4-2
+Added Pin To Net: NetName=+3V3 Pin=DD1-10
+Added Pin To Net: NetName=+3V3 Pin=DD1-16
+Added Pin To Net: NetName=+3V3 Pin=DD2-A2
+Added Pin To Net: NetName=+3V3 Pin=DD3-10
+Added Pin To Net: NetName=+3V3 Pin=DD3-16
+Added Pin To Net: NetName=+3V3 Pin=DD4-10
+Added Pin To Net: NetName=+3V3 Pin=DD4-16
+Added Pin To Net: NetName=+3V3 Pin=DD5-10
+Added Pin To Net: NetName=+3V3 Pin=DD5-16
+Added Pin To Net: NetName=+3V3 Pin=R1-2
+Added Net: Name=+3V3
+Added Pin To Net: NetName=+5V Pin=C6-2
+Added Pin To Net: NetName=+5V Pin=DD2-5V
+Added Pin To Net: NetName=+5V Pin=DD6-6
+Added Pin To Net: NetName=+5V Pin=R2-2
+Added Net: Name=+5V
+Added Pin To Net: NetName=1 Pin=DD1-15
+Added Pin To Net: NetName=1 Pin=VT1-1
+Added Net: Name=1
+Added Pin To Net: NetName=2 Pin=DD1-1
+Added Pin To Net: NetName=2 Pin=VT2-1
+Added Net: Name=2
+Added Pin To Net: NetName=3 Pin=DD1-2
+Added Pin To Net: NetName=3 Pin=VT3-1
+Added Net: Name=3
+Added Pin To Net: NetName=4 Pin=DD1-3
+Added Pin To Net: NetName=4 Pin=VT4-1
+Added Net: Name=4
+Added Pin To Net: NetName=5 Pin=DD1-4
+Added Pin To Net: NetName=5 Pin=VT5-1
+Added Net: Name=5
+Added Pin To Net: NetName=6 Pin=DD1-5
+Added Pin To Net: NetName=6 Pin=VT6-1
+Added Net: Name=6
+Added Pin To Net: NetName=7 Pin=DD1-6
+Added Pin To Net: NetName=7 Pin=VT7-1
+Added Net: Name=7
+Added Pin To Net: NetName=8 Pin=DD1-7
+Added Pin To Net: NetName=8 Pin=VT8-1
+Added Net: Name=8
+Added Pin To Net: NetName=9 Pin=DD3-15
+Added Pin To Net: NetName=9 Pin=VT9-1
+Added Net: Name=9
+Added Pin To Net: NetName=10 Pin=DD3-1
+Added Pin To Net: NetName=10 Pin=VT10-1
+Added Net: Name=10
+Added Pin To Net: NetName=11 Pin=DD3-2
+Added Pin To Net: NetName=11 Pin=VT11-1
+Added Net: Name=11
+Added Pin To Net: NetName=12 Pin=DD3-3
+Added Pin To Net: NetName=12 Pin=VT12-1
+Added Net: Name=12
+Added Pin To Net: NetName=13 Pin=DD3-4
+Added Pin To Net: NetName=13 Pin=VT13-1
+Added Net: Name=13
+Added Pin To Net: NetName=14 Pin=DD3-5
+Added Pin To Net: NetName=14 Pin=VT14-1
+Added Net: Name=14
+Added Pin To Net: NetName=15 Pin=DD3-6
+Added Pin To Net: NetName=15 Pin=VT15-1
+Added Net: Name=15
+Added Pin To Net: NetName=16 Pin=DD3-7
+Added Pin To Net: NetName=16 Pin=VT16-1
+Added Net: Name=16
+Added Pin To Net: NetName=17 Pin=DD4-15
+Added Pin To Net: NetName=17 Pin=VT17-1
+Added Net: Name=17
+Added Pin To Net: NetName=18 Pin=DD4-1
+Added Pin To Net: NetName=18 Pin=VT18-1
+Added Net: Name=18
+Added Pin To Net: NetName=19 Pin=DD4-2
+Added Pin To Net: NetName=19 Pin=VT21-1
+Added Net: Name=19
+Added Pin To Net: NetName=20 Pin=DD4-3
+Added Pin To Net: NetName=20 Pin=VT22-1
+Added Net: Name=20
+Added Pin To Net: NetName=21 Pin=DD4-4
+Added Pin To Net: NetName=21 Pin=VT23-1
+Added Net: Name=21
+Added Pin To Net: NetName=22 Pin=DD4-5
+Added Pin To Net: NetName=22 Pin=VT24-1
+Added Net: Name=22
+Added Pin To Net: NetName=23 Pin=DD4-6
+Added Pin To Net: NetName=23 Pin=VT19-1
+Added Net: Name=23
+Added Pin To Net: NetName=24 Pin=DD4-7
+Added Pin To Net: NetName=24 Pin=VT20-1
+Added Net: Name=24
+Added Pin To Net: NetName=25 Pin=DD5-15
+Added Pin To Net: NetName=25 Pin=VT25-1
+Added Net: Name=25
+Added Pin To Net: NetName=26 Pin=DD5-1
+Added Pin To Net: NetName=26 Pin=VT26-1
+Added Net: Name=26
+Added Pin To Net: NetName=27 Pin=DD5-2
+Added Pin To Net: NetName=27 Pin=VT27-1
+Added Net: Name=27
+Added Pin To Net: NetName=28 Pin=DD5-3
+Added Pin To Net: NetName=28 Pin=VT28-1
+Added Net: Name=28
+Added Pin To Net: NetName=29 Pin=DD5-4
+Added Pin To Net: NetName=29 Pin=VT29-1
+Added Net: Name=29
+Added Pin To Net: NetName=30 Pin=DD5-5
+Added Pin To Net: NetName=30 Pin=VT30-1
+Added Net: Name=30
+Added Pin To Net: NetName=31 Pin=DD5-6
+Added Pin To Net: NetName=31 Pin=VT31-1
+Added Net: Name=31
+Added Pin To Net: NetName=32 Pin=DD5-7
+Added Pin To Net: NetName=32 Pin=VT32-1
+Added Net: Name=32
+Added Pin To Net: NetName=33 Pin=DD2-19
+Added Pin To Net: NetName=33 Pin=VT33-1
+Added Net: Name=33
+Added Pin To Net: NetName=34 Pin=DD2-18
+Added Pin To Net: NetName=34 Pin=VT34-1
+Added Net: Name=34
+Added Pin To Net: NetName=35 Pin=DD2-42
+Added Pin To Net: NetName=35 Pin=VT35-1
+Added Net: Name=35
+Added Pin To Net: NetName=36 Pin=DD2-43
+Added Pin To Net: NetName=36 Pin=VT36-1
+Added Net: Name=36
+Added Pin To Net: NetName=GND Pin=C1-1
+Added Pin To Net: NetName=GND Pin=C2-1
+Added Pin To Net: NetName=GND Pin=C3-1
+Added Pin To Net: NetName=GND Pin=C4-1
+Added Pin To Net: NetName=GND Pin=C5-1
+Added Pin To Net: NetName=GND Pin=C6-1
+Added Pin To Net: NetName=GND Pin=DD1-8
+Added Pin To Net: NetName=GND Pin=DD1-13
+Added Pin To Net: NetName=GND Pin=DD2-GND
+Added Pin To Net: NetName=GND Pin=DD2-GND
+Added Pin To Net: NetName=GND Pin=DD2-GND
+Added Pin To Net: NetName=GND Pin=DD3-8
+Added Pin To Net: NetName=GND Pin=DD3-13
+Added Pin To Net: NetName=GND Pin=DD4-8
+Added Pin To Net: NetName=GND Pin=DD4-13
+Added Pin To Net: NetName=GND Pin=DD5-8
+Added Pin To Net: NetName=GND Pin=DD5-13
+Added Pin To Net: NetName=GND Pin=DD6-2
+Added Pin To Net: NetName=GND Pin=DD6-4
+Added Pin To Net: NetName=GND Pin=HL2-1
+Added Pin To Net: NetName=GND Pin=VT1-2
+Added Pin To Net: NetName=GND Pin=VT2-2
+Added Pin To Net: NetName=GND Pin=VT3-2
+Added Pin To Net: NetName=GND Pin=VT4-2
+Added Pin To Net: NetName=GND Pin=VT5-2
+Added Pin To Net: NetName=GND Pin=VT6-2
+Added Pin To Net: NetName=GND Pin=VT7-2
+Added Pin To Net: NetName=GND Pin=VT8-2
+Added Pin To Net: NetName=GND Pin=VT9-2
+Added Pin To Net: NetName=GND Pin=VT10-2
+Added Pin To Net: NetName=GND Pin=VT11-2
+Added Pin To Net: NetName=GND Pin=VT12-2
+Added Pin To Net: NetName=GND Pin=VT13-2
+Added Pin To Net: NetName=GND Pin=VT14-2
+Added Pin To Net: NetName=GND Pin=VT15-2
+Added Pin To Net: NetName=GND Pin=VT16-2
+Added Pin To Net: NetName=GND Pin=VT17-2
+Added Pin To Net: NetName=GND Pin=VT18-2
+Added Pin To Net: NetName=GND Pin=VT19-2
+Added Pin To Net: NetName=GND Pin=VT20-2
+Added Pin To Net: NetName=GND Pin=VT21-2
+Added Pin To Net: NetName=GND Pin=VT22-2
+Added Pin To Net: NetName=GND Pin=VT23-2
+Added Pin To Net: NetName=GND Pin=VT24-2
+Added Pin To Net: NetName=GND Pin=VT25-2
+Added Pin To Net: NetName=GND Pin=VT26-2
+Added Pin To Net: NetName=GND Pin=VT27-2
+Added Pin To Net: NetName=GND Pin=VT28-2
+Added Pin To Net: NetName=GND Pin=VT29-2
+Added Pin To Net: NetName=GND Pin=VT30-2
+Added Pin To Net: NetName=GND Pin=VT31-2
+Added Pin To Net: NetName=GND Pin=VT32-2
+Added Pin To Net: NetName=GND Pin=VT33-2
+Added Pin To Net: NetName=GND Pin=VT34-2
+Added Pin To Net: NetName=GND Pin=VT35-2
+Added Pin To Net: NetName=GND Pin=VT36-2
+Added Pin To Net: NetName=GND Pin=XS2-1
+Added Net: Name=GND
+Added Pin To Net: NetName=MOSI Pin=DD1-14
+Added Pin To Net: NetName=MOSI Pin=DD2-28
+Added Net: Name=MOSI
+Added Pin To Net: NetName=NET1 Pin=*-1
+Added Net: Name=NET1
+Added Pin To Net: NetName=NET2 Pin=*1-1
+Added Net: Name=NET2
+Added Pin To Net: NetName=NET3 Pin=*2-1
+Added Net: Name=NET3
+Added Pin To Net: NetName=NET4 Pin=*3-1
+Added Net: Name=NET4
+Added Pin To Net: NetName=NET5 Pin=*4-1
+Added Net: Name=NET5
+Added Pin To Net: NetName=NET6 Pin=*5-1
+Added Net: Name=NET6
+Added Pin To Net: NetName=NET7 Pin=*6-1
+Added Net: Name=NET7
+Added Pin To Net: NetName=NET8 Pin=*7-1
+Added Net: Name=NET8
+Added Pin To Net: NetName=NET9 Pin=*8-1
+Added Net: Name=NET9
+Added Pin To Net: NetName=NET10 Pin=*9-1
+Added Net: Name=NET10
+Added Pin To Net: NetName=NET11 Pin=*10-1
+Added Net: Name=NET11
+Added Pin To Net: NetName=NET12 Pin=*11-1
+Added Net: Name=NET12
+Added Pin To Net: NetName=NET13 Pin=*12-1
+Added Net: Name=NET13
+Added Pin To Net: NetName=NET14 Pin=*13-1
+Added Net: Name=NET14
+Added Pin To Net: NetName=NET15 Pin=*14-1
+Added Net: Name=NET15
+Added Pin To Net: NetName=NET16 Pin=*15-1
+Added Net: Name=NET16
+Added Pin To Net: NetName=NET17 Pin=*16-1
+Added Net: Name=NET17
+Added Pin To Net: NetName=NET18 Pin=*17-1
+Added Net: Name=NET18
+Added Pin To Net: NetName=NET19 Pin=*18-1
+Added Net: Name=NET19
+Added Pin To Net: NetName=NET20 Pin=*19-1
+Added Net: Name=NET20
+Added Pin To Net: NetName=NET21 Pin=*20-1
+Added Net: Name=NET21
+Added Pin To Net: NetName=NET22 Pin=*21-1
+Added Net: Name=NET22
+Added Pin To Net: NetName=NET23 Pin=*22-1
+Added Pin To Net: NetName=NET23 Pin=XS3-1
+Added Net: Name=NET23
+Added Pin To Net: NetName=NET24 Pin=*23-1
+Added Net: Name=NET24
+Added Pin To Net: NetName=NET25 Pin=*24-1
+Added Net: Name=NET25
+Added Pin To Net: NetName=NET26 Pin=*25-1
+Added Net: Name=NET26
+Added Pin To Net: NetName=NET27 Pin=*26-1
+Added Net: Name=NET27
+Added Pin To Net: NetName=NET28 Pin=*27-1
+Added Net: Name=NET28
+Added Pin To Net: NetName=NET29 Pin=*28-1
+Added Net: Name=NET29
+Added Pin To Net: NetName=NET30 Pin=*29-1
+Added Net: Name=NET30
+Added Pin To Net: NetName=NET31 Pin=*30-1
+Added Net: Name=NET31
+Added Pin To Net: NetName=NET32 Pin=*31-1
+Added Net: Name=NET32
+Added Pin To Net: NetName=NET33 Pin=*32-1
+Added Net: Name=NET33
+Added Pin To Net: NetName=NET34 Pin=*33-1
+Added Net: Name=NET34
+Added Pin To Net: NetName=NET35 Pin=*34-1
+Added Net: Name=NET35
+Added Pin To Net: NetName=NET36 Pin=*35-1
+Added Net: Name=NET36
+Added Pin To Net: NetName=NetDD1_9 Pin=DD1-9
+Added Pin To Net: NetName=NetDD1_9 Pin=DD3-14
+Added Net: Name=NetDD1_9
+Added Pin To Net: NetName=NetDD2_2 Pin=DD2-2
+Added Pin To Net: NetName=NetDD2_2 Pin=HL1-1
+Added Net: Name=NetDD2_2
+Added Pin To Net: NetName=NetDD3_9 Pin=DD3-9
+Added Pin To Net: NetName=NetDD3_9 Pin=DD4-14
+Added Net: Name=NetDD3_9
+Added Pin To Net: NetName=NetDD4_9 Pin=DD4-9
+Added Pin To Net: NetName=NetDD4_9 Pin=DD5-14
+Added Net: Name=NetDD4_9
+Added Pin To Net: NetName=NetHL1_2 Pin=HL1-2
+Added Pin To Net: NetName=NetHL1_2 Pin=R1-1
+Added Net: Name=NetHL1_2
+Added Pin To Net: NetName=NetHL2_2 Pin=HL2-2
+Added Pin To Net: NetName=NetHL2_2 Pin=R2-1
+Added Net: Name=NetHL2_2
+Added Pin To Net: NetName=NetRY1_6 Pin=VT1-3
+Added Net: Name=NetRY1_6
+Added Pin To Net: NetName=NetRY2_6 Pin=VT2-3
+Added Net: Name=NetRY2_6
+Added Pin To Net: NetName=NetRY3_6 Pin=VT3-3
+Added Net: Name=NetRY3_6
+Added Pin To Net: NetName=NetRY4_6 Pin=VT4-3
+Added Net: Name=NetRY4_6
+Added Pin To Net: NetName=NetRY5_6 Pin=VT5-3
+Added Net: Name=NetRY5_6
+Added Pin To Net: NetName=NetRY6_6 Pin=VT6-3
+Added Net: Name=NetRY6_6
+Added Pin To Net: NetName=NetRY7_6 Pin=VT7-3
+Added Net: Name=NetRY7_6
+Added Pin To Net: NetName=NetRY8_6 Pin=VT8-3
+Added Net: Name=NetRY8_6
+Added Pin To Net: NetName=NetRY9_6 Pin=VT9-3
+Added Net: Name=NetRY9_6
+Added Pin To Net: NetName=NetRY10_6 Pin=VT10-3
+Added Net: Name=NetRY10_6
+Added Pin To Net: NetName=NetRY11_6 Pin=VT11-3
+Added Net: Name=NetRY11_6
+Added Pin To Net: NetName=NetRY12_6 Pin=VT12-3
+Added Net: Name=NetRY12_6
+Added Pin To Net: NetName=NetRY13_6 Pin=VT13-3
+Added Net: Name=NetRY13_6
+Added Pin To Net: NetName=NetRY14_6 Pin=VT14-3
+Added Net: Name=NetRY14_6
+Added Pin To Net: NetName=NetRY15_6 Pin=VT15-3
+Added Net: Name=NetRY15_6
+Added Pin To Net: NetName=NetRY16_6 Pin=VT16-3
+Added Net: Name=NetRY16_6
+Added Pin To Net: NetName=NetRY17_6 Pin=VT17-3
+Added Net: Name=NetRY17_6
+Added Pin To Net: NetName=NetRY18_6 Pin=VT18-3
+Added Net: Name=NetRY18_6
+Added Pin To Net: NetName=NetRY19_6 Pin=VT19-3
+Added Net: Name=NetRY19_6
+Added Pin To Net: NetName=NetRY20_6 Pin=VT20-3
+Added Net: Name=NetRY20_6
+Added Pin To Net: NetName=NetRY21_6 Pin=VT21-3
+Added Net: Name=NetRY21_6
+Added Pin To Net: NetName=NetRY22_6 Pin=VT22-3
+Added Net: Name=NetRY22_6
+Added Pin To Net: NetName=NetRY23_6 Pin=VT23-3
+Added Net: Name=NetRY23_6
+Added Pin To Net: NetName=NetRY24_6 Pin=VT24-3
+Added Net: Name=NetRY24_6
+Added Pin To Net: NetName=NetRY25_6 Pin=VT25-3
+Added Net: Name=NetRY25_6
+Added Pin To Net: NetName=NetRY26_6 Pin=VT26-3
+Added Net: Name=NetRY26_6
+Added Pin To Net: NetName=NetRY27_6 Pin=VT27-3
+Added Net: Name=NetRY27_6
+Added Pin To Net: NetName=NetRY28_6 Pin=VT28-3
+Added Net: Name=NetRY28_6
+Added Pin To Net: NetName=NetRY29_6 Pin=VT29-3
+Added Net: Name=NetRY29_6
+Added Pin To Net: NetName=NetRY30_6 Pin=VT30-3
+Added Net: Name=NetRY30_6
+Added Pin To Net: NetName=NetRY31_6 Pin=VT31-3
+Added Net: Name=NetRY31_6
+Added Pin To Net: NetName=NetRY32_6 Pin=VT32-3
+Added Net: Name=NetRY32_6
+Added Pin To Net: NetName=NetRY33_6 Pin=VT33-3
+Added Net: Name=NetRY33_6
+Added Pin To Net: NetName=NetRY34_6 Pin=VT34-3
+Added Net: Name=NetRY34_6
+Added Pin To Net: NetName=NetRY35_6 Pin=VT35-3
+Added Net: Name=NetRY35_6
+Added Pin To Net: NetName=NetRY36_6 Pin=VT36-3
+Added Net: Name=NetRY36_6
+Added Pin To Net: NetName=RX1 Pin=DD2-31
+Added Pin To Net: NetName=RX1 Pin=XS1-2
+Added Net: Name=RX1
+Added Pin To Net: NetName=Shift_register Pin=DD1-11
+Added Pin To Net: NetName=Shift_register Pin=DD2-26
+Added Pin To Net: NetName=Shift_register Pin=DD3-11
+Added Pin To Net: NetName=Shift_register Pin=DD4-11
+Added Pin To Net: NetName=Shift_register Pin=DD5-11
+Added Net: Name=Shift_register
+Added Pin To Net: NetName=Storage_register Pin=DD1-12
+Added Pin To Net: NetName=Storage_register Pin=DD2-25
+Added Pin To Net: NetName=Storage_register Pin=DD3-12
+Added Pin To Net: NetName=Storage_register Pin=DD4-12
+Added Pin To Net: NetName=Storage_register Pin=DD5-12
+Added Net: Name=Storage_register
+Added Pin To Net: NetName=TX1 Pin=DD2-30
+Added Pin To Net: NetName=TX1 Pin=XS1-1
+Added Net: Name=TX1
+Added Pin To Net: NetName=Vin Pin=C5-2
+Added Pin To Net: NetName=Vin Pin=DD6-1
+Added Pin To Net: NetName=Vin Pin=XS2-2
+Added Net: Name=Vin
+Added Class: Name=1.NZPP
+Added Class: Name=2.NZPP

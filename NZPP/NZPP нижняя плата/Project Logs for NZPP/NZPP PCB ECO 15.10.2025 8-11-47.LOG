@@ -1,0 +1,9 @@
+Removed Pin From Net: NetName=Vin Pin=DD6-1
+Added Component: Designator=L1(100לךֳם)
+Add component. Clean all parameters for all variants
+Added Pin To Net: NetName=Vin Pin=L1-1
+Added Pin To Net: NetName=NetDD6_1 Pin=DD6-1
+Added Pin To Net: NetName=NetDD6_1 Pin=L1-2
+Added Net: Name=NetDD6_1
+Added Member To Class: ClassName=1.NZPP Member=Component L1 ִנמססוכü 100לךֳם CD43-101K
+Added Member To Class: ClassName=1.NZPP Member=Component XS1 MKDSN

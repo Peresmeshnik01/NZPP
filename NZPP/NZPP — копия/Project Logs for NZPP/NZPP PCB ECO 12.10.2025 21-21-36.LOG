@@ -1,6 +1,0 @@
-Added Component: Designator=VD18(DIODE: SOD323)
-Add component (AddParameter): Name = "Наименование"; Value = "1N4148"; VariantName = "[No Variations]"
-Add component (AddParameter): Name = "Примечание"; Value = "SMD"; VariantName = "[No Variations]"
-Added Pin To Net: NetName=NetRY13_6 Pin=VD18-1
-Added Pin To Net: NetName=+5V Pin=VD18-2
-Added Member To Class: ClassName=2.NZPP Member=Component VD18 1N4148

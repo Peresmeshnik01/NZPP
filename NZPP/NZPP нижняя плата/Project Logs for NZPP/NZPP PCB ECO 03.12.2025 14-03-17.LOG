@@ -1,0 +1,13 @@
+Removed Pin From Net: NetName=NetDD2_2 Pin=HL1-1
+Removed Pin From Net: NetName=GND Pin=HL2-1
+Change Component Footprint: Designator=DD2 Old Footprint=STM32F103C8T6 New Footprint=STM32F103C8T6 - duplicate
+Added Pin To Net: NetName=NetDD2_2 Pin=HL1-2
+Added Pin To Net: NetName=GND Pin=HL2-2
+Added Pin To Net: NetName=NetHL1_1 Pin=HL1-1
+Added Pin To Net: NetName=NetHL1_1 Pin=R1-1
+Added Net: Name=NetHL1_1
+Added Pin To Net: NetName=NetHL2_1 Pin=HL2-1
+Added Pin To Net: NetName=NetHL2_1 Pin=R2-1
+Added Net: Name=NetHL2_1
+Added Member To Class: ClassName=1.NZPP Member=Component X1 DRB-9FA
+Added Member To Class: ClassName=1.NZPP Member=Component XP1 DS210

@@ -1,0 +1,8 @@
+Added Component: Designator=HL1(led)
+Added Component: Designator=HL2(led)
+Added Pin To Net: NetName=NetDD2_2 Pin=HL1-1
+Added Pin To Net: NetName=NetHL1_2 Pin=HL1-2
+Added Pin To Net: NetName=GND Pin=HL2-1
+Added Pin To Net: NetName=NetHL2_2 Pin=HL2-2
+Added Member To Class: ClassName=1.NZPP Member=Component HL1 GNL-3012HD
+Added Member To Class: ClassName=1.NZPP Member=Component HL2 GNL-3012HD
