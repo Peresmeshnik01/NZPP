@@ -1,0 +1,5 @@
+Added Component: Designator=VD18(DIODE: SOD323)
+Add component (AddParameter): Name = "Наименование"; Value = "1N4148"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Примечание"; Value = "SMD"; VariantName = "[No Variations]"
+Added Member To Class: ClassName=1.NZPP Member=Component *32 Point
+Added Member To Class: ClassName=2.NZPP Member=Component VD18 1N4148

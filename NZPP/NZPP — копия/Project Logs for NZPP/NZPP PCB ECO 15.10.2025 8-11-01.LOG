@@ -1,0 +1,16 @@
+Removed Pin From Net: NetName=Vin Pin=DD6-1
+Removed Pin From Net: NetName=TX1 Pin=XS1-1
+Removed Pin From Net: NetName=RX1 Pin=XS1-2
+Removed Member From Class: ClassName=1.NZPP Member=XS1
+Added Component: Designator=L?(100לךֳם)
+Add component. Clean all parameters for all variants
+Added Component: Designator=XS?(MKDSN 1,5/ 2-5,08)
+Add component. Clean all parameters for all variants
+Added Pin To Net: NetName=Vin Pin=L?-1
+Added Pin To Net: NetName=TX1 Pin=XS?-1
+Added Pin To Net: NetName=RX1 Pin=XS?-2
+Added Pin To Net: NetName=NetDD6_1 Pin=DD6-1
+Added Pin To Net: NetName=NetDD6_1 Pin=L?-2
+Added Net: Name=NetDD6_1
+Added Member To Class: ClassName=1.NZPP Member=Component L? ִנמססוכü 100לךֳם CD43-101K
+Added Member To Class: ClassName=1.NZPP Member=Component XS? MKDSN
