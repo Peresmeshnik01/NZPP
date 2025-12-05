@@ -1,0 +1,923 @@
+<html>
+<head>
+<META http-equiv="Content-Type" content="text/html">
+<style type="text/css">
+		h1, h2, h3, h4, h5, h6 {
+			font-family : segoe ui;
+			color : black;
+			background-color : #EDE7D9;
+			padding: 0.3em;
+		}
+
+		h1 {
+			font-size: 1.2em;
+		}		
+
+		h2 {
+			font-size: 1.2em;
+		}
+
+		body {
+			font-family : segoe ui;
+		}
+
+		td, th {
+			padding: 0.5em;
+			text-align : left;
+			width: 10em;
+		}
+		th {
+			background-color : #EEEEEE;
+
+		}
+		th.column1, td.column1 {
+			text-align: left;
+			width : auto;
+		}
+		table {
+			width : 100%;
+			font-size: 0.9em;
+		}
+
+		.DRC_summary_header {
+			padding-bottom : 0.1em;
+			border : 0px solid black;
+			width: 100%;
+			align: left;
+		}
+
+		.DRC_summary_header_col1,
+		.DRC_summary_header_col2, 
+		.DRC_summary_header_col3 {
+			color : black;
+			font-size:100%;
+			padding : 0em;
+			padding-top : 0.2em;
+			padding-bottom 0.2em;
+			border : 0px solid black;
+			vertical-align: top;
+			text-align: left;
+		}
+
+		.DRC_summary_header_col1 {
+			font-weight: bold;
+			width: 9em;
+		}
+
+		.DRC_summary_header_col2 {
+			width: 0.1em;
+		
+		}
+
+		.DRC_summary_header_col3 {
+			width : auto;
+		}
+
+		.header_holder {
+		    Width = 100%;
+		    border = 0px solid green;
+		    padding = 0;
+		}
+
+
+		.front_matter, .front_matter_column1, .front_matter_column2, .front_matter_column3
+		{
+			left : 0;
+			top : 0;
+			padding: 0em;
+			padding-top : 0.1em;
+			border : 0px solid black;
+			width : 100%;
+			vertical-align: top;
+			text-align: left;
+		}
+
+		.front_matter_column1 {
+			width : 8em;
+			font-weight: bold;
+		}
+
+		.front_matter_column2 {
+			width: 0.1em;
+		}
+
+		.front_matter_column3 {
+			width : auto;
+		}
+
+		.total_column1, .total_column {
+			font-weight : bold;
+		}
+		.total_column1 {
+			text-align : left;
+		}
+		.warning, .error {
+			color : red;
+			font-weight : bold;
+		}
+		tr.onmouseout_odd {
+			background-color : #white;
+		}
+		tr.onmouseout_even { 
+			background-color : #FAFAFA;
+		}
+		tr.onmouseover_odd, tr.onmouseover_even { 
+			background-color : #EEEEEE;
+		} 
+		a:link, a:visited, .q a:link,.q a:active,.q {
+			color: #21489e; 
+		}
+		a:link.callback, a:visited.callback { 
+			color: #21489e;
+		}
+		a:link.customize, a:visited.customize {
+			color: #C0C0C0;
+			position: absolute; 
+			right: 10px;
+		}	
+		p.contents_level1 {
+			font-weight : bold;
+			font-size : 110%;
+			margin : 0.5em;
+		}
+		p.contents_level2 {
+			position : relative;
+			left : 20px;
+			margin : 0.5em;
+		}
+	</style><script type="text/javascript">
+		function coordToMils(coord) {
+			var number = coord / 10000;
+			
+			if (number != number.toFixed(3))
+				number = number.toFixed(3);
+
+			return number + 'mil'
+		}
+
+		function coordToMM(coord) {
+			var number = 0.0254 * coord / 10000;
+			
+			if (number != number.toFixed(4))
+				number = number.toFixed(4);
+			
+			return number + 'mm'
+		}
+	
+		function convertCoord(coordNode, units) {
+			for (var i = 0; i < coordNode.childNodes.length; i++) {
+				coordNode.removeChild(coordNode.childNodes[i]);
+			}
+
+			var coord = coordNode.getAttribute('value');
+			if (coord != null) {
+				if (units == 'mm') {
+					textNode = document.createTextNode(coordToMM(coord));
+					coordNode.appendChild(textNode);
+				} else if (units == 'mil') {
+					textNode = document.createTextNode(coordToMils(coord));		
+					coordNode.appendChild(textNode);	
+				}
+			}
+		}
+	
+		function convertUnits(unitNode, units) {
+			for (var i = 0; i < unitNode.childNodes.length; i++) {
+				unitNode.removeChild(unitNode.childNodes[i]);		
+			}
+		
+			textNode = document.createTextNode(units); 
+			unitNode.appendChild(textNode);
+		}
+	
+		function changeUnits(radio_input, units) {
+			if (radio_input.checked) {
+			
+				var elements = document.getElementsByName('coordinate');
+				if (elements) {
+					for (var i = 0; i < elements.length; i++) {
+						convertCoord(elements[i], units);
+					}
+				}
+	
+				var elements = document.getElementsByName('units');
+				if (elements) {
+					for (var i = 0; i < elements.length; i++) {
+						convertUnits(elements[i], units);
+					}
+				}
+			}
+		}
+	</script><title>Design Rule Verification Report</title>
+</head>
+<body onload=""><img ALT="Altium" src="
+			file://D:\Polineno\Altium\Templates\AD_logo.png
+		"><h1>Design Rule Verification Report</h1>
+<table class="header_holder">
+<td class="column1">
+<table class="front_matter">
+<tr class="front_matter">
+<td class="front_matter_column1">Date:</td>
+<td class="front_matter_column2"></td>
+<td class="front_matter_column3">03.12.2025</td>
+</tr>
+<tr class="front_matter">
+<td class="front_matter_column1">Time:</td>
+<td class="front_matter_column2"></td>
+<td class="front_matter_column3">20:14:12</td>
+</tr>
+<tr class="front_matter">
+<td class="front_matter_column1">Elapsed Time:</td>
+<td class="front_matter_column2"></td>
+<td class="front_matter_column3">00:00:07</td>
+</tr>
+<tr class="front_matter">
+<td class="front_matter_column1">Filename:</td>
+<td class="front_matter_column2"></td>
+<td class="front_matter_column3"><a href="file:///D:\GitHub\NZPP\NZPP\NZPP\NZPP.PcbDoc" class="file"><acronym title="D:\GitHub\NZPP\NZPP\NZPP\NZPP.PcbDoc">D:\GitHub\NZPP\NZPP\NZPP\NZPP.PcbDoc</acronym></a></td>
+</tr>
+</table>
+</td>
+<td class="column2">
+<table class="DRC_summary_header">
+<tr>
+<td class="DRC_summary_header_col1">Warnings:</td>
+<td class="DRC_summary_header_col2"></td>
+<td class="DRC_summary_header_col3">0</td></tr>
+<tr>
+<td class="DRC_summary_header_col1">Rule Violations:</td>
+<td class="DRC_summary_header_col2"></td>
+<td class="DRC_summary_header_col3" style="color : red">193</td></tr>
+</table>
+</td>
+</table><a name="IDQRSE4LDRFUXJJ0CEH1SCP0HU0GIMEBLDWBTTH1CUPZE05MAANAXC"><h2>Summary</h2></a><table>
+<tr>
+<th class="column1">Warnings</th>
+<th class="column2">Count</th>
+</tr>
+<tr>
+<td style="font-weight : bold; text-align : right" class="column1">Total</td>
+<td style="font-weight : bold" class="column2">0</td>
+</tr>
+</table><br><table>
+<tr>
+<th class="column1">Rule Violations</th>
+<th class="column2">Count</th>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDI3SKX3NTAFU5K4Z5VF0VR3QLQCDEQG1JH1WHJGK32GOJFXKKIYWB">Clearance Constraint (Gap=0.254mm) (All),(All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#IDMUSR0PNORWRBISAOVM3NXAKKXLN4EW4JH12SJCGVNWT1A12RY3UK">Short-Circuit Constraint (Allowed=No) (All),(All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDUVNURS2HLXNXCACKV0KOJNQGCB3A0X4SOAZGWTI3LKGHJEBVERQO">Un-Routed Net Constraint ( (All) )</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#IDBEOTCMWTL241OE2EDKQIUAKX1MDABVWLETX0PCCSNX2DA555AGLD">Modified Polygon (Allow modified: No), (Allow shelved: No)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDN2Y4MPRTIBCLNIX5BAFM1TEFHI035BWDIFLYPQKFRMBRSNVN2XRC">Width Constraint (Min=0.254mm) (Max=1mm) (Preferred=0.5mm) (All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#IDVSLRVTTWTSI2CS4KOSWA4E5P1CIBW4AQX4QDSCCXZVXK4UQMHIQI">Width Constraint (Min=0.516mm) (Max=0.516mm) (Preferred=0.516mm) (InNet('NET37'))</a></td>
+<td class="column2">192</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDDJCYGPSYIUC3I5ZUIVQSNB0COEUYEKV5G2Q4NHC0D1LZ4BTEVUL">Power Plane Connect Rule(Relief Connect )(Expansion=0.508mm) (Conductor Width=0.254mm) (Air Gap=0.254mm) (Entries=4) (All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#IDS3WDQBGRXM10HTZDAX52OGCKMI4II4VR34H0KOO145RZEULN23LK">Hole Size Constraint (Min=0.025mm) (Max=9mm) (All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDDN4ZOTVBVUW1CW5TJKPELWUUNL3YH0OV33YJR4N0EMBKEN3HNZ1">Hole To Hole Clearance (Gap=0.254mm) (All),(All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#ID3IOAHB4HL40QL52JWUBJVWAFXK4JJERZ1GBUMDYQXLAYWGABNMK">Minimum Solder Mask Sliver (Gap=0.254mm) (All),(All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDNCT5ZSQUV4NLEDX12GO3YYDAPBWNOCCWEM4PO0EAMAI3LVDQEAXN">Silk To Solder Mask (Clearance=0.254mm) (IsPad),(OnLayer('Bottom Layer'))</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#IDT4ZHHDC5TIJSKBO1N01QXP4PAKRR2IL1OETDRFKXUZK4S0KDTKEL">Silk To Solder Mask (Clearance=0.254mm) (IsPad),(OnLayer('Top Layer'))</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDUO1QCNQRVAJSJMWMYQ3LLFXZ0AV3MNHON4U2ZLTQZPAAMJ0QBXE">Silk to Silk (Clearance=0.254mm) (All),(OnLayer('Top Overlay'))</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#IDBIDUOALDDNDEIIEKQ2V4KHKROMTGRFO01ZIWY2GI5P31U5EFWSQI">Net Antennae (Tolerance=0mm) (All)</a></td>
+<td class="column2">1</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDTMFC414GYBRZEHUG4SUNOD3XCMPOZDBY4SW4EQLKX5VYKTNCQ0KG">Matched Lengths(Tolerance=1mm) (InNetClass('All Nets'))</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#IDRRLFDOZGZUJ3DIC55SY3Z41RQBZLYKZLJRCDVJMOQSMHYM3L2ZPE">Height Constraint (Min=0mm) (Max=25.4mm) (Prefered=12.7mm) (All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr>
+<td style="font-weight : bold; text-align : right" class="column1">Total</td>
+<td style="font-weight : bold" class="column2">193</td>
+</tr>
+</table><br><a name="IDVSLRVTTWTSI2CS4KOSWA4E5P1CIBW4AQX4QDSCCXZVXK4UQMHIQI"><table>
+<tr>
+<th style="text-align : left" colspan="1" class="rule">Width Constraint (Min=0.516mm) (Max=0.516mm) (Preferred=0.516mm) (InNet('NET37'))</th>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\GitHub\NZPP\NZPP\NZPP\NZPP.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=7970.728mil|Location2.X=8029.344mil|Location1.Y=5629.783mil|Location2.Y=5672.154mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\GitHub\NZPP\NZPP\NZPP\NZPP.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=7970.728mil|Location2.X=8029.344mil|Location1.Y=5629.783mil|Location2.Y=5672.154mil|Absolute=True">Width Constraint: Track (202.9mm,143.44mm)(203.089mm,143.629mm) on Bottom Layer Actual Width = 1mm, Target Width = 0.516mm</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\GitHub\NZPP\NZPP\NZPP\NZPP.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=8022.776mil|Location2.X=8064.837mil|Location1.Y=5672.382mil|Location2.Y=5699.425mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\GitHub\NZPP\NZPP\NZPP\NZPP.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=8022.776mil|Location2.X=8064.837mil|Location1.Y=5672.382mil|Location2.Y=5699.425mil|Absolute=True">Width Constraint: Track (203.145mm,143.445mm)(205.005mm,145.305mm) on Bottom Layer Actual Width = 0.516mm (20.315mil), Target Width = 0.5161mm (20.3203mil)</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\GitHub\NZPP\NZPP\NZPP\NZPP.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=8131.043mil|Location2.X=8178.431mil|Location1.Y=5708.996mil|Location2.Y=5732.311mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\GitHub\NZPP\NZPP\NZPP\NZPP.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=8131.043mil|Location2.X=8178.431mil|Location1.Y=5708.996mil|Location2.Y=5732.311mil|Absolute=True">Width Constraint: Track (205.005mm,145.305mm)(208.645mm,145.305mm) on Bottom Layer Actual Width = 0.516mm (20.315mil), Target Width = 0.5161mm (20.3203mil)</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\GitHub\NZPP\NZPP\NZPP\NZPP.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=8210.874mil|Location2.X=8252.936mil|Location1.Y=4486.465mil|Location2.Y=4513.508mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\GitHub\NZPP\NZPP\NZPP\NZPP.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=8210.874mil|Location2.X=8252.936mil|Location1.Y=4486.465mil|Location2.Y=4513.508mil|Absolute=True">Width Constraint: Track (207.9mm,113.3mm)(209.805mm,115.205mm) on Bottom Layer Actual Width = 0.516mm (20.315mil), Target Width = 0.5161mm (20.3203mil)</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\GitHub\NZPP\NZPP\NZPP\NZPP.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=8196.357mil|Location2.X=8232.087mil|Location1.Y=5426.074mil|Location2.Y=5458.256mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\GitHub\NZPP\NZPP\NZPP\NZPP.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=8196.357mil|Location2.X=8232.087mil|Location1.Y=5426.074mil|Location2.Y=5458.256mil|Absolute=True">Width Constraint: Track (208.645mm,130.932mm)(208.645mm,145.305mm) on Bottom Layer Actual Width = 0.516mm (20.315mil), Target Width = 0.5161mm (20.3203mil)</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\GitHub\NZPP\NZPP\NZPP\NZPP.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=8229.149mil|Location2.X=8271.397mil|Location1.Y=5113.157mil|Location2.Y=5140.014mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\GitHub\NZPP\NZPP\NZPP\NZPP.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=8229.149mil|Location2.X=8271.397mil|Location1.Y=5113.157mil|Location2.Y=5140.014mil|Absolute=True">Width Constraint: Track (208.645mm,130.932mm)(209.988mm,129.588mm) on Bottom Layer Actual Width = 0.516mm (20.315mil), Target Width = 0.5161mm (20.3203mil)</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\GitHub\NZPP\NZPP\NZPP\NZPP.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=8274.351mil|Location2.X=8321.738mil|Location1.Y=5708.996mil|Location2.Y=5732.311mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\GitHub\NZPP\NZPP\NZPP\NZPP.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=8274.351mil|Location2.X=8321.738mil|Location1.Y=5708.996mil|Location2.Y=5732.311mil|Absolute=True">Width Constraint: Track (208.645mm,145.305mm)(212.285mm,145.305mm) on Bottom Layer Actual Width = 0.516mm (20.315mil), Target Width = 0.5161mm (20.3203mil)</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\GitHub\NZPP\NZPP\NZPP\NZPP.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=8324.537mil|Location2.X=8371.924mil|Location1.Y=4523.957mil|Location2.Y=4547.272mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\GitHub\NZPP\NZPP\NZPP\NZPP.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=8324.537mil|Location2.X=8371.924mil|Location1.Y=4523.957mil|Location2.Y=4547.272mil|Absolute=True">Width Constraint: Track (209.805mm,115.205mm)(213.674mm,115.205mm) on Bottom Layer Actual Width = 0.516mm (20.315mil), Target Width = 0.5161mm (20.3203mil)</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\GitHub\NZPP\NZPP\NZPP\NZPP.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=8478.271mil|Location2.X=8520.333mil|Location1.Y=5312.917mil|Location2.Y=5339.96mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\GitHub\NZPP\NZPP\NZPP\NZPP.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=8478.271mil|Location2.X=8520.333mil|Location1.Y=5312.917mil|Location2.Y=5339.96mil|Absolute=True">Width Constraint: Track (209.988mm,129.588mm)(221.3mm,140.9mm) on Bottom Layer Actual Width = 0.516mm (20.315mil), Target Width = 0.5161mm (20.3203mil)</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\GitHub\NZPP\NZPP\NZPP\NZPP.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=8331.569mil|Location2.X=8373.818mil|Location1.Y=5010.737mil|Location2.Y=5037.593mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\GitHub\NZPP\NZPP\NZPP\NZPP.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=8331.569mil|Location2.X=8373.818mil|Location1.Y=5010.737mil|Location2.Y=5037.593mil|Absolute=True">Width Constraint: Track (210.162mm,129.415mm)(213.674mm,125.903mm) on Bottom Layer Actual Width = 0.516mm (20.315mil), Target Width = 0.5161mm (20.3203mil)</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\GitHub\NZPP\NZPP\NZPP\NZPP.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=8382.618mil|Location2.X=8424.867mil|Location1.Y=5668.841mil|Location2.Y=5695.697mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\GitHub\NZPP\NZPP\NZPP\NZPP.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=8382.618mil|Location2.X=8424.867mil|Location1.Y=5668.841mil|Location2.Y=5695.697mil|Absolute=True">Width Constraint: Track (212.285mm,145.305mm)(214.145mm,143.445mm) on Bottom Layer Actual Width = 0.516mm (20.315mil), Target Width = 0.5161mm (20.3203mil)</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\GitHub\NZPP\NZPP\NZPP\NZPP.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=8394.368mil|Location2.X=8430.098mil|Location1.Y=4734.549mil|Location2.Y=4766.731mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\GitHub\NZPP\NZPP\NZPP\NZPP.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=8394.368mil|Location2.X=8430.098mil|Location1.Y=4734.549mil|Location2.Y=4766.731mil|Absolute=True">Width Constraint: Track (213.674mm,115.205mm)(213.674mm,125.903mm) on Bottom Layer Actual Width = 0.516mm (20.315mil), Target Width = 0.5161mm (20.3203mil)</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\GitHub\NZPP\NZPP\NZPP\NZPP.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=8467.844mil|Location2.X=8515.231mil|Location1.Y=4523.957mil|Location2.Y=4547.272mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\GitHub\NZPP\NZPP\NZPP\NZPP.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=8467.844mil|Location2.X=8515.231mil|Location1.Y=4523.957mil|Location2.Y=4547.272mil|Absolute=True">Width Constraint: Track (213.674mm,115.205mm)(217.085mm,115.205mm) on Bottom Layer Actual Width = 0.516mm (20.315mil), Target Width = 0.5161mm (20.3203mil)</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\GitHub\NZPP\NZPP\NZPP\NZPP.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=8396.379mil|Location2.X=8455.228mil|Location1.Y=5629.755mil|Location2.Y=5672.125mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\GitHub\NZPP\NZPP\NZPP\NZPP.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=8396.379mil|Location2.X=8455.228mil|Location1.Y=5629.755mil|Location2.Y=5672.125mil|Absolute=True">Width Constraint: Track (213.712mm,143.628mm)(213.9mm,143.44mm) on Bottom Layer Actual Width = 1mm, Target Width = 0.516mm</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\GitHub\NZPP\NZPP\NZPP\NZPP.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=8571.594mil|Location2.X=8613.843mil|Location1.Y=4483.801mil|Location2.Y=4510.658mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\GitHub\NZPP\NZPP\NZPP\NZPP.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=8571.594mil|Location2.X=8613.843mil|Location1.Y=4483.801mil|Location2.Y=4510.658mil|Absolute=True">Width Constraint: Track (217.085mm,115.205mm)(218.945mm,113.345mm) on Bottom Layer Actual Width = 0.516mm (20.315mil), Target Width = 0.5161mm (20.3203mil)</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\GitHub\NZPP\NZPP\NZPP\NZPP.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=8593.159mil|Location2.X=8652.008mil|Location1.Y=4444.786mil|Location2.Y=4487.156mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\GitHub\NZPP\NZPP\NZPP\NZPP.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=8593.159mil|Location2.X=8652.008mil|Location1.Y=4444.786mil|Location2.Y=4487.156mil|Absolute=True">Width Constraint: Track (218.709mm,113.531mm)(218.9mm,113.34mm) on Bottom Layer Actual Width = 1mm, Target Width = 0.516mm</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\GitHub\NZPP\NZPP\NZPP\NZPP.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=8641.135mil|Location2.X=8676.865mil|Location1.Y=5570.981mil|Location2.Y=5603.164mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\GitHub\NZPP\NZPP\NZPP\NZPP.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=8641.135mil|Location2.X=8676.865mil|Location1.Y=5570.981mil|Location2.Y=5603.164mil|Absolute=True">Width Constraint: Track (219.942mm,141.287mm)(219.942mm,142.311mm) on Bottom Layer Actual Width = 0.516mm (20.315mil), Target Width = 0.5161mm (20.3203mil)</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\GitHub\NZPP\NZPP\NZPP\NZPP.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=8674.208mil|Location2.X=8721.595mil|Location1.Y=5550.824mil|Location2.Y=5574.139mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\GitHub\NZPP\NZPP\NZPP\NZPP.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=8674.208mil|Location2.X=8721.595mil|Location1.Y=5550.824mil|Location2.Y=5574.139mil|Absolute=True">Width Constraint: Track (219.942mm,141.287mm)(221.3mm,141.287mm) on Bottom Layer Actual Width = 0.516mm (20.315mil), Target Width = 0.5161mm (20.3203mil)</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\GitHub\NZPP\NZPP\NZPP\NZPP.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=8698.795mil|Location2.X=8746.183mil|Location1.Y=5591.139mil|Location2.Y=5614.454mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\GitHub\NZPP\NZPP\NZPP\NZPP.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=8698.795mil|Location2.X=8746.183mil|Location1.Y=5591.139mil|Location2.Y=5614.454mil|Absolute=True">Width Constraint: Track (219.942mm,142.311mm)(222.549mm,142.311mm) on Bottom Layer Actual Width = 0.516mm (20.315mil), Target Width = 0.5161mm (20.3203mil)</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\GitHub\NZPP\NZPP\NZPP\NZPP.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=8641.135mil|Location2.X=8676.865mil|Location1.Y=5651.611mil|Location2.Y=5683.794mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\GitHub\NZPP\NZPP\NZPP\NZPP.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=8641.135mil|Location2.X=8676.865mil|Location1.Y=5651.611mil|Location2.Y=5683.794mil|Absolute=True">Width Constraint: Track (219.942mm,143.335mm)(219.942mm,144.359mm) on Bottom Layer Actual Width = 0.516mm (20.315mil), Target Width = 0.5161mm (20.3203mil)</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\GitHub\NZPP\NZPP\NZPP\NZPP.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=8698.795mil|Location2.X=8746.183mil|Location1.Y=5631.454mil|Location2.Y=5654.769mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\GitHub\NZPP\NZPP\NZPP\NZPP.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=8698.795mil|Location2.X=8746.183mil|Location1.Y=5631.454mil|Location2.Y=5654.769mil|Absolute=True">Width Constraint: Track (219.942mm,143.335mm)(222.549mm,143.335mm) on Bottom Layer Actual Width = 0.516mm (20.315mil), Target Width = 0.5161mm (20.3203mil)</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\GitHub\NZPP\NZPP\NZPP\NZPP.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=8674.208mil|Location2.X=8721.595mil|Location1.Y=5671.769mil|Location2.Y=5695.084mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\GitHub\NZPP\NZPP\NZPP\NZPP.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=8674.208mil|Location2.X=8721.595mil|Location1.Y=5671.769mil|Location2.Y=5695.084mil|Absolute=True">Width Constraint: Track (219.942mm,144.359mm)(221.3mm,144.359mm) on Bottom Layer Actual Width = 0.516mm (20.315mil), Target Width = 0.5161mm (20.3203mil)</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\GitHub\NZPP\NZPP\NZPP\NZPP.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=8694.601mil|Location2.X=8730.331mil|Location1.Y=5538.126mil|Location2.Y=5570.309mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\GitHub\NZPP\NZPP\NZPP\NZPP.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=8694.601mil|Location2.X=8730.331mil|Location1.Y=5538.126mil|Location2.Y=5570.309mil|Absolute=True">Width Constraint: Track (221.3mm,140.9mm)(221.3mm,141.029mm) on Bottom Layer Actual Width = 0.516mm (20.315mil), Target Width = 0.5161mm (20.3203mil)</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\GitHub\NZPP\NZPP\NZPP\NZPP.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=8694.601mil|Location2.X=8730.331mil|Location1.Y=5545.745mil|Location2.Y=5577.927mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\GitHub\NZPP\NZPP\NZPP\NZPP.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=8694.601mil|Location2.X=8730.331mil|Location1.Y=5545.745mil|Location2.Y=5577.927mil|Absolute=True">Width Constraint: Track (221.3mm,141.029mm)(221.3mm,141.287mm) on Bottom Layer Actual Width = 0.516mm (20.315mil), Target Width = 0.5161mm (20.3203mil)</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\GitHub\NZPP\NZPP\NZPP\NZPP.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=8694.601mil|Location2.X=8730.331mil|Location1.Y=5686.355mil|Location2.Y=5718.537mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\GitHub\NZPP\NZPP\NZPP\NZPP.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=8694.601mil|Location2.X=8730.331mil|Location1.Y=5686.355mil|Location2.Y=5718.537mil|Absolute=True">Width Constraint: Track (221.3mm,144.359mm)(221.3mm,145.1mm) on Bottom Layer Actual Width = 0.516mm (20.315mil), Target Width = 0.5161mm (20.3203mil)</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\GitHub\NZPP\NZPP\NZPP\NZPP.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=8694.601mil|Location2.X=8730.331mil|Location1.Y=5737.433mil|Location2.Y=5769.615mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\GitHub\NZPP\NZPP\NZPP\NZPP.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=8694.601mil|Location2.X=8730.331mil|Location1.Y=5737.433mil|Location2.Y=5769.615mil|Absolute=True">Width Constraint: Track (221.3mm,145.1mm)(221.3mm,146.954mm) on Bottom Layer Actual Width = 0.516mm (20.315mil), Target Width = 0.5161mm (20.3203mil)</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\GitHub\NZPP\NZPP\NZPP\NZPP.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=8727.372mil|Location2.X=8769.434mil|Location1.Y=5800.356mil|Location2.Y=5827.399mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\GitHub\NZPP\NZPP\NZPP\NZPP.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=8727.372mil|Location2.X=8769.434mil|Location1.Y=5800.356mil|Location2.Y=5827.399mil|Absolute=True">Width Constraint: Track (221.3mm,146.954mm)(222.643mm,148.296mm) on Bottom Layer Actual Width = 0.516mm (20.315mil), Target Width = 0.5161mm (20.3203mil)</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\GitHub\NZPP\NZPP\NZPP\NZPP.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=8743.776mil|Location2.X=8779.506mil|Location1.Y=5611.296mil|Location2.Y=5643.479mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\GitHub\NZPP\NZPP\NZPP\NZPP.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=8743.776mil|Location2.X=8779.506mil|Location1.Y=5611.296mil|Location2.Y=5643.479mil|Absolute=True">Width Constraint: Track (222.549mm,142.311mm)(222.549mm,143.335mm) on Bottom Layer Actual Width = 0.516mm (20.315mil), Target Width = 0.5161mm (20.3203mil)</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\GitHub\NZPP\NZPP\NZPP\NZPP.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=8747.464mil|Location2.X=8783.194mil|Location1.Y=5918.248mil|Location2.Y=5950.43mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\GitHub\NZPP\NZPP\NZPP\NZPP.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=8747.464mil|Location2.X=8783.194mil|Location1.Y=5918.248mil|Location2.Y=5950.43mil|Absolute=True">Width Constraint: Track (222.643mm,148.296mm)(222.643mm,152.943mm) on Bottom Layer Actual Width = 0.516mm (20.315mil), Target Width = 0.5161mm (20.3203mil)</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\GitHub\NZPP\NZPP\NZPP\NZPP.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=9258.868mil|Location2.X=9300.93mil|Location1.Y=6514.774mil|Location2.Y=6541.817mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\GitHub\NZPP\NZPP\NZPP\NZPP.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=9258.868mil|Location2.X=9300.93mil|Location1.Y=6514.774mil|Location2.Y=6541.817mil|Absolute=True">Width Constraint: Track (222.643mm,152.943mm)(248.3mm,178.6mm) on Bottom Layer Actual Width = 0.516mm (20.315mil), Target Width = 0.5161mm (20.3203mil)</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\GitHub\NZPP\NZPP\NZPP\NZPP.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=8840.045mil|Location2.X=8884.035mil|Location1.Y=5626.601mil|Location2.Y=5673.056mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\GitHub\NZPP\NZPP\NZPP\NZPP.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=8840.045mil|Location2.X=8884.035mil|Location1.Y=5626.601mil|Location2.Y=5673.056mil|Absolute=True">Width Constraint: Track (225.1mm,143.44mm)(225.1mm,143.468mm) on Bottom Layer Actual Width = 1mm, Target Width = 0.516mm</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\GitHub\NZPP\NZPP\NZPP\NZPP.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=8886.62mil|Location2.X=8928.681mil|Location1.Y=5672.743mil|Location2.Y=5699.786mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\GitHub\NZPP\NZPP\NZPP\NZPP.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=8886.62mil|Location2.X=8928.681mil|Location1.Y=5672.743mil|Location2.Y=5699.786mil|Absolute=True">Width Constraint: Track (225.1mm,143.468mm)(226.932mm,145.3mm) on Bottom Layer Actual Width = 0.516mm (20.315mil), Target Width = 0.5161mm (20.3203mil)</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\GitHub\NZPP\NZPP\NZPP\NZPP.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=8994.345mil|Location2.X=9041.733mil|Location1.Y=5708.815mil|Location2.Y=5732.13mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\GitHub\NZPP\NZPP\NZPP\NZPP.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=8994.345mil|Location2.X=9041.733mil|Location1.Y=5708.815mil|Location2.Y=5732.13mil|Absolute=True">Width Constraint: Track (226.932mm,145.3mm)(230.572mm,145.3mm) on Bottom Layer Actual Width = 0.516mm (20.315mil), Target Width = 0.5161mm (20.3203mil)</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\GitHub\NZPP\NZPP\NZPP\NZPP.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=9075.054mil|Location2.X=9117.115mil|Location1.Y=4487.161mil|Location2.Y=4514.205mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\GitHub\NZPP\NZPP\NZPP\NZPP.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=9075.054mil|Location2.X=9117.115mil|Location1.Y=4487.161mil|Location2.Y=4514.205mil|Absolute=True">Width Constraint: Track (229.872mm,113.34mm)(231.732mm,115.2mm) on Bottom Layer Actual Width = 0.516mm (20.315mil), Target Width = 0.5161mm (20.3203mil)</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\GitHub\NZPP\NZPP\NZPP\NZPP.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=9059.659mil|Location2.X=9095.389mil|Location1.Y=5425.892mil|Location2.Y=5458.075mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\GitHub\NZPP\NZPP\NZPP\NZPP.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=9059.659mil|Location2.X=9095.389mil|Location1.Y=5425.892mil|Location2.Y=5458.075mil|Absolute=True">Width Constraint: Track (230.572mm,130.928mm)(230.572mm,145.3mm) on Bottom Layer Actual Width = 0.516mm (20.315mil), Target Width = 0.5161mm (20.3203mil)</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\GitHub\NZPP\NZPP\NZPP\NZPP.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=9095.866mil|Location2.X=9138.115mil|Location1.Y=5109.561mil|Location2.Y=5136.417mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\GitHub\NZPP\NZPP\NZPP\NZPP.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=9095.866mil|Location2.X=9138.115mil|Location1.Y=5109.561mil|Location2.Y=5136.417mil|Absolute=True">Width Constraint: Track (230.572mm,130.928mm)(232.09mm,129.41mm) on Bottom Layer Actual Width = 0.516mm (20.315mil), Target Width = 0.5161mm (20.3203mil)</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\GitHub\NZPP\NZPP\NZPP\NZPP.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=9137.652mil|Location2.X=9185.04mil|Location1.Y=5708.815mil|Location2.Y=5732.13mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\GitHub\NZPP\NZPP\NZPP\NZPP.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=9137.652mil|Location2.X=9185.04mil|Location1.Y=5708.815mil|Location2.Y=5732.13mil|Absolute=True">Width Constraint: Track (230.572mm,145.3mm)(234.212mm,145.3mm) on Bottom Layer Actual Width = 0.516mm (20.315mil), Target Width = 0.5161mm (20.3203mil)</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\GitHub\NZPP\NZPP\NZPP\NZPP.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=9187.839mil|Location2.X=9235.226mil|Location1.Y=4523.776mil|Location2.Y=4547.091mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\GitHub\NZPP\NZPP\NZPP\NZPP.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=9187.839mil|Location2.X=9235.226mil|Location1.Y=4523.776mil|Location2.Y=4547.091mil|Absolute=True">Width Constraint: Track (231.732mm,115.2mm)(235.602mm,115.2mm) on Bottom Layer Actual Width = 0.516mm (20.315mil), Target Width = 0.5161mm (20.3203mil)</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\GitHub\NZPP\NZPP\NZPP\NZPP.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=9186.437mil|Location2.X=9228.498mil|Location1.Y=5143.938mil|Location2.Y=5170.982mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\GitHub\NZPP\NZPP\NZPP\NZPP.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=9186.437mil|Location2.X=9228.498mil|Location1.Y=5143.938mil|Location2.Y=5170.982mil|Absolute=True">Width Constraint: Track (232.09mm,129.41mm)(235.173mm,132.494mm) on Bottom Layer Actual Width = 0.516mm (20.315mil), Target Width = 0.5161mm (20.3203mil)</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\GitHub\NZPP\NZPP\NZPP\NZPP.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=9194.871mil|Location2.X=9237.12mil|Location1.Y=5010.556mil|Location2.Y=5037.412mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\GitHub\NZPP\NZPP\NZPP\NZPP.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=9194.871mil|Location2.X=9237.12mil|Location1.Y=5010.556mil|Location2.Y=5037.412mil|Absolute=True">Width Constraint: Track (232.09mm,129.41mm)(235.602mm,125.898mm) on Bottom Layer Actual Width = 0.516mm (20.315mil), Target Width = 0.5161mm (20.3203mil)</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\GitHub\NZPP\NZPP\NZPP\NZPP.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=9245.92mil|Location2.X=9288.168mil|Location1.Y=5668.659mil|Location2.Y=5695.516mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\GitHub\NZPP\NZPP\NZPP\NZPP.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=9245.92mil|Location2.X=9288.168mil|Location1.Y=5668.659mil|Location2.Y=5695.516mil|Absolute=True">Width Constraint: Track (234.212mm,145.3mm)(236.072mm,143.44mm) on Bottom Layer Actual Width = 0.516mm (20.315mil), Target Width = 0.5161mm (20.3203mil)</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\GitHub\NZPP\NZPP\NZPP\NZPP.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=9343.833mil|Location2.X=9391.221mil|Location1.Y=5204.642mil|Location2.Y=5227.957mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\GitHub\NZPP\NZPP\NZPP\NZPP.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=9343.833mil|Location2.X=9391.221mil|Location1.Y=5204.642mil|Location2.Y=5227.957mil|Absolute=True">Width Constraint: Track (235.173mm,132.494mm)(240.085mm,132.494mm) on Bottom Layer Actual Width = 0.516mm (20.315mil), Target Width = 0.5161mm (20.3203mil)</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\GitHub\NZPP\NZPP\NZPP\NZPP.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=9257.67mil|Location2.X=9293.4mil|Location1.Y=4734.367mil|Location2.Y=4766.55mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\GitHub\NZPP\NZPP\NZPP\NZPP.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=9257.67mil|Location2.X=9293.4mil|Location1.Y=4734.367mil|Location2.Y=4766.55mil|Absolute=True">Width Constraint: Track (235.602mm,115.2mm)(235.602mm,125.898mm) on Bottom Layer Actual Width = 0.516mm (20.315mil), Target Width = 0.5161mm (20.3203mil)</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\GitHub\NZPP\NZPP\NZPP\NZPP.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=9331.146mil|Location2.X=9378.533mil|Location1.Y=4523.776mil|Location2.Y=4547.091mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\GitHub\NZPP\NZPP\NZPP\NZPP.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=9331.146mil|Location2.X=9378.533mil|Location1.Y=4523.776mil|Location2.Y=4547.091mil|Absolute=True">Width Constraint: Track (235.602mm,115.2mm)(239.012mm,115.2mm) on Bottom Layer Actual Width = 0.516mm (20.315mil), Target Width = 0.5161mm (20.3203mil)</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\GitHub\NZPP\NZPP\NZPP\NZPP.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=9434.896mil|Location2.X=9477.145mil|Location1.Y=4483.62mil|Location2.Y=4510.476mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\GitHub\NZPP\NZPP\NZPP\NZPP.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=9434.896mil|Location2.X=9477.145mil|Location1.Y=4483.62mil|Location2.Y=4510.476mil|Absolute=True">Width Constraint: Track (239.012mm,115.2mm)(240.872mm,113.34mm) on Bottom Layer Actual Width = 0.516mm (20.315mil), Target Width = 0.5161mm (20.3203mil)</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\GitHub\NZPP\NZPP\NZPP\NZPP.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=9499.465mil|Location2.X=9541.713mil|Location1.Y=5142.162mil|Location2.Y=5169.018mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\GitHub\NZPP\NZPP\NZPP\NZPP.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=9499.465mil|Location2.X=9541.713mil|Location1.Y=5142.162mil|Location2.Y=5169.018mil|Absolute=True">Width Constraint: Track (240.085mm,132.494mm)(243.08mm,129.5mm) on Bottom Layer Actual Width = 0.516mm (20.315mil), Target Width = 0.5161mm (20.3203mil)</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\GitHub\NZPP\NZPP\NZPP\NZPP.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=9599.082mil|Location2.X=9641.33mil|Location1.Y=5042.545mil|Location2.Y=5069.401mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\GitHub\NZPP\NZPP\NZPP\NZPP.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=9599.082mil|Location2.X=9641.33mil|Location1.Y=5042.545mil|Location2.Y=5069.401mil|Absolute=True">Width Constraint: Track (243.08mm,129.5mm)(245.146mm,127.433mm) on Bottom Layer Actual Width = 0.516mm (20.315mil), Target Width = 0.5161mm (20.3203mil)</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\GitHub\NZPP\NZPP\NZPP\NZPP.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=9554.848mil|Location2.X=9590.578mil|Location1.Y=5345.063mil|Location2.Y=5377.245mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\GitHub\NZPP\NZPP\NZPP\NZPP.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=9554.848mil|Location2.X=9590.578mil|Location1.Y=5345.063mil|Location2.Y=5377.245mil|Absolute=True">Width Constraint: Track (243.15mm,129.571mm)(243.15mm,142.551mm) on Bottom Layer Actual Width = 0.516mm (20.315mil), Target Width = 0.5161mm (20.3203mil)</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\GitHub\NZPP\NZPP\NZPP\NZPP.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=9705.385mil|Location2.X=9747.446mil|Location1.Y=5744.775mil|Location2.Y=5771.819mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\GitHub\NZPP\NZPP\NZPP\NZPP.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=9705.385mil|Location2.X=9747.446mil|Location1.Y=5744.775mil|Location2.Y=5771.819mil|Absolute=True">Width Constraint: Track (243.15mm,142.551mm)(250.475mm,149.876mm) on Bottom Layer Actual Width = 0.516mm (20.315mil), Target Width = 0.5161mm (20.3203mil)</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\GitHub\NZPP\NZPP\NZPP\NZPP.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=9667.401mil|Location2.X=9709.649mil|Location1.Y=4974.225mil|Location2.Y=5001.082mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\GitHub\NZPP\NZPP\NZPP\NZPP.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=9667.401mil|Location2.X=9709.649mil|Location1.Y=4974.225mil|Location2.Y=5001.082mil|Absolute=True">Width Constraint: Track (245.217mm,127.363mm)(246.479mm,126.1mm) on Bottom Layer Actual Width = 0.516mm (20.315mil), Target Width = 0.5161mm (20.3203mil)</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\GitHub\NZPP\NZPP\NZPP\NZPP.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=9788.194mil|Location2.X=9835.582mil|Location1.Y=4952.909mil|Location2.Y=4976.224mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\GitHub\NZPP\NZPP\NZPP\NZPP.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=9788.194mil|Location2.X=9835.582mil|Location1.Y=4952.909mil|Location2.Y=4976.224mil|Absolute=True">Width Constraint: Track (246.479mm,126.1mm)(251.353mm,126.1mm) on Bottom Layer Actual Width = 0.516mm (20.315mil), Target Width = 0.5161mm (20.3203mil)</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\GitHub\NZPP\NZPP\NZPP\NZPP.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=9752.219mil|Location2.X=9794.281mil|Location1.Y=5672.201mil|Location2.Y=5699.244mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\GitHub\NZPP\NZPP\NZPP\NZPP.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=9752.219mil|Location2.X=9794.281mil|Location1.Y=5672.201mil|Location2.Y=5699.244mil|Absolute=True">Width Constraint: Track (247.072mm,143.44mm)(248.932mm,145.3mm) on Bottom Layer Actual Width = 0.516mm (20.315mil), Target Width = 0.5161mm (20.3203mil)</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\GitHub\NZPP\NZPP\NZPP\NZPP.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=10279.018mil|Location2.X=10326.406mil|Location1.Y=7019.839mil|Location2.Y=7043.154mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\GitHub\NZPP\NZPP\NZPP\NZPP.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=10279.018mil|Location2.X=10326.406mil|Location1.Y=7019.839mil|Location2.Y=7043.154mil|Absolute=True">Width Constraint: Track (248.3mm,178.6mm)(274.466mm,178.6mm) on Bottom Layer Actual Width = 0.516mm (20.315mil), Target Width = 0.5161mm (20.3203mil)</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\GitHub\NZPP\NZPP\NZPP\NZPP.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=9860.487mil|Location2.X=9907.875mil|Location1.Y=5708.815mil|Location2.Y=5732.13mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\GitHub\NZPP\NZPP\NZPP\NZPP.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=9860.487mil|Location2.X=9907.875mil|Location1.Y=5708.815mil|Location2.Y=5732.13mil|Absolute=True">Width Constraint: Track (248.932mm,145.3mm)(252.572mm,145.3mm) on Bottom Layer Actual Width = 0.516mm (20.315mil), Target Width = 0.5161mm (20.3203mil)</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\GitHub\NZPP\NZPP\NZPP\NZPP.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=10109.907mil|Location2.X=10157.295mil|Location1.Y=5888.973mil|Location2.Y=5912.288mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\GitHub\NZPP\NZPP\NZPP\NZPP.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=10109.907mil|Location2.X=10157.295mil|Location1.Y=5888.973mil|Location2.Y=5912.288mil|Absolute=True">Width Constraint: Track (250.475mm,149.876mm)(263.7mm,149.876mm) on Bottom Layer Actual Width = 0.516mm (20.315mil), Target Width = 0.5161mm (20.3203mil)</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\GitHub\NZPP\NZPP\NZPP\NZPP.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=9944.632mil|Location2.X=9986.694mil|Location1.Y=5013.411mil|Location2.Y=5040.455mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\GitHub\NZPP\NZPP\NZPP\NZPP.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=9944.632mil|Location2.X=9986.694mil|Location1.Y=5013.411mil|Location2.Y=5040.455mil|Absolute=True">Width Constraint: Track (251.353mm,126.1mm)(254.427mm,129.173mm) on Bottom Layer Actual Width = 0.516mm (20.315mil), Target Width = 0.5161mm (20.3203mil)</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\GitHub\NZPP\NZPP\NZPP\NZPP.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=9941.467mil|Location2.X=9983.528mil|Location1.Y=4487.432mil|Location2.Y=4514.476mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\GitHub\NZPP\NZPP\NZPP\NZPP.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=9941.467mil|Location2.X=9983.528mil|Location1.Y=4487.432mil|Location2.Y=4514.476mil|Absolute=True">Width Constraint: Track (251.886mm,113.354mm)(253.732mm,115.2mm) on Bottom Layer Actual Width = 0.516mm (20.315mil), Target Width = 0.5161mm (20.3203mil)</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\GitHub\NZPP\NZPP\NZPP\NZPP.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=9925.801mil|Location2.X=9961.531mil|Location1.Y=5427.861mil|Location2.Y=5460.043mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\GitHub\NZPP\NZPP\NZPP\NZPP.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=9925.801mil|Location2.X=9961.531mil|Location1.Y=5427.861mil|Location2.Y=5460.043mil|Absolute=True">Width Constraint: Track (252.572mm,131.028mm)(252.572mm,145.3mm) on Bottom Layer Actual Width = 0.516mm (20.315mil), Target Width = 0.5161mm (20.3203mil)</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\GitHub\NZPP\NZPP\NZPP\NZPP.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=9968.638mil|Location2.X=10010.886mil|Location1.Y=5106.868mil|Location2.Y=5133.725mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\GitHub\NZPP\NZPP\NZPP\NZPP.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=9968.638mil|Location2.X=10010.886mil|Location1.Y=5106.868mil|Location2.Y=5133.725mil|Absolute=True">Width Constraint: Track (252.572mm,131.028mm)(254.427mm,129.173mm) on Bottom Layer Actual Width = 0.516mm (20.315mil), Target Width = 0.5161mm (20.3203mil)</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\GitHub\NZPP\NZPP\NZPP\NZPP.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=10003.794mil|Location2.X=10051.182mil|Location1.Y=5708.815mil|Location2.Y=5732.13mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\GitHub\NZPP\NZPP\NZPP\NZPP.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=10003.794mil|Location2.X=10051.182mil|Location1.Y=5708.815mil|Location2.Y=5732.13mil|Absolute=True">Width Constraint: Track (252.572mm,145.3mm)(256.212mm,145.3mm) on Bottom Layer Actual Width = 0.516mm (20.315mil), Target Width = 0.5161mm (20.3203mil)</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\GitHub\NZPP\NZPP\NZPP\NZPP.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=10121.117mil|Location2.X=10168.504mil|Location1.Y=4523.776mil|Location2.Y=4547.091mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\GitHub\NZPP\NZPP\NZPP\NZPP.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=10121.117mil|Location2.X=10168.504mil|Location1.Y=4523.776mil|Location2.Y=4547.091mil|Absolute=True">Width Constraint: Track (253.732mm,115.2mm)(261.012mm,115.2mm) on Bottom Layer Actual Width = 0.516mm (20.315mil), Target Width = 0.5161mm (20.3203mil)</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\GitHub\NZPP\NZPP\NZPP\NZPP.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=10067.643mil|Location2.X=10109.891mil|Location1.Y=5007.863mil|Location2.Y=5034.72mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\GitHub\NZPP\NZPP\NZPP\NZPP.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=10067.643mil|Location2.X=10109.891mil|Location1.Y=5007.863mil|Location2.Y=5034.72mil|Absolute=True">Width Constraint: Track (254.427mm,129.173mm)(257.602mm,125.998mm) on Bottom Layer Actual Width = 0.516mm (20.315mil), Target Width = 0.5161mm (20.3203mil)</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\GitHub\NZPP\NZPP\NZPP\NZPP.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=10112.062mil|Location2.X=10154.31mil|Location1.Y=5668.659mil|Location2.Y=5695.516mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\GitHub\NZPP\NZPP\NZPP\NZPP.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=10112.062mil|Location2.X=10154.31mil|Location1.Y=5668.659mil|Location2.Y=5695.516mil|Absolute=True">Width Constraint: Track (256.212mm,145.3mm)(258.072mm,143.44mm) on Bottom Layer Actual Width = 0.516mm (20.315mil), Target Width = 0.5161mm (20.3203mil)</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\GitHub\NZPP\NZPP\NZPP\NZPP.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=10123.811mil|Location2.X=10159.541mil|Location1.Y=4740.853mil|Location2.Y=4773.036mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\GitHub\NZPP\NZPP\NZPP\NZPP.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=10123.811mil|Location2.X=10159.541mil|Location1.Y=4740.853mil|Location2.Y=4773.036mil|Absolute=True">Width Constraint: Track (257.602mm,115.429mm)(257.602mm,125.998mm) on Bottom Layer Actual Width = 0.516mm (20.315mil), Target Width = 0.5161mm (20.3203mil)</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\GitHub\NZPP\NZPP\NZPP\NZPP.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=10301.038mil|Location2.X=10343.287mil|Location1.Y=4483.62mil|Location2.Y=4510.476mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\GitHub\NZPP\NZPP\NZPP\NZPP.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=10301.038mil|Location2.X=10343.287mil|Location1.Y=4483.62mil|Location2.Y=4510.476mil|Absolute=True">Width Constraint: Track (261.012mm,115.2mm)(262.872mm,113.34mm) on Bottom Layer Actual Width = 0.516mm (20.315mil), Target Width = 0.5161mm (20.3203mil)</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\GitHub\NZPP\NZPP\NZPP\NZPP.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=10363.893mil|Location2.X=10399.623mil|Location1.Y=5911.099mil|Location2.Y=5943.281mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\GitHub\NZPP\NZPP\NZPP\NZPP.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=10363.893mil|Location2.X=10399.623mil|Location1.Y=5911.099mil|Location2.Y=5943.281mil|Absolute=True">Width Constraint: Track (263.7mm,149.876mm)(263.7mm,151mm) on Bottom Layer Actual Width = 0.516mm (20.315mil), Target Width = 0.5161mm (20.3203mil)</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\GitHub\NZPP\NZPP\NZPP\NZPP.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=10701.424mil|Location2.X=10748.811mil|Location1.Y=5888.973mil|Location2.Y=5912.288mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\GitHub\NZPP\NZPP\NZPP\NZPP.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=10701.424mil|Location2.X=10748.811mil|Location1.Y=5888.973mil|Location2.Y=5912.288mil|Absolute=True">Width Constraint: Track (263.7mm,149.876mm)(280.525mm,149.876mm) on Bottom Layer Actual Width = 0.516mm (20.315mil), Target Width = 0.5161mm (20.3203mil)</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\GitHub\NZPP\NZPP\NZPP\NZPP.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=10490.311mil|Location2.X=10532.372mil|Location1.Y=6053.303mil|Location2.Y=6080.346mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\GitHub\NZPP\NZPP\NZPP\NZPP.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=10490.311mil|Location2.X=10532.372mil|Location1.Y=6053.303mil|Location2.Y=6080.346mil|Absolute=True">Width Constraint: Track (263.7mm,151mm)(269.8mm,157.1mm) on Bottom Layer Actual Width = 0.516mm (20.315mil), Target Width = 0.5161mm (20.3203mil)</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\GitHub\NZPP\NZPP\NZPP\NZPP.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=10565.429mil|Location2.X=10630.604mil|Location1.Y=5626.059mil|Location2.Y=5668.429mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\GitHub\NZPP\NZPP\NZPP\NZPP.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=10565.429mil|Location2.X=10630.604mil|Location1.Y=5626.059mil|Location2.Y=5668.429mil|Absolute=True">Width Constraint: Track (268.9mm,143.44mm)(268.9mm,143.44mm) on Bottom Layer Actual Width = 1mm, Target Width = 0.516mm</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\GitHub\NZPP\NZPP\NZPP\NZPP.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=10611.571mil|Location2.X=10653.632mil|Location1.Y=5672.201mil|Location2.Y=5699.244mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\GitHub\NZPP\NZPP\NZPP\NZPP.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=10611.571mil|Location2.X=10653.632mil|Location1.Y=5672.201mil|Location2.Y=5699.244mil|Absolute=True">Width Constraint: Track (268.9mm,143.44mm)(270.76mm,145.3mm) on Bottom Layer Actual Width = 0.516mm (20.315mil), Target Width = 0.5161mm (20.3203mil)</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\GitHub\NZPP\NZPP\NZPP\NZPP.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=11385.534mil|Location2.X=11432.922mil|Location1.Y=6173.382mil|Location2.Y=6196.697mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\GitHub\NZPP\NZPP\NZPP\NZPP.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=11385.534mil|Location2.X=11432.922mil|Location1.Y=6173.382mil|Location2.Y=6196.697mil|Absolute=True">Width Constraint: Track (269.8mm,157.1mm)(309.177mm,157.1mm) on Bottom Layer Actual Width = 0.516mm (20.315mil), Target Width = 0.5161mm (20.3203mil)</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\GitHub\NZPP\NZPP\NZPP\NZPP.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=10719.838mil|Location2.X=10767.226mil|Location1.Y=5708.815mil|Location2.Y=5732.13mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\GitHub\NZPP\NZPP\NZPP\NZPP.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=10719.838mil|Location2.X=10767.226mil|Location1.Y=5708.815mil|Location2.Y=5732.13mil|Absolute=True">Width Constraint: Track (270.76mm,145.3mm)(274.4mm,145.3mm) on Bottom Layer Actual Width = 0.516mm (20.315mil), Target Width = 0.5161mm (20.3203mil)</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\GitHub\NZPP\NZPP\NZPP\NZPP.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=10802.515mil|Location2.X=10844.577mil|Location1.Y=4489.13mil|Location2.Y=4516.173mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\GitHub\NZPP\NZPP\NZPP\NZPP.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=10802.515mil|Location2.X=10844.577mil|Location1.Y=4489.13mil|Location2.Y=4516.173mil|Absolute=True">Width Constraint: Track (273.8mm,113.44mm)(275.56mm,115.2mm) on Bottom Layer Actual Width = 0.516mm (20.315mil), Target Width = 0.5161mm (20.3203mil)</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\GitHub\NZPP\NZPP\NZPP\NZPP.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=10896.465mil|Location2.X=10938.714mil|Location1.Y=6913.935mil|Location2.Y=6940.791mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\GitHub\NZPP\NZPP\NZPP\NZPP.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=10896.465mil|Location2.X=10938.714mil|Location1.Y=6913.935mil|Location2.Y=6940.791mil|Absolute=True">Width Constraint: Track (274.466mm,178.6mm)(279.666mm,173.4mm) on Bottom Layer Actual Width = 0.516mm (20.315mil), Target Width = 0.5161mm (20.3203mil)</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\GitHub\NZPP\NZPP\NZPP\NZPP.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=10785.152mil|Location2.X=10820.882mil|Location1.Y=5427.319mil|Location2.Y=5459.501mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\GitHub\NZPP\NZPP\NZPP\NZPP.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=10785.152mil|Location2.X=10820.882mil|Location1.Y=5427.319mil|Location2.Y=5459.501mil|Absolute=True">Width Constraint: Track (274.4mm,131mm)(274.4mm,145.3mm) on Bottom Layer Actual Width = 0.516mm (20.315mil), Target Width = 0.5161mm (20.3203mil)</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\GitHub\NZPP\NZPP\NZPP\NZPP.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=10820.035mil|Location2.X=10862.284mil|Location1.Y=5113.738mil|Location2.Y=5140.595mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\GitHub\NZPP\NZPP\NZPP\NZPP.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=10820.035mil|Location2.X=10862.284mil|Location1.Y=5113.738mil|Location2.Y=5140.595mil|Absolute=True">Width Constraint: Track (274.4mm,131mm)(275.85mm,129.55mm) on Bottom Layer Actual Width = 0.516mm (20.315mil), Target Width = 0.5161mm (20.3203mil)</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\GitHub\NZPP\NZPP\NZPP\NZPP.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=10863.145mil|Location2.X=10910.533mil|Location1.Y=5708.815mil|Location2.Y=5732.13mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\GitHub\NZPP\NZPP\NZPP\NZPP.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=10863.145mil|Location2.X=10910.533mil|Location1.Y=5708.815mil|Location2.Y=5732.13mil|Absolute=True">Width Constraint: Track (274.4mm,145.3mm)(278.04mm,145.3mm) on Bottom Layer Actual Width = 0.516mm (20.315mil), Target Width = 0.5161mm (20.3203mil)</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\GitHub\NZPP\NZPP\NZPP\NZPP.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=10913.332mil|Location2.X=10960.719mil|Location1.Y=4523.776mil|Location2.Y=4547.091mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\GitHub\NZPP\NZPP\NZPP\NZPP.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=10913.332mil|Location2.X=10960.719mil|Location1.Y=4523.776mil|Location2.Y=4547.091mil|Absolute=True">Width Constraint: Track (275.56mm,115.2mm)(279.429mm,115.2mm) on Bottom Layer Actual Width = 0.516mm (20.315mil), Target Width = 0.5161mm (20.3203mil)</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\GitHub\NZPP\NZPP\NZPP\NZPP.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=10910.98mil|Location2.X=10953.042mil|Location1.Y=5147.988mil|Location2.Y=5175.032mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\GitHub\NZPP\NZPP\NZPP\NZPP.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=10910.98mil|Location2.X=10953.042mil|Location1.Y=5147.988mil|Location2.Y=5175.032mil|Absolute=True">Width Constraint: Track (275.89mm,129.51mm)(278.98mm,132.6mm) on Bottom Layer Actual Width = 0.516mm (20.315mil), Target Width = 0.5161mm (20.3203mil)</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\GitHub\NZPP\NZPP\NZPP\NZPP.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=10919.828mil|Location2.X=10962.076mil|Location1.Y=5013.946mil|Location2.Y=5040.802mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\GitHub\NZPP\NZPP\NZPP\NZPP.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=10919.828mil|Location2.X=10962.076mil|Location1.Y=5013.946mil|Location2.Y=5040.802mil|Absolute=True">Width Constraint: Track (275.89mm,129.51mm)(279.429mm,125.971mm) on Bottom Layer Actual Width = 0.516mm (20.315mil), Target Width = 0.5161mm (20.3203mil)</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\GitHub\NZPP\NZPP\NZPP\NZPP.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=10970.626mil|Location2.X=11012.874mil|Location1.Y=5669.447mil|Location2.Y=5696.303mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\GitHub\NZPP\NZPP\NZPP\NZPP.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=10970.626mil|Location2.X=11012.874mil|Location1.Y=5669.447mil|Location2.Y=5696.303mil|Absolute=True">Width Constraint: Track (278.04mm,145.3mm)(279.86mm,143.48mm) on Bottom Layer Actual Width = 0.516mm (20.315mil), Target Width = 0.5161mm (20.3203mil)</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\GitHub\NZPP\NZPP\NZPP\NZPP.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=11070.222mil|Location2.X=11117.61mil|Location1.Y=5208.815mil|Location2.Y=5232.13mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\GitHub\NZPP\NZPP\NZPP\NZPP.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=11070.222mil|Location2.X=11117.61mil|Location1.Y=5208.815mil|Location2.Y=5232.13mil|Absolute=True">Width Constraint: Track (278.98mm,132.6mm)(283.979mm,132.6mm) on Bottom Layer Actual Width = 0.516mm (20.315mil), Target Width = 0.5161mm (20.3203mil)</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\GitHub\NZPP\NZPP\NZPP\NZPP.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=10983.163mil|Location2.X=11018.893mil|Location1.Y=4735.794mil|Location2.Y=4767.977mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\GitHub\NZPP\NZPP\NZPP\NZPP.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=10983.163mil|Location2.X=11018.893mil|Location1.Y=4735.794mil|Location2.Y=4767.977mil|Absolute=True">Width Constraint: Track (279.429mm,115.2mm)(279.429mm,125.971mm) on Bottom Layer Actual Width = 0.516mm (20.315mil), Target Width = 0.5161mm (20.3203mil)</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\GitHub\NZPP\NZPP\NZPP\NZPP.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=11056.639mil|Location2.X=11104.026mil|Location1.Y=4523.776mil|Location2.Y=4547.091mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\GitHub\NZPP\NZPP\NZPP\NZPP.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=11056.639mil|Location2.X=11104.026mil|Location1.Y=4523.776mil|Location2.Y=4547.091mil|Absolute=True">Width Constraint: Track (279.429mm,115.2mm)(282.84mm,115.2mm) on Bottom Layer Actual Width = 0.516mm (20.315mil), Target Width = 0.5161mm (20.3203mil)</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\GitHub\NZPP\NZPP\NZPP\NZPP.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=11330.199mil|Location2.X=11377.587mil|Location1.Y=6815.114mil|Location2.Y=6838.429mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\GitHub\NZPP\NZPP\NZPP\NZPP.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=11330.199mil|Location2.X=11377.587mil|Location1.Y=6815.114mil|Location2.Y=6838.429mil|Absolute=True">Width Constraint: Track (279.666mm,173.4mm)(296.5mm,173.4mm) on Bottom Layer Actual Width = 0.516mm (20.315mil), Target Width = 0.5161mm (20.3203mil)</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\GitHub\NZPP\NZPP\NZPP\NZPP.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=11164.022mil|Location2.X=11206.27mil|Location1.Y=5754.024mil|Location2.Y=5780.88mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\GitHub\NZPP\NZPP\NZPP\NZPP.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=11164.022mil|Location2.X=11206.27mil|Location1.Y=5754.024mil|Location2.Y=5780.88mil|Absolute=True">Width Constraint: Track (280.525mm,149.876mm)(287.2mm,143.201mm) on Bottom Layer Actual Width = 0.516mm (20.315mil), Target Width = 0.5161mm (20.3203mil)</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\GitHub\NZPP\NZPP\NZPP\NZPP.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=11160.389mil|Location2.X=11202.638mil|Location1.Y=4483.62mil|Location2.Y=4510.476mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\GitHub\NZPP\NZPP\NZPP\NZPP.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=11160.389mil|Location2.X=11202.638mil|Location1.Y=4483.62mil|Location2.Y=4510.476mil|Absolute=True">Width Constraint: Track (282.84mm,115.2mm)(284.7mm,113.34mm) on Bottom Layer Actual Width = 0.516mm (20.315mil), Target Width = 0.5161mm (20.3203mil)</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\GitHub\NZPP\NZPP\NZPP\NZPP.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=11189.773mil|Location2.X=11232.021mil|Location1.Y=5184.138mil|Location2.Y=5210.995mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\GitHub\NZPP\NZPP\NZPP\NZPP.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=11189.773mil|Location2.X=11232.021mil|Location1.Y=5184.138mil|Location2.Y=5210.995mil|Absolute=True">Width Constraint: Track (283.979mm,132.6mm)(285.053mm,131.526mm) on Bottom Layer Actual Width = 0.516mm (20.315mil), Target Width = 0.5161mm (20.3203mil)</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\GitHub\NZPP\NZPP\NZPP\NZPP.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=11193.382mil|Location2.X=11252.231mil|Location1.Y=4442.988mil|Location2.Y=4485.358mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\GitHub\NZPP\NZPP\NZPP\NZPP.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=11193.382mil|Location2.X=11252.231mil|Location1.Y=4442.988mil|Location2.Y=4485.358mil|Absolute=True">Width Constraint: Track (284.8mm,113.44mm)(284.9mm,113.34mm) on Bottom Layer Actual Width = 1mm, Target Width = 0.516mm</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\GitHub\NZPP\NZPP\NZPP\NZPP.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=11200.405mil|Location2.X=11244.395mil|Location1.Y=5156.909mil|Location2.Y=5203.364mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\GitHub\NZPP\NZPP\NZPP\NZPP.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=11200.405mil|Location2.X=11244.395mil|Location1.Y=5156.909mil|Location2.Y=5203.364mil|Absolute=True">Width Constraint: Track (285.053mm,131.521mm)(285.053mm,131.526mm) on Bottom Layer Actual Width = 1mm, Target Width = 0.516mm</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\GitHub\NZPP\NZPP\NZPP\NZPP.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=11315.649mil|Location2.X=11357.897mil|Location1.Y=5058.046mil|Location2.Y=5084.902mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\GitHub\NZPP\NZPP\NZPP\NZPP.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=11315.649mil|Location2.X=11357.897mil|Location1.Y=5058.046mil|Location2.Y=5084.902mil|Absolute=True">Width Constraint: Track (285.053mm,131.521mm)(290.374mm,126.2mm) on Bottom Layer Actual Width = 0.516mm (20.315mil), Target Width = 0.5161mm (20.3203mil)</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\GitHub\NZPP\NZPP\NZPP\NZPP.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=11289.09mil|Location2.X=11324.82mil|Location1.Y=5354.967mil|Location2.Y=5387.149mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\GitHub\NZPP\NZPP\NZPP\NZPP.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=11289.09mil|Location2.X=11324.82mil|Location1.Y=5354.967mil|Location2.Y=5387.149mil|Absolute=True">Width Constraint: Track (287.2mm,129.424mm)(287.2mm,143.201mm) on Bottom Layer Actual Width = 0.516mm (20.315mil), Target Width = 0.5161mm (20.3203mil)</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\GitHub\NZPP\NZPP\NZPP\NZPP.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=11516.975mil|Location2.X=11564.363mil|Location1.Y=4956.846mil|Location2.Y=4980.161mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\GitHub\NZPP\NZPP\NZPP\NZPP.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=11516.975mil|Location2.X=11564.363mil|Location1.Y=4956.846mil|Location2.Y=4980.161mil|Absolute=True">Width Constraint: Track (290.374mm,126.2mm)(295.281mm,126.2mm) on Bottom Layer Actual Width = 0.516mm (20.315mil), Target Width = 0.5161mm (20.3203mil)</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\GitHub\NZPP\NZPP\NZPP\NZPP.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=11432.867mil|Location2.X=11498.042mil|Location1.Y=5628.414mil|Location2.Y=5670.784mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\GitHub\NZPP\NZPP\NZPP\NZPP.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=11432.867mil|Location2.X=11498.042mil|Location1.Y=5628.414mil|Location2.Y=5670.784mil|Absolute=True">Width Constraint: Track (290.919mm,143.5mm)(290.947mm,143.5mm) on Bottom Layer Actual Width = 1mm, Target Width = 0.516mm</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\GitHub\NZPP\NZPP\NZPP\NZPP.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=11478.761mil|Location2.X=11520.822mil|Location1.Y=5673.249mil|Location2.Y=5700.292mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\GitHub\NZPP\NZPP\NZPP\NZPP.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=11478.761mil|Location2.X=11520.822mil|Location1.Y=5673.249mil|Location2.Y=5700.292mil|Absolute=True">Width Constraint: Track (290.953mm,143.493mm)(292.76mm,145.3mm) on Bottom Layer Actual Width = 0.516mm (20.315mil), Target Width = 0.5161mm (20.3203mil)</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\GitHub\NZPP\NZPP\NZPP\NZPP.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=11585.98mil|Location2.X=11633.368mil|Location1.Y=5708.815mil|Location2.Y=5732.13mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\GitHub\NZPP\NZPP\NZPP\NZPP.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=11585.98mil|Location2.X=11633.368mil|Location1.Y=5708.815mil|Location2.Y=5732.13mil|Absolute=True">Width Constraint: Track (292.76mm,145.3mm)(296.4mm,145.3mm) on Bottom Layer Actual Width = 0.516mm (20.315mil), Target Width = 0.5161mm (20.3203mil)</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\GitHub\NZPP\NZPP\NZPP\NZPP.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=11673.983mil|Location2.X=11716.045mil|Location1.Y=5017.269mil|Location2.Y=5044.312mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\GitHub\NZPP\NZPP\NZPP\NZPP.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=11673.983mil|Location2.X=11716.045mil|Location1.Y=5017.269mil|Location2.Y=5044.312mil|Absolute=True">Width Constraint: Track (295.281mm,126.2mm)(298.35mm,129.269mm) on Bottom Layer Actual Width = 0.516mm (20.315mil), Target Width = 0.5161mm (20.3203mil)</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\GitHub\NZPP\NZPP\NZPP\NZPP.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=11668.386mil|Location2.X=11710.448mil|Location1.Y=4488.859mil|Location2.Y=4515.902mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\GitHub\NZPP\NZPP\NZPP\NZPP.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=11668.386mil|Location2.X=11710.448mil|Location1.Y=4488.859mil|Location2.Y=4515.902mil|Absolute=True">Width Constraint: Track (295.786mm,113.426mm)(297.56mm,115.2mm) on Bottom Layer Actual Width = 0.516mm (20.315mil), Target Width = 0.5161mm (20.3203mil)</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\GitHub\NZPP\NZPP\NZPP\NZPP.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=11627.879mil|Location2.X=11693.054mil|Location1.Y=4441.02mil|Location2.Y=4483.39mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\GitHub\NZPP\NZPP\NZPP\NZPP.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=11627.879mil|Location2.X=11693.054mil|Location1.Y=4441.02mil|Location2.Y=4483.39mil|Absolute=True">Width Constraint: Track (295.872mm,113.34mm)(295.9mm,113.34mm) on Bottom Layer Actual Width = 1mm, Target Width = 0.516mm</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\GitHub\NZPP\NZPP\NZPP\NZPP.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=11651.294mil|Location2.X=11687.024mil|Location1.Y=5431.639mil|Location2.Y=5463.822mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\GitHub\NZPP\NZPP\NZPP\NZPP.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=11651.294mil|Location2.X=11687.024mil|Location1.Y=5431.639mil|Location2.Y=5463.822mil|Absolute=True">Width Constraint: Track (296.4mm,131.219mm)(296.4mm,145.3mm) on Bottom Layer Actual Width = 0.516mm (20.315mil), Target Width = 0.5161mm (20.3203mil)</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\GitHub\NZPP\NZPP\NZPP\NZPP.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=11696.02mil|Location2.X=11738.268mil|Location1.Y=5112.536mil|Location2.Y=5139.392mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\GitHub\NZPP\NZPP\NZPP\NZPP.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=11696.02mil|Location2.X=11738.268mil|Location1.Y=5112.536mil|Location2.Y=5139.392mil|Absolute=True">Width Constraint: Track (296.4mm,131.219mm)(298.35mm,129.269mm) on Bottom Layer Actual Width = 0.516mm (20.315mil), Target Width = 0.5161mm (20.3203mil)</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\GitHub\NZPP\NZPP\NZPP\NZPP.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=11729.287mil|Location2.X=11776.675mil|Location1.Y=5708.815mil|Location2.Y=5732.13mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\GitHub\NZPP\NZPP\NZPP\NZPP.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=11729.287mil|Location2.X=11776.675mil|Location1.Y=5708.815mil|Location2.Y=5732.13mil|Absolute=True">Width Constraint: Track (296.4mm,145.3mm)(300.04mm,145.3mm) on Bottom Layer Actual Width = 0.516mm (20.315mil), Target Width = 0.5161mm (20.3203mil)</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\GitHub\NZPP\NZPP\NZPP\NZPP.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=11751.885mil|Location2.X=11794.134mil|Location1.Y=6729.761mil|Location2.Y=6756.618mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\GitHub\NZPP\NZPP\NZPP\NZPP.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=11751.885mil|Location2.X=11794.134mil|Location1.Y=6729.761mil|Location2.Y=6756.618mil|Absolute=True">Width Constraint: Track (296.5mm,173.616mm)(301.088mm,169.028mm) on Bottom Layer Actual Width = 0.516mm (20.315mil), Target Width = 0.5161mm (20.3203mil)</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\GitHub\NZPP\NZPP\NZPP\NZPP.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=11655.231mil|Location2.X=11690.961mil|Location1.Y=6925.35mil|Location2.Y=6957.533mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\GitHub\NZPP\NZPP\NZPP\NZPP.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=11655.231mil|Location2.X=11690.961mil|Location1.Y=6925.35mil|Location2.Y=6957.533mil|Absolute=True">Width Constraint: Track (296.5mm,173.8mm)(296.5mm,178.6mm) on Bottom Layer Actual Width = 0.516mm (20.315mil), Target Width = 0.5161mm (20.3203mil)</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\GitHub\NZPP\NZPP\NZPP\NZPP.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=11846.61mil|Location2.X=11893.997mil|Location1.Y=4523.776mil|Location2.Y=4547.091mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\GitHub\NZPP\NZPP\NZPP\NZPP.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=11846.61mil|Location2.X=11893.997mil|Location1.Y=4523.776mil|Location2.Y=4547.091mil|Absolute=True">Width Constraint: Track (297.56mm,115.2mm)(304.84mm,115.2mm) on Bottom Layer Actual Width = 0.516mm (20.315mil), Target Width = 0.5161mm (20.3203mil)</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\GitHub\NZPP\NZPP\NZPP\NZPP.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=11795.025mil|Location2.X=11837.273mil|Location1.Y=5013.531mil|Location2.Y=5040.387mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\GitHub\NZPP\NZPP\NZPP\NZPP.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=11795.025mil|Location2.X=11837.273mil|Location1.Y=5013.531mil|Location2.Y=5040.387mil|Absolute=True">Width Constraint: Track (298.35mm,129.269mm)(301.429mm,126.19mm) on Bottom Layer Actual Width = 0.516mm (20.315mil), Target Width = 0.5161mm (20.3203mil)</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\GitHub\NZPP\NZPP\NZPP\NZPP.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=11837.555mil|Location2.X=11879.803mil|Location1.Y=5668.659mil|Location2.Y=5695.516mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\GitHub\NZPP\NZPP\NZPP\NZPP.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=11837.555mil|Location2.X=11879.803mil|Location1.Y=5668.659mil|Location2.Y=5695.516mil|Absolute=True">Width Constraint: Track (300.04mm,145.3mm)(301.9mm,143.44mm) on Bottom Layer Actual Width = 0.516mm (20.315mil), Target Width = 0.5161mm (20.3203mil)</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\GitHub\NZPP\NZPP\NZPP\NZPP.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=11875.35mil|Location2.X=11922.737mil|Location1.Y=6642.988mil|Location2.Y=6666.303mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\GitHub\NZPP\NZPP\NZPP\NZPP.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=11875.35mil|Location2.X=11922.737mil|Location1.Y=6642.988mil|Location2.Y=6666.303mil|Absolute=True">Width Constraint: Track (301.088mm,169.028mm)(302.772mm,169.028mm) on Bottom Layer Actual Width = 0.516mm (20.315mil), Target Width = 0.5161mm (20.3203mil)</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\GitHub\NZPP\NZPP\NZPP\NZPP.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=11849.305mil|Location2.X=11885.034mil|Location1.Y=4744.631mil|Location2.Y=4776.814mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\GitHub\NZPP\NZPP\NZPP\NZPP.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=11849.305mil|Location2.X=11885.034mil|Location1.Y=4744.631mil|Location2.Y=4776.814mil|Absolute=True">Width Constraint: Track (301.429mm,115.429mm)(301.429mm,126.19mm) on Bottom Layer Actual Width = 0.516mm (20.315mil), Target Width = 0.5161mm (20.3203mil)</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\GitHub\NZPP\NZPP\NZPP\NZPP.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=11868.79mil|Location2.X=11933.965mil|Location1.Y=5628.414mil|Location2.Y=5670.784mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\GitHub\NZPP\NZPP\NZPP\NZPP.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=11868.79mil|Location2.X=11933.965mil|Location1.Y=5628.414mil|Location2.Y=5670.784mil|Absolute=True">Width Constraint: Track (301.992mm,143.5mm)(302.019mm,143.5mm) on Bottom Layer Actual Width = 1mm, Target Width = 0.516mm</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\GitHub\NZPP\NZPP\NZPP\NZPP.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=12034.589mil|Location2.X=12076.838mil|Location1.Y=6513.357mil|Location2.Y=6540.214mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\GitHub\NZPP\NZPP\NZPP\NZPP.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=12034.589mil|Location2.X=12076.838mil|Location1.Y=6513.357mil|Location2.Y=6540.214mil|Absolute=True">Width Constraint: Track (302.772mm,169.028mm)(309.177mm,162.623mm) on Bottom Layer Actual Width = 0.516mm (20.315mil), Target Width = 0.5161mm (20.3203mil)</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\GitHub\NZPP\NZPP\NZPP\NZPP.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=12026.531mil|Location2.X=12068.78mil|Location1.Y=4483.62mil|Location2.Y=4510.476mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\GitHub\NZPP\NZPP\NZPP\NZPP.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=12026.531mil|Location2.X=12068.78mil|Location1.Y=4483.62mil|Location2.Y=4510.476mil|Absolute=True">Width Constraint: Track (304.84mm,115.2mm)(306.7mm,113.34mm) on Bottom Layer Actual Width = 0.516mm (20.315mil), Target Width = 0.5161mm (20.3203mil)</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\GitHub\NZPP\NZPP\NZPP\NZPP.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=12060.95mil|Location2.X=12126.125mil|Location1.Y=4441.02mil|Location2.Y=4483.39mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\GitHub\NZPP\NZPP\NZPP\NZPP.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=12060.95mil|Location2.X=12126.125mil|Location1.Y=4441.02mil|Location2.Y=4483.39mil|Absolute=True">Width Constraint: Track (306.872mm,113.34mm)(306.9mm,113.34mm) on Bottom Layer Actual Width = 1mm, Target Width = 0.516mm</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\GitHub\NZPP\NZPP\NZPP\NZPP.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=12154.339mil|Location2.X=12190.069mil|Location1.Y=6282.096mil|Location2.Y=6314.278mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\GitHub\NZPP\NZPP\NZPP\NZPP.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=12154.339mil|Location2.X=12190.069mil|Location1.Y=6282.096mil|Location2.Y=6314.278mil|Absolute=True">Width Constraint: Track (309.177mm,157.1mm)(309.177mm,162.623mm) on Bottom Layer Actual Width = 0.516mm (20.315mil), Target Width = 0.5161mm (20.3203mil)</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\GitHub\NZPP\NZPP\NZPP\NZPP.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=12907.188mil|Location2.X=12954.575mil|Location1.Y=6173.382mil|Location2.Y=6196.697mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\GitHub\NZPP\NZPP\NZPP\NZPP.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=12907.188mil|Location2.X=12954.575mil|Location1.Y=6173.382mil|Location2.Y=6196.697mil|Absolute=True">Width Constraint: Track (309.177mm,157.1mm)(347.1mm,157.1mm) on Bottom Layer Actual Width = 0.516mm (20.315mil), Target Width = 0.5161mm (20.3203mil)</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\GitHub\NZPP\NZPP\NZPP\NZPP.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=12298.254mil|Location2.X=12363.429mil|Location1.Y=5626.059mil|Location2.Y=5668.429mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\GitHub\NZPP\NZPP\NZPP\NZPP.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=12298.254mil|Location2.X=12363.429mil|Location1.Y=5626.059mil|Location2.Y=5668.429mil|Absolute=True">Width Constraint: Track (312.9mm,143.44mm)(312.928mm,143.44mm) on Bottom Layer Actual Width = 1mm, Target Width = 0.516mm</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\GitHub\NZPP\NZPP\NZPP\NZPP.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=12350.645mil|Location2.X=12392.706mil|Location1.Y=5672.201mil|Location2.Y=5699.244mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\GitHub\NZPP\NZPP\NZPP\NZPP.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=12350.645mil|Location2.X=12392.706mil|Location1.Y=5672.201mil|Location2.Y=5699.244mil|Absolute=True">Width Constraint: Track (313.072mm,143.44mm)(314.932mm,145.3mm) on Bottom Layer Actual Width = 0.516mm (20.315mil), Target Width = 0.5161mm (20.3203mil)</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\GitHub\NZPP\NZPP\NZPP\NZPP.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=12458.912mil|Location2.X=12506.3mil|Location1.Y=5708.815mil|Location2.Y=5732.13mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\GitHub\NZPP\NZPP\NZPP\NZPP.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=12458.912mil|Location2.X=12506.3mil|Location1.Y=5708.815mil|Location2.Y=5732.13mil|Absolute=True">Width Constraint: Track (314.932mm,145.3mm)(318.572mm,145.3mm) on Bottom Layer Actual Width = 0.516mm (20.315mil), Target Width = 0.5161mm (20.3203mil)</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\GitHub\NZPP\NZPP\NZPP\NZPP.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=12494.021mil|Location2.X=12559.196mil|Location1.Y=4441.02mil|Location2.Y=4483.39mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\GitHub\NZPP\NZPP\NZPP\NZPP.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=12494.021mil|Location2.X=12559.196mil|Location1.Y=4441.02mil|Location2.Y=4483.39mil|Absolute=True">Width Constraint: Track (317.872mm,113.34mm)(317.9mm,113.34mm) on Bottom Layer Actual Width = 1mm, Target Width = 0.516mm</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\GitHub\NZPP\NZPP\NZPP\NZPP.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=12539.621mil|Location2.X=12581.682mil|Location1.Y=4487.161mil|Location2.Y=4514.205mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\GitHub\NZPP\NZPP\NZPP\NZPP.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=12539.621mil|Location2.X=12581.682mil|Location1.Y=4487.161mil|Location2.Y=4514.205mil|Absolute=True">Width Constraint: Track (317.872mm,113.34mm)(319.732mm,115.2mm) on Bottom Layer Actual Width = 0.516mm (20.315mil), Target Width = 0.5161mm (20.3203mil)</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\GitHub\NZPP\NZPP\NZPP\NZPP.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=12524.226mil|Location2.X=12559.956mil|Location1.Y=5425.892mil|Location2.Y=5458.075mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\GitHub\NZPP\NZPP\NZPP\NZPP.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=12524.226mil|Location2.X=12559.956mil|Location1.Y=5425.892mil|Location2.Y=5458.075mil|Absolute=True">Width Constraint: Track (318.572mm,130.928mm)(318.572mm,145.3mm) on Bottom Layer Actual Width = 0.516mm (20.315mil), Target Width = 0.5161mm (20.3203mil)</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\GitHub\NZPP\NZPP\NZPP\NZPP.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=12560.433mil|Location2.X=12602.682mil|Location1.Y=5109.561mil|Location2.Y=5136.417mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\GitHub\NZPP\NZPP\NZPP\NZPP.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=12560.433mil|Location2.X=12602.682mil|Location1.Y=5109.561mil|Location2.Y=5136.417mil|Absolute=True">Width Constraint: Track (318.572mm,130.928mm)(320.09mm,129.41mm) on Bottom Layer Actual Width = 0.516mm (20.315mil), Target Width = 0.5161mm (20.3203mil)</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\GitHub\NZPP\NZPP\NZPP\NZPP.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=12602.219mil|Location2.X=12649.607mil|Location1.Y=5708.815mil|Location2.Y=5732.13mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\GitHub\NZPP\NZPP\NZPP\NZPP.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=12602.219mil|Location2.X=12649.607mil|Location1.Y=5708.815mil|Location2.Y=5732.13mil|Absolute=True">Width Constraint: Track (318.572mm,145.3mm)(322.212mm,145.3mm) on Bottom Layer Actual Width = 0.516mm (20.315mil), Target Width = 0.5161mm (20.3203mil)</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\GitHub\NZPP\NZPP\NZPP\NZPP.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=12652.406mil|Location2.X=12699.793mil|Location1.Y=4523.776mil|Location2.Y=4547.091mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\GitHub\NZPP\NZPP\NZPP\NZPP.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=12652.406mil|Location2.X=12699.793mil|Location1.Y=4523.776mil|Location2.Y=4547.091mil|Absolute=True">Width Constraint: Track (319.732mm,115.2mm)(323.602mm,115.2mm) on Bottom Layer Actual Width = 0.516mm (20.315mil), Target Width = 0.5161mm (20.3203mil)</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\GitHub\NZPP\NZPP\NZPP\NZPP.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=12651.004mil|Location2.X=12693.065mil|Location1.Y=5143.938mil|Location2.Y=5170.982mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\GitHub\NZPP\NZPP\NZPP\NZPP.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=12651.004mil|Location2.X=12693.065mil|Location1.Y=5143.938mil|Location2.Y=5170.982mil|Absolute=True">Width Constraint: Track (320.09mm,129.41mm)(323.173mm,132.494mm) on Bottom Layer Actual Width = 0.516mm (20.315mil), Target Width = 0.5161mm (20.3203mil)</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\GitHub\NZPP\NZPP\NZPP\NZPP.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=12659.438mil|Location2.X=12701.687mil|Location1.Y=5010.556mil|Location2.Y=5037.412mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\GitHub\NZPP\NZPP\NZPP\NZPP.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=12659.438mil|Location2.X=12701.687mil|Location1.Y=5010.556mil|Location2.Y=5037.412mil|Absolute=True">Width Constraint: Track (320.09mm,129.41mm)(323.602mm,125.898mm) on Bottom Layer Actual Width = 0.516mm (20.315mil), Target Width = 0.5161mm (20.3203mil)</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\GitHub\NZPP\NZPP\NZPP\NZPP.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=12709.06mil|Location2.X=12751.309mil|Location1.Y=5670.086mil|Location2.Y=5696.942mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\GitHub\NZPP\NZPP\NZPP\NZPP.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=12709.06mil|Location2.X=12751.309mil|Location1.Y=5670.086mil|Location2.Y=5696.942mil|Absolute=True">Width Constraint: Track (322.212mm,145.3mm)(324mm,143.512mm) on Bottom Layer Actual Width = 0.516mm (20.315mil), Target Width = 0.5161mm (20.3203mil)</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\GitHub\NZPP\NZPP\NZPP\NZPP.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=12808.794mil|Location2.X=12856.182mil|Location1.Y=5204.642mil|Location2.Y=5227.957mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\GitHub\NZPP\NZPP\NZPP\NZPP.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=12808.794mil|Location2.X=12856.182mil|Location1.Y=5204.642mil|Location2.Y=5227.957mil|Absolute=True">Width Constraint: Track (323.173mm,132.494mm)(328.105mm,132.494mm) on Bottom Layer Actual Width = 0.516mm (20.315mil), Target Width = 0.5161mm (20.3203mil)</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\GitHub\NZPP\NZPP\NZPP\NZPP.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=12722.237mil|Location2.X=12757.967mil|Location1.Y=4734.367mil|Location2.Y=4766.55mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\GitHub\NZPP\NZPP\NZPP\NZPP.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=12722.237mil|Location2.X=12757.967mil|Location1.Y=4734.367mil|Location2.Y=4766.55mil|Absolute=True">Width Constraint: Track (323.602mm,115.2mm)(323.602mm,125.898mm) on Bottom Layer Actual Width = 0.516mm (20.315mil), Target Width = 0.5161mm (20.3203mil)</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\GitHub\NZPP\NZPP\NZPP\NZPP.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=12795.713mil|Location2.X=12843.1mil|Location1.Y=4523.776mil|Location2.Y=4547.091mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\GitHub\NZPP\NZPP\NZPP\NZPP.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=12795.713mil|Location2.X=12843.1mil|Location1.Y=4523.776mil|Location2.Y=4547.091mil|Absolute=True">Width Constraint: Track (323.602mm,115.2mm)(327.012mm,115.2mm) on Bottom Layer Actual Width = 0.516mm (20.315mil), Target Width = 0.5161mm (20.3203mil)</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\GitHub\NZPP\NZPP\NZPP\NZPP.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=12731.325mil|Location2.X=12796.5mil|Location1.Y=5626.059mil|Location2.Y=5668.429mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\GitHub\NZPP\NZPP\NZPP\NZPP.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=12731.325mil|Location2.X=12796.5mil|Location1.Y=5626.059mil|Location2.Y=5668.429mil|Absolute=True">Width Constraint: Track (323.9mm,143.44mm)(323.928mm,143.44mm) on Bottom Layer Actual Width = 1mm, Target Width = 0.516mm</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\GitHub\NZPP\NZPP\NZPP\NZPP.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=12899.463mil|Location2.X=12941.712mil|Location1.Y=4483.62mil|Location2.Y=4510.476mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\GitHub\NZPP\NZPP\NZPP\NZPP.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=12899.463mil|Location2.X=12941.712mil|Location1.Y=4483.62mil|Location2.Y=4510.476mil|Absolute=True">Width Constraint: Track (327.012mm,115.2mm)(328.872mm,113.34mm) on Bottom Layer Actual Width = 0.516mm (20.315mil), Target Width = 0.5161mm (20.3203mil)</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\GitHub\NZPP\NZPP\NZPP\NZPP.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=12961.875mil|Location2.X=13004.124mil|Location1.Y=5145.106mil|Location2.Y=5171.962mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\GitHub\NZPP\NZPP\NZPP\NZPP.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=12961.875mil|Location2.X=13004.124mil|Location1.Y=5145.106mil|Location2.Y=5171.962mil|Absolute=True">Width Constraint: Track (328.105mm,132.494mm)(330.95mm,129.649mm) on Bottom Layer Actual Width = 0.516mm (20.315mil), Target Width = 0.5161mm (20.3203mil)</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\GitHub\NZPP\NZPP\NZPP\NZPP.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=12927.092mil|Location2.X=12992.267mil|Location1.Y=4441.02mil|Location2.Y=4483.39mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\GitHub\NZPP\NZPP\NZPP\NZPP.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=12927.092mil|Location2.X=12992.267mil|Location1.Y=4441.02mil|Location2.Y=4483.39mil|Absolute=True">Width Constraint: Track (328.872mm,113.34mm)(328.9mm,113.34mm) on Bottom Layer Actual Width = 1mm, Target Width = 0.516mm</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\GitHub\NZPP\NZPP\NZPP\NZPP.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=13011.53mil|Location2.X=13047.26mil|Location1.Y=5338.726mil|Location2.Y=5370.908mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\GitHub\NZPP\NZPP\NZPP\NZPP.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=13011.53mil|Location2.X=13047.26mil|Location1.Y=5338.726mil|Location2.Y=5370.908mil|Absolute=True">Width Constraint: Track (330.95mm,129.649mm)(330.95mm,142.15mm) on Bottom Layer Actual Width = 0.516mm (20.315mil), Target Width = 0.5161mm (20.3203mil)</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\GitHub\NZPP\NZPP\NZPP\NZPP.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=13085.773mil|Location2.X=13128.022mil|Location1.Y=5021.208mil|Location2.Y=5048.065mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\GitHub\NZPP\NZPP\NZPP\NZPP.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=13085.773mil|Location2.X=13128.022mil|Location1.Y=5021.208mil|Location2.Y=5048.065mil|Absolute=True">Width Constraint: Track (330.95mm,129.649mm)(334.399mm,126.2mm) on Bottom Layer Actual Width = 0.516mm (20.315mil), Target Width = 0.5161mm (20.3203mil)</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\GitHub\NZPP\NZPP\NZPP\NZPP.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=13165.025mil|Location2.X=13207.087mil|Location1.Y=5731.954mil|Location2.Y=5758.998mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\GitHub\NZPP\NZPP\NZPP\NZPP.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=13165.025mil|Location2.X=13207.087mil|Location1.Y=5731.954mil|Location2.Y=5758.998mil|Absolute=True">Width Constraint: Track (330.95mm,142.15mm)(338.425mm,149.625mm) on Bottom Layer Actual Width = 0.516mm (20.315mil), Target Width = 0.5161mm (20.3203mil)</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\GitHub\NZPP\NZPP\NZPP\NZPP.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=13253.155mil|Location2.X=13300.543mil|Location1.Y=4956.846mil|Location2.Y=4980.161mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\GitHub\NZPP\NZPP\NZPP\NZPP.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=13253.155mil|Location2.X=13300.543mil|Location1.Y=4956.846mil|Location2.Y=4980.161mil|Absolute=True">Width Constraint: Track (334.399mm,126.2mm)(339.453mm,126.2mm) on Bottom Layer Actual Width = 0.516mm (20.315mil), Target Width = 0.5161mm (20.3203mil)</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\GitHub\NZPP\NZPP\NZPP\NZPP.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=13164.396mil|Location2.X=13229.571mil|Location1.Y=5626.059mil|Location2.Y=5668.429mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\GitHub\NZPP\NZPP\NZPP\NZPP.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=13164.396mil|Location2.X=13229.571mil|Location1.Y=5626.059mil|Location2.Y=5668.429mil|Absolute=True">Width Constraint: Track (334.9mm,143.44mm)(334.928mm,143.44mm) on Bottom Layer Actual Width = 1mm, Target Width = 0.516mm</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\GitHub\NZPP\NZPP\NZPP\NZPP.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=13216.786mil|Location2.X=13258.848mil|Location1.Y=5672.201mil|Location2.Y=5699.244mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\GitHub\NZPP\NZPP\NZPP\NZPP.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=13216.786mil|Location2.X=13258.848mil|Location1.Y=5672.201mil|Location2.Y=5699.244mil|Absolute=True">Width Constraint: Track (335.072mm,143.44mm)(336.932mm,145.3mm) on Bottom Layer Actual Width = 0.516mm (20.315mil), Target Width = 0.5161mm (20.3203mil)</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\GitHub\NZPP\NZPP\NZPP\NZPP.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=13325.054mil|Location2.X=13372.442mil|Location1.Y=5708.815mil|Location2.Y=5732.13mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\GitHub\NZPP\NZPP\NZPP\NZPP.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=13325.054mil|Location2.X=13372.442mil|Location1.Y=5708.815mil|Location2.Y=5732.13mil|Absolute=True">Width Constraint: Track (336.932mm,145.3mm)(340.572mm,145.3mm) on Bottom Layer Actual Width = 0.516mm (20.315mil), Target Width = 0.5161mm (20.3203mil)</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\GitHub\NZPP\NZPP\NZPP\NZPP.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=13597.845mil|Location2.X=13645.233mil|Location1.Y=5879.109mil|Location2.Y=5902.425mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\GitHub\NZPP\NZPP\NZPP\NZPP.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=13597.845mil|Location2.X=13645.233mil|Location1.Y=5879.109mil|Location2.Y=5902.425mil|Absolute=True">Width Constraint: Track (338.425mm,149.625mm)(352.937mm,149.625mm) on Bottom Layer Actual Width = 0.516mm (20.315mil), Target Width = 0.5161mm (20.3203mil)</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\GitHub\NZPP\NZPP\NZPP\NZPP.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=13411.168mil|Location2.X=13453.229mil|Location1.Y=5015.38mil|Location2.Y=5042.423mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\GitHub\NZPP\NZPP\NZPP\NZPP.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=13411.168mil|Location2.X=13453.229mil|Location1.Y=5015.38mil|Location2.Y=5042.423mil|Absolute=True">Width Constraint: Track (339.453mm,126.2mm)(342.427mm,129.173mm) on Bottom Layer Actual Width = 0.516mm (20.315mil), Target Width = 0.5161mm (20.3203mil)</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\GitHub\NZPP\NZPP\NZPP\NZPP.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=13360.163mil|Location2.X=13425.338mil|Location1.Y=4441.02mil|Location2.Y=4483.39mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\GitHub\NZPP\NZPP\NZPP\NZPP.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=13360.163mil|Location2.X=13425.338mil|Location1.Y=4441.02mil|Location2.Y=4483.39mil|Absolute=True">Width Constraint: Track (339.872mm,113.34mm)(339.9mm,113.34mm) on Bottom Layer Actual Width = 1mm, Target Width = 0.516mm</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\GitHub\NZPP\NZPP\NZPP\NZPP.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=13405.763mil|Location2.X=13447.824mil|Location1.Y=4487.161mil|Location2.Y=4514.205mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\GitHub\NZPP\NZPP\NZPP\NZPP.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=13405.763mil|Location2.X=13447.824mil|Location1.Y=4487.161mil|Location2.Y=4514.205mil|Absolute=True">Width Constraint: Track (339.872mm,113.34mm)(341.732mm,115.2mm) on Bottom Layer Actual Width = 0.516mm (20.315mil), Target Width = 0.5161mm (20.3203mil)</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\GitHub\NZPP\NZPP\NZPP\NZPP.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=13390.368mil|Location2.X=13426.098mil|Location1.Y=5427.861mil|Location2.Y=5460.043mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\GitHub\NZPP\NZPP\NZPP\NZPP.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=13390.368mil|Location2.X=13426.098mil|Location1.Y=5427.861mil|Location2.Y=5460.043mil|Absolute=True">Width Constraint: Track (340.572mm,131.028mm)(340.572mm,145.3mm) on Bottom Layer Actual Width = 0.516mm (20.315mil), Target Width = 0.5161mm (20.3203mil)</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\GitHub\NZPP\NZPP\NZPP\NZPP.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=13433.204mil|Location2.X=13475.453mil|Location1.Y=5106.868mil|Location2.Y=5133.725mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\GitHub\NZPP\NZPP\NZPP\NZPP.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=13433.204mil|Location2.X=13475.453mil|Location1.Y=5106.868mil|Location2.Y=5133.725mil|Absolute=True">Width Constraint: Track (340.572mm,131.028mm)(342.427mm,129.173mm) on Bottom Layer Actual Width = 0.516mm (20.315mil), Target Width = 0.5161mm (20.3203mil)</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\GitHub\NZPP\NZPP\NZPP\NZPP.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=13468.361mil|Location2.X=13515.749mil|Location1.Y=5708.815mil|Location2.Y=5732.13mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\GitHub\NZPP\NZPP\NZPP\NZPP.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=13468.361mil|Location2.X=13515.749mil|Location1.Y=5708.815mil|Location2.Y=5732.13mil|Absolute=True">Width Constraint: Track (340.572mm,145.3mm)(344.212mm,145.3mm) on Bottom Layer Actual Width = 0.516mm (20.315mil), Target Width = 0.5161mm (20.3203mil)</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\GitHub\NZPP\NZPP\NZPP\NZPP.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=13585.684mil|Location2.X=13633.071mil|Location1.Y=4523.776mil|Location2.Y=4547.091mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\GitHub\NZPP\NZPP\NZPP\NZPP.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=13585.684mil|Location2.X=13633.071mil|Location1.Y=4523.776mil|Location2.Y=4547.091mil|Absolute=True">Width Constraint: Track (341.732mm,115.2mm)(349.012mm,115.2mm) on Bottom Layer Actual Width = 0.516mm (20.315mil), Target Width = 0.5161mm (20.3203mil)</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\GitHub\NZPP\NZPP\NZPP\NZPP.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=13532.21mil|Location2.X=13574.458mil|Location1.Y=5007.863mil|Location2.Y=5034.72mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\GitHub\NZPP\NZPP\NZPP\NZPP.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=13532.21mil|Location2.X=13574.458mil|Location1.Y=5007.863mil|Location2.Y=5034.72mil|Absolute=True">Width Constraint: Track (342.427mm,129.173mm)(345.602mm,125.998mm) on Bottom Layer Actual Width = 0.516mm (20.315mil), Target Width = 0.5161mm (20.3203mil)</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\GitHub\NZPP\NZPP\NZPP\NZPP.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=13575.202mil|Location2.X=13617.451mil|Location1.Y=5670.086mil|Location2.Y=5696.942mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\GitHub\NZPP\NZPP\NZPP\NZPP.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=13575.202mil|Location2.X=13617.451mil|Location1.Y=5670.086mil|Location2.Y=5696.942mil|Absolute=True">Width Constraint: Track (344.212mm,145.3mm)(346mm,143.512mm) on Bottom Layer Actual Width = 0.516mm (20.315mil), Target Width = 0.5161mm (20.3203mil)</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\GitHub\NZPP\NZPP\NZPP\NZPP.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=13588.379mil|Location2.X=13624.109mil|Location1.Y=4740.853mil|Location2.Y=4773.035mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\GitHub\NZPP\NZPP\NZPP\NZPP.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=13588.379mil|Location2.X=13624.109mil|Location1.Y=4740.853mil|Location2.Y=4773.035mil|Absolute=True">Width Constraint: Track (345.602mm,115.429mm)(345.602mm,125.998mm) on Bottom Layer Actual Width = 0.516mm (20.315mil), Target Width = 0.5161mm (20.3203mil)</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\GitHub\NZPP\NZPP\NZPP\NZPP.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=13597.467mil|Location2.X=13662.642mil|Location1.Y=5626.059mil|Location2.Y=5668.429mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\GitHub\NZPP\NZPP\NZPP\NZPP.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=13597.467mil|Location2.X=13662.642mil|Location1.Y=5626.059mil|Location2.Y=5668.429mil|Absolute=True">Width Constraint: Track (345.9mm,143.44mm)(345.928mm,143.44mm) on Bottom Layer Actual Width = 1mm, Target Width = 0.516mm</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\GitHub\NZPP\NZPP\NZPP\NZPP.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=13768.603mil|Location2.X=13810.852mil|Location1.Y=6054.934mil|Location2.Y=6081.79mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\GitHub\NZPP\NZPP\NZPP\NZPP.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=13768.603mil|Location2.X=13810.852mil|Location1.Y=6054.934mil|Location2.Y=6081.79mil|Absolute=True">Width Constraint: Track (347.1mm,157.1mm)(352.937mm,151.263mm) on Bottom Layer Actual Width = 0.516mm (20.315mil), Target Width = 0.5161mm (20.3203mil)</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\GitHub\NZPP\NZPP\NZPP\NZPP.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=13765.605mil|Location2.X=13807.853mil|Location1.Y=4483.62mil|Location2.Y=4510.476mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\GitHub\NZPP\NZPP\NZPP\NZPP.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=13765.605mil|Location2.X=13807.853mil|Location1.Y=4483.62mil|Location2.Y=4510.476mil|Absolute=True">Width Constraint: Track (349.012mm,115.2mm)(350.872mm,113.34mm) on Bottom Layer Actual Width = 0.516mm (20.315mil), Target Width = 0.5161mm (20.3203mil)</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\GitHub\NZPP\NZPP\NZPP\NZPP.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=13793.234mil|Location2.X=13858.409mil|Location1.Y=4441.02mil|Location2.Y=4483.39mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\GitHub\NZPP\NZPP\NZPP\NZPP.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=13793.234mil|Location2.X=13858.409mil|Location1.Y=4441.02mil|Location2.Y=4483.39mil|Absolute=True">Width Constraint: Track (350.872mm,113.34mm)(350.9mm,113.34mm) on Bottom Layer Actual Width = 1mm, Target Width = 0.516mm</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\GitHub\NZPP\NZPP\NZPP\NZPP.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=13877.171mil|Location2.X=13912.901mil|Location1.Y=5911.339mil|Location2.Y=5943.521mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\GitHub\NZPP\NZPP\NZPP\NZPP.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=13877.171mil|Location2.X=13912.901mil|Location1.Y=5911.339mil|Location2.Y=5943.521mil|Absolute=True">Width Constraint: Track (352.937mm,149.625mm)(352.937mm,151.263mm) on Bottom Layer Actual Width = 0.516mm (20.315mil), Target Width = 0.5161mm (20.3203mil)</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\GitHub\NZPP\NZPP\NZPP\NZPP.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=14189.362mil|Location2.X=14236.749mil|Location1.Y=5879.109mil|Location2.Y=5902.425mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\GitHub\NZPP\NZPP\NZPP\NZPP.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=14189.362mil|Location2.X=14236.749mil|Location1.Y=5879.109mil|Location2.Y=5902.425mil|Absolute=True">Width Constraint: Track (352.937mm,149.625mm)(368.475mm,149.625mm) on Bottom Layer Actual Width = 0.516mm (20.315mil), Target Width = 0.5161mm (20.3203mil)</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\GitHub\NZPP\NZPP\NZPP\NZPP.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=14076.138mil|Location2.X=14118.199mil|Location1.Y=5672.201mil|Location2.Y=5699.244mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\GitHub\NZPP\NZPP\NZPP\NZPP.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=14076.138mil|Location2.X=14118.199mil|Location1.Y=5672.201mil|Location2.Y=5699.244mil|Absolute=True">Width Constraint: Track (356.9mm,143.44mm)(358.76mm,145.3mm) on Bottom Layer Actual Width = 0.516mm (20.315mil), Target Width = 0.5161mm (20.3203mil)</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\GitHub\NZPP\NZPP\NZPP\NZPP.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=14184.405mil|Location2.X=14231.793mil|Location1.Y=5708.815mil|Location2.Y=5732.13mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\GitHub\NZPP\NZPP\NZPP\NZPP.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=14184.405mil|Location2.X=14231.793mil|Location1.Y=5708.815mil|Location2.Y=5732.13mil|Absolute=True">Width Constraint: Track (358.76mm,145.3mm)(362.4mm,145.3mm) on Bottom Layer Actual Width = 0.516mm (20.315mil), Target Width = 0.5161mm (20.3203mil)</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\GitHub\NZPP\NZPP\NZPP\NZPP.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=14266.811mil|Location2.X=14308.873mil|Location1.Y=4488.859mil|Location2.Y=4515.902mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\GitHub\NZPP\NZPP\NZPP\NZPP.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=14266.811mil|Location2.X=14308.873mil|Location1.Y=4488.859mil|Location2.Y=4515.902mil|Absolute=True">Width Constraint: Track (361.786mm,113.426mm)(363.56mm,115.2mm) on Bottom Layer Actual Width = 0.516mm (20.315mil), Target Width = 0.5161mm (20.3203mil)</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\GitHub\NZPP\NZPP\NZPP\NZPP.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=14226.304mil|Location2.X=14291.479mil|Location1.Y=4441.02mil|Location2.Y=4483.39mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\GitHub\NZPP\NZPP\NZPP\NZPP.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=14226.304mil|Location2.X=14291.479mil|Location1.Y=4441.02mil|Location2.Y=4483.39mil|Absolute=True">Width Constraint: Track (361.872mm,113.34mm)(361.9mm,113.34mm) on Bottom Layer Actual Width = 1mm, Target Width = 0.516mm</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\GitHub\NZPP\NZPP\NZPP\NZPP.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=14249.719mil|Location2.X=14285.449mil|Location1.Y=5431.639mil|Location2.Y=5463.822mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\GitHub\NZPP\NZPP\NZPP\NZPP.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=14249.719mil|Location2.X=14285.449mil|Location1.Y=5431.639mil|Location2.Y=5463.822mil|Absolute=True">Width Constraint: Track (362.4mm,131.219mm)(362.4mm,145.3mm) on Bottom Layer Actual Width = 0.516mm (20.315mil), Target Width = 0.5161mm (20.3203mil)</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\GitHub\NZPP\NZPP\NZPP\NZPP.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=14290.497mil|Location2.X=14332.746mil|Location1.Y=5116.483mil|Location2.Y=5143.34mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\GitHub\NZPP\NZPP\NZPP\NZPP.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=14290.497mil|Location2.X=14332.746mil|Location1.Y=5116.483mil|Location2.Y=5143.34mil|Absolute=True">Width Constraint: Track (362.4mm,131.219mm)(364.149mm,129.47mm) on Bottom Layer Actual Width = 0.516mm (20.315mil), Target Width = 0.5161mm (20.3203mil)</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\GitHub\NZPP\NZPP\NZPP\NZPP.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=14327.712mil|Location2.X=14375.1mil|Location1.Y=5708.815mil|Location2.Y=5732.13mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\GitHub\NZPP\NZPP\NZPP\NZPP.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=14327.712mil|Location2.X=14375.1mil|Location1.Y=5708.815mil|Location2.Y=5732.13mil|Absolute=True">Width Constraint: Track (362.4mm,145.3mm)(366.04mm,145.3mm) on Bottom Layer Actual Width = 0.516mm (20.315mil), Target Width = 0.5161mm (20.3203mil)</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\GitHub\NZPP\NZPP\NZPP\NZPP.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=14377.899mil|Location2.X=14425.286mil|Location1.Y=4523.776mil|Location2.Y=4547.091mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\GitHub\NZPP\NZPP\NZPP\NZPP.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=14377.899mil|Location2.X=14425.286mil|Location1.Y=4523.776mil|Location2.Y=4547.091mil|Absolute=True">Width Constraint: Track (363.56mm,115.2mm)(367.429mm,115.2mm) on Bottom Layer Actual Width = 0.516mm (20.315mil), Target Width = 0.5161mm (20.3203mil)</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\GitHub\NZPP\NZPP\NZPP\NZPP.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=14384.463mil|Location2.X=14426.524mil|Location1.Y=5145.114mil|Location2.Y=5172.158mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\GitHub\NZPP\NZPP\NZPP\NZPP.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=14384.463mil|Location2.X=14426.524mil|Location1.Y=5145.114mil|Location2.Y=5172.158mil|Absolute=True">Width Constraint: Track (364.149mm,129.47mm)(367.173mm,132.494mm) on Bottom Layer Actual Width = 0.516mm (20.315mil), Target Width = 0.5161mm (20.3203mil)</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\GitHub\NZPP\NZPP\NZPP\NZPP.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=14389.502mil|Location2.X=14431.751mil|Location1.Y=5017.478mil|Location2.Y=5044.335mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\GitHub\NZPP\NZPP\NZPP\NZPP.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=14389.502mil|Location2.X=14431.751mil|Location1.Y=5017.478mil|Location2.Y=5044.335mil|Absolute=True">Width Constraint: Track (364.149mm,129.47mm)(367.429mm,126.19mm) on Bottom Layer Actual Width = 0.516mm (20.315mil), Target Width = 0.5161mm (20.3203mil)</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\GitHub\NZPP\NZPP\NZPP\NZPP.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=14435.98mil|Location2.X=14478.228mil|Location1.Y=5668.659mil|Location2.Y=5695.516mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\GitHub\NZPP\NZPP\NZPP\NZPP.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=14435.98mil|Location2.X=14478.228mil|Location1.Y=5668.659mil|Location2.Y=5695.516mil|Absolute=True">Width Constraint: Track (366.04mm,145.3mm)(367.9mm,143.44mm) on Bottom Layer Actual Width = 0.516mm (20.315mil), Target Width = 0.5161mm (20.3203mil)</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\GitHub\NZPP\NZPP\NZPP\NZPP.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=14540.576mil|Location2.X=14587.963mil|Location1.Y=5204.642mil|Location2.Y=5227.957mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\GitHub\NZPP\NZPP\NZPP\NZPP.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=14540.576mil|Location2.X=14587.963mil|Location1.Y=5204.642mil|Location2.Y=5227.957mil|Absolute=True">Width Constraint: Track (367.173mm,132.494mm)(372.08mm,132.494mm) on Bottom Layer Actual Width = 0.516mm (20.315mil), Target Width = 0.5161mm (20.3203mil)</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\GitHub\NZPP\NZPP\NZPP\NZPP.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=14447.73mil|Location2.X=14483.46mil|Location1.Y=4740.114mil|Location2.Y=4772.297mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\GitHub\NZPP\NZPP\NZPP\NZPP.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=14447.73mil|Location2.X=14483.46mil|Location1.Y=4740.114mil|Location2.Y=4772.297mil|Absolute=True">Width Constraint: Track (367.429mm,115.2mm)(367.429mm,126.19mm) on Bottom Layer Actual Width = 0.516mm (20.315mil), Target Width = 0.5161mm (20.3203mil)</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\GitHub\NZPP\NZPP\NZPP\NZPP.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=14521.206mil|Location2.X=14568.593mil|Location1.Y=4523.776mil|Location2.Y=4547.091mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\GitHub\NZPP\NZPP\NZPP\NZPP.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=14521.206mil|Location2.X=14568.593mil|Location1.Y=4523.776mil|Location2.Y=4547.091mil|Absolute=True">Width Constraint: Track (367.429mm,115.2mm)(370.84mm,115.2mm) on Bottom Layer Actual Width = 0.516mm (20.315mil), Target Width = 0.5161mm (20.3203mil)</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\GitHub\NZPP\NZPP\NZPP\NZPP.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=14626.62mil|Location2.X=14668.869mil|Location1.Y=5744.161mil|Location2.Y=5771.017mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\GitHub\NZPP\NZPP\NZPP\NZPP.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=14626.62mil|Location2.X=14668.869mil|Location1.Y=5744.161mil|Location2.Y=5771.017mil|Absolute=True">Width Constraint: Track (368.475mm,149.625mm)(375.15mm,142.95mm) on Bottom Layer Actual Width = 0.516mm (20.315mil), Target Width = 0.5161mm (20.3203mil)</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\GitHub\NZPP\NZPP\NZPP\NZPP.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=14624.956mil|Location2.X=14667.205mil|Location1.Y=4483.62mil|Location2.Y=4510.476mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\GitHub\NZPP\NZPP\NZPP\NZPP.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=14624.956mil|Location2.X=14667.205mil|Location1.Y=4483.62mil|Location2.Y=4510.476mil|Absolute=True">Width Constraint: Track (370.84mm,115.2mm)(372.7mm,113.34mm) on Bottom Layer Actual Width = 0.516mm (20.315mil), Target Width = 0.5161mm (20.3203mil)</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\GitHub\NZPP\NZPP\NZPP\NZPP.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=14697.594mil|Location2.X=14739.843mil|Location1.Y=5140.667mil|Location2.Y=5167.524mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\GitHub\NZPP\NZPP\NZPP\NZPP.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=14697.594mil|Location2.X=14739.843mil|Location1.Y=5140.667mil|Location2.Y=5167.524mil|Absolute=True">Width Constraint: Track (372.08mm,132.494mm)(375.15mm,129.424mm) on Bottom Layer Actual Width = 0.516mm (20.315mil), Target Width = 0.5161mm (20.3203mil)</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\GitHub\NZPP\NZPP\NZPP\NZPP.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=14659.375mil|Location2.X=14724.55mil|Location1.Y=4441.02mil|Location2.Y=4483.39mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\GitHub\NZPP\NZPP\NZPP\NZPP.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=14659.375mil|Location2.X=14724.55mil|Location1.Y=4441.02mil|Location2.Y=4483.39mil|Absolute=True">Width Constraint: Track (372.872mm,113.34mm)(372.9mm,113.34mm) on Bottom Layer Actual Width = 1mm, Target Width = 0.516mm</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\GitHub\NZPP\NZPP\NZPP\NZPP.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=14751.688mil|Location2.X=14787.418mil|Location1.Y=5350.035mil|Location2.Y=5382.218mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\GitHub\NZPP\NZPP\NZPP\NZPP.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=14751.688mil|Location2.X=14787.418mil|Location1.Y=5350.035mil|Location2.Y=5382.218mil|Absolute=True">Width Constraint: Track (375.15mm,129.424mm)(375.15mm,142.95mm) on Bottom Layer Actual Width = 0.516mm (20.315mil), Target Width = 0.5161mm (20.3203mil)</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\GitHub\NZPP\NZPP\NZPP\NZPP.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=14821.492mil|Location2.X=14863.74mil|Location1.Y=5016.769mil|Location2.Y=5043.626mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\GitHub\NZPP\NZPP\NZPP\NZPP.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=14821.492mil|Location2.X=14863.74mil|Location1.Y=5016.769mil|Location2.Y=5043.626mil|Absolute=True">Width Constraint: Track (375.15mm,129.424mm)(378.374mm,126.2mm) on Bottom Layer Actual Width = 0.516mm (20.315mil), Target Width = 0.5161mm (20.3203mil)</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\GitHub\NZPP\NZPP\NZPP\NZPP.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=14981.542mil|Location2.X=15028.93mil|Location1.Y=4956.846mil|Location2.Y=4980.161mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\GitHub\NZPP\NZPP\NZPP\NZPP.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=14981.542mil|Location2.X=15028.93mil|Location1.Y=4956.846mil|Location2.Y=4980.161mil|Absolute=True">Width Constraint: Track (378.374mm,126.2mm)(383.281mm,126.2mm) on Bottom Layer Actual Width = 0.516mm (20.315mil), Target Width = 0.5161mm (20.3203mil)</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\GitHub\NZPP\NZPP\NZPP\NZPP.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=14942.279mil|Location2.X=14984.341mil|Location1.Y=5672.201mil|Location2.Y=5699.244mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\GitHub\NZPP\NZPP\NZPP\NZPP.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=14942.279mil|Location2.X=14984.341mil|Location1.Y=5672.201mil|Location2.Y=5699.244mil|Absolute=True">Width Constraint: Track (378.9mm,143.44mm)(380.76mm,145.3mm) on Bottom Layer Actual Width = 0.516mm (20.315mil), Target Width = 0.5161mm (20.3203mil)</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\GitHub\NZPP\NZPP\NZPP\NZPP.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=15050.547mil|Location2.X=15097.935mil|Location1.Y=5708.815mil|Location2.Y=5732.13mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\GitHub\NZPP\NZPP\NZPP\NZPP.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=15050.547mil|Location2.X=15097.935mil|Location1.Y=5708.815mil|Location2.Y=5732.13mil|Absolute=True">Width Constraint: Track (380.76mm,145.3mm)(384.4mm,145.3mm) on Bottom Layer Actual Width = 0.516mm (20.315mil), Target Width = 0.5161mm (20.3203mil)</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\GitHub\NZPP\NZPP\NZPP\NZPP.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=15138.55mil|Location2.X=15180.612mil|Location1.Y=5017.269mil|Location2.Y=5044.312mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\GitHub\NZPP\NZPP\NZPP\NZPP.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=15138.55mil|Location2.X=15180.612mil|Location1.Y=5017.269mil|Location2.Y=5044.312mil|Absolute=True">Width Constraint: Track (383.281mm,126.2mm)(386.35mm,129.269mm) on Bottom Layer Actual Width = 0.516mm (20.315mil), Target Width = 0.5161mm (20.3203mil)</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\GitHub\NZPP\NZPP\NZPP\NZPP.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=15133.224mil|Location2.X=15175.286mil|Location1.Y=4489.13mil|Location2.Y=4516.173mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\GitHub\NZPP\NZPP\NZPP\NZPP.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=15133.224mil|Location2.X=15175.286mil|Location1.Y=4489.13mil|Location2.Y=4516.173mil|Absolute=True">Width Constraint: Track (383.7mm,113.34mm)(385.66mm,115.3mm) on Bottom Layer Actual Width = 0.516mm (20.315mil), Target Width = 0.5161mm (20.3203mil)</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\GitHub\NZPP\NZPP\NZPP\NZPP.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=15115.861mil|Location2.X=15151.591mil|Location1.Y=5431.639mil|Location2.Y=5463.822mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\GitHub\NZPP\NZPP\NZPP\NZPP.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=15115.861mil|Location2.X=15151.591mil|Location1.Y=5431.639mil|Location2.Y=5463.822mil|Absolute=True">Width Constraint: Track (384.4mm,131.219mm)(384.4mm,145.3mm) on Bottom Layer Actual Width = 0.516mm (20.315mil), Target Width = 0.5161mm (20.3203mil)</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\GitHub\NZPP\NZPP\NZPP\NZPP.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=15160.586mil|Location2.X=15202.835mil|Location1.Y=5112.536mil|Location2.Y=5139.392mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\GitHub\NZPP\NZPP\NZPP\NZPP.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=15160.586mil|Location2.X=15202.835mil|Location1.Y=5112.536mil|Location2.Y=5139.392mil|Absolute=True">Width Constraint: Track (384.4mm,131.219mm)(386.35mm,129.269mm) on Bottom Layer Actual Width = 0.516mm (20.315mil), Target Width = 0.5161mm (20.3203mil)</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\GitHub\NZPP\NZPP\NZPP\NZPP.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=15193.854mil|Location2.X=15241.242mil|Location1.Y=5708.815mil|Location2.Y=5732.13mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\GitHub\NZPP\NZPP\NZPP\NZPP.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=15193.854mil|Location2.X=15241.242mil|Location1.Y=5708.815mil|Location2.Y=5732.13mil|Absolute=True">Width Constraint: Track (384.4mm,145.3mm)(388.04mm,145.3mm) on Bottom Layer Actual Width = 0.516mm (20.315mil), Target Width = 0.5161mm (20.3203mil)</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\GitHub\NZPP\NZPP\NZPP\NZPP.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=15246.009mil|Location2.X=15293.397mil|Location1.Y=4527.713mil|Location2.Y=4551.028mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\GitHub\NZPP\NZPP\NZPP\NZPP.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=15246.009mil|Location2.X=15293.397mil|Location1.Y=4527.713mil|Location2.Y=4551.028mil|Absolute=True">Width Constraint: Track (385.66mm,115.3mm)(389.429mm,115.3mm) on Bottom Layer Actual Width = 0.516mm (20.315mil), Target Width = 0.5161mm (20.3203mil)</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\GitHub\NZPP\NZPP\NZPP\NZPP.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=15259.592mil|Location2.X=15301.84mil|Location1.Y=5013.53mil|Location2.Y=5040.387mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\GitHub\NZPP\NZPP\NZPP\NZPP.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=15259.592mil|Location2.X=15301.84mil|Location1.Y=5013.53mil|Location2.Y=5040.387mil|Absolute=True">Width Constraint: Track (386.35mm,129.269mm)(389.429mm,126.19mm) on Bottom Layer Actual Width = 0.516mm (20.315mil), Target Width = 0.5161mm (20.3203mil)</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\GitHub\NZPP\NZPP\NZPP\NZPP.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=15302.122mil|Location2.X=15344.37mil|Location1.Y=5668.659mil|Location2.Y=5695.516mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\GitHub\NZPP\NZPP\NZPP\NZPP.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=15302.122mil|Location2.X=15344.37mil|Location1.Y=5668.659mil|Location2.Y=5695.516mil|Absolute=True">Width Constraint: Track (388.04mm,145.3mm)(389.9mm,143.44mm) on Bottom Layer Actual Width = 0.516mm (20.315mil), Target Width = 0.5161mm (20.3203mil)</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\GitHub\NZPP\NZPP\NZPP\NZPP.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=15313.871mil|Location2.X=15349.602mil|Location1.Y=4742.083mil|Location2.Y=4774.265mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\GitHub\NZPP\NZPP\NZPP\NZPP.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=15313.871mil|Location2.X=15349.602mil|Location1.Y=4742.083mil|Location2.Y=4774.265mil|Absolute=True">Width Constraint: Track (389.429mm,115.3mm)(389.429mm,126.19mm) on Bottom Layer Actual Width = 0.516mm (20.315mil), Target Width = 0.5161mm (20.3203mil)</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\GitHub\NZPP\NZPP\NZPP\NZPP.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=15385.379mil|Location2.X=15432.766mil|Location1.Y=4527.713mil|Location2.Y=4551.028mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\GitHub\NZPP\NZPP\NZPP\NZPP.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=15385.379mil|Location2.X=15432.766mil|Location1.Y=4527.713mil|Location2.Y=4551.028mil|Absolute=True">Width Constraint: Track (389.429mm,115.3mm)(392.74mm,115.3mm) on Bottom Layer Actual Width = 0.516mm (20.315mil), Target Width = 0.5161mm (20.3203mil)</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\GitHub\NZPP\NZPP\NZPP\NZPP.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=15489.129mil|Location2.X=15531.378mil|Location1.Y=4485.588mil|Location2.Y=4512.445mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\GitHub\NZPP\NZPP\NZPP\NZPP.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=15489.129mil|Location2.X=15531.378mil|Location1.Y=4485.588mil|Location2.Y=4512.445mil|Absolute=True">Width Constraint: Track (392.74mm,115.3mm)(394.7mm,113.34mm) on Bottom Layer Actual Width = 0.516mm (20.315mil), Target Width = 0.5161mm (20.3203mil)</acronym></a><br></td>
+</tr>
+</table></a><hr color="#EEEEEE"><a href="#top" style="font-size: 0.9em">Back to top</a><br><br><a name="IDBIDUOALDDNDEIIEKQ2V4KHKROMTGRFO01ZIWY2GI5P31U5EFWSQI"><table>
+<tr>
+<th style="text-align : left" colspan="1" class="rule">Net Antennae (Tolerance=0mm) (All)</th>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\GitHub\NZPP\NZPP\NZPP\NZPP.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=14142.162mil|Location2.X=14176.292mil|Location1.Y=5943.347mil|Location2.Y=5994.932mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\GitHub\NZPP\NZPP\NZPP\NZPP.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=14142.162mil|Location2.X=14176.292mil|Location1.Y=5943.347mil|Location2.Y=5994.932mil|Absolute=True">Net Antennae: Track (359.531mm,151.281mm)(359.55mm,151.3mm) on Top Layer </acronym></a><br></td>
+</tr>
+</table></a><hr color="#EEEEEE"><a href="#top" style="font-size: 0.9em">Back to top</a><br><br></body>
+</html>

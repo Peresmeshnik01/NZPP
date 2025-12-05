@@ -1,0 +1,13 @@
+Output: NC Drill Files
+Type  : NC Drill
+From  : Project [NZPP.PrjPcb]
+   Generated File[NZPP-RoundHoles.TXT]
+   Generated File[NZPP-SlotHoles.TXT]
+   Generated File[NZPP.LDP]
+   Generated File[NZPP.DRR]
+
+
+Files Generated   : 4
+Documents Printed : 0
+
+Finished Output Generation At 12:47:40 On 05.12.2025

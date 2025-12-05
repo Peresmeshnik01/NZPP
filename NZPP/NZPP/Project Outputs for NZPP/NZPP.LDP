@@ -1,0 +1,3 @@
+Layer Pairs Export File for PCB: C:\Users\pilipenko\Documents\GitHub\NZPP\NZPP\NZPP\NZPP.PcbDoc
+LayersSetName=Top_Bot_Thru_Holes|DrillFile=nzpp-roundholes.txt|DrillLayers=gtl,gbl
+LayersSetName=Top_Bot_Slot_Holes|DrillFile=nzpp-slotholes.txt|DrillLayers=gtl,gbl

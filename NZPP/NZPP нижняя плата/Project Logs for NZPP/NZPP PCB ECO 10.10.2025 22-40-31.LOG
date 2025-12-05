@@ -1,4 +1,0 @@
-Added Component: Designator=XS3(MKDSN 1,5/ 2-5,08)
-Added Pin To Net: NetName=NET37 Pin=XS3-1
-Added Member To Class: ClassName=1.NZPP Member=Component DD2 STM32F103C8T6
-Added Member To Class: ClassName=1.NZPP Member=Component XS3 MKDSN

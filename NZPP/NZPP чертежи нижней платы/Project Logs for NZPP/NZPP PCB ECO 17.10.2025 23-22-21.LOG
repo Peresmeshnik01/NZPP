@@ -1,0 +1,32 @@
+Removed Pin From Net: NetName=TX1 Pin=XS1-1
+Removed Pin From Net: NetName=RX1 Pin=XS1-2
+Removed Pin From Net: NetName=GND Pin=XS1-3
+Removed Pin From Net: NetName=GND Pin=XS2-1
+Removed Pin From Net: NetName=Vin Pin=XS2-2
+Removed Pin From Net: NetName=NET37 Pin=XS3-1
+Removed Member From Class: ClassName=1.NZPP Member=XS1
+Removed Member From Class: ClassName=1.NZPP Member=XS2
+Removed Member From Class: ClassName=1.NZPP Member=XS3
+Change Component Comment : Designator=L1 Old Comment=Дроссель 100мкГн CD43-101K New Comment=100мкГн
+Added Component: Designator=X?(CON: SMA-KWHD)
+Add component (AddParameter): Name = "Наименование"; Value = "DG350-3.5-02P-14"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Примечание"; Value = ""; VariantName = "[No Variations]"
+Added Component: Designator=X?(CON: DB-9F)
+Add component (AddParameter): Name = "Наименование"; Value = "DRB-9FA"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Примечание"; Value = ""; VariantName = "[No Variations]"
+Added Component: Designator=XP?(CON: DS210)
+Add component (AddParameter): Name = "Value"; Value = "DS210"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Valuerus"; Value = "DS210"; VariantName = "[No Variations]"
+Added Pin To Net: NetName=NET37 Pin=X?-1
+Added Pin To Net: NetName=TX1 Pin=X?-1
+Added Pin To Net: NetName=GND Pin=X?-2
+Added Pin To Net: NetName=GND Pin=X?-2
+Added Pin To Net: NetName=GND Pin=X?-2
+Added Pin To Net: NetName=GND Pin=X?-2
+Added Pin To Net: NetName=RX1 Pin=X?-2
+Added Pin To Net: NetName=GND Pin=X?-3
+Added Pin To Net: NetName=Vin Pin=XP?-1
+Added Pin To Net: NetName=GND Pin=XP?-2
+Added Member To Class: ClassName=1.NZPP Member=Component X? SMA-KWHD
+Added Member To Class: ClassName=1.NZPP Member=Component X? DRB-9FA
+Added Member To Class: ClassName=1.NZPP Member=Component XP? DS210

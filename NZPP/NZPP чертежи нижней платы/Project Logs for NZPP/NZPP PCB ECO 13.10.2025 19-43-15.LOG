@@ -1,0 +1,19 @@
+Added Component: Designator=DD2(STM32F103C8T6)
+Added Pin To Net: NetName=+5V Pin=DD2-5V
+Added Pin To Net: NetName=34 Pin=DD2-18
+Added Pin To Net: NetName=33 Pin=DD2-19
+Added Pin To Net: NetName=Storage_register Pin=DD2-25
+Added Pin To Net: NetName=Shift_register Pin=DD2-26
+Added Pin To Net: NetName=MOSI Pin=DD2-28
+Added Pin To Net: NetName=TX1 Pin=DD2-30
+Added Pin To Net: NetName=RX1 Pin=DD2-31
+Added Pin To Net: NetName=35 Pin=DD2-42
+Added Pin To Net: NetName=36 Pin=DD2-43
+Added Pin To Net: NetName=+3V3 Pin=DD2-A2
+Added Pin To Net: NetName=GND Pin=DD2-GND
+Added Pin To Net: NetName=GND Pin=DD2-GND
+Added Pin To Net: NetName=GND Pin=DD2-GND
+Added Pin To Net: NetName=NetDD2_2 Pin=DD2-2
+Added Pin To Net: NetName=NetDD2_2 Pin=HL1-1
+Added Net: Name=NetDD2_2
+Added Member To Class: ClassName=1.NZPP Member=Component DD2 STM32F103C8T6

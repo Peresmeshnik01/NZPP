@@ -1,0 +1,6 @@
+Removed Pin From Net: NetName=NET23 Pin=*22-1
+Removed Pin From Net: NetName=NET23 Pin=RY19-8
+Change Net Name : Old Net Name=NET23 New Net Name=NET37
+Added Pin To Net: NetName=NET23 Pin=*22-1
+Added Pin To Net: NetName=NET23 Pin=RY19-8
+Added Net: Name=NET23
